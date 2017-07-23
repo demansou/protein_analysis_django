@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+
+from .custom import large_file_hasher
 
 
 class Collection(models.Model):
@@ -9,9 +12,18 @@ class Collection(models.Model):
     collection_file = models.FileField()
     collection_hash = models.CharField(max_length=16)
     pub_date = models.DateTimeField('Date Published')
+    collection_parsed = models.BooleanField(default=False)
 
     def __str__(self):
         return self.collection_name
+
+    def save(self, *args, **kwargs):
+        if self.pk is None:
+            self.pub_date = timezone.now()
+            super(Collection, self).save(*args, **kwargs)
+
+        self.collection_hash = large_file_hasher(self.collection_file.path)
+        super(Collection, self).save(*args, **kwargs)
 
 
 class Sequence(models.Model):

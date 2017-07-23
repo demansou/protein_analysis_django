@@ -28,8 +28,11 @@
     </nav>
     <!-- /Navbar -->
 
-    {% block content %}{% endblock %}
-
+    <div class="container">
+        <div class="col-xs-12">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
     <!-- Load Javascript -->
     <script src="{% static 'protein_analysis_tool/js/jquery-3.2.1.js' %}"></script>
     <script src="{% static 'protein_analysis_tool/js/bootstrap.js' %}"></script>
