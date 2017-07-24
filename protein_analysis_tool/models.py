@@ -10,7 +10,7 @@ class Collection(models.Model):
     """
     collection_name = models.CharField(max_length=128)
     collection_file = models.FileField()
-    collection_hash = models.CharField(max_length=16)
+    collection_hash = models.CharField(max_length=16, unique=True)
     pub_date = models.DateTimeField('Date Published')
     collection_parsed = models.BooleanField(default=False)
 
@@ -22,7 +22,9 @@ class Collection(models.Model):
             self.pub_date = timezone.now()
             super(Collection, self).save(*args, **kwargs)
 
-        self.collection_hash = large_file_hasher(self.collection_file.path)
+        # TODO: try/except clause
+        file_path = self.collection_file.path
+        self.collection_hash = large_file_hasher(file_path)
         super(Collection, self).save(*args, **kwargs)
 
 
@@ -31,6 +33,7 @@ class Sequence(models.Model):
     Collection sequences.
     """
     collection_fk = models.ForeignKey(Collection, on_delete=models.CASCADE)
+    sequence_id = models.CharField(max_length=256)
     sequence_name = models.CharField(max_length=256)
     sequence = models.CharField(max_length=4096)
 
