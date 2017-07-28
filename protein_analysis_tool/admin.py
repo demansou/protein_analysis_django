@@ -8,6 +8,7 @@ from django.utils.html import format_html
 from .models import Collection, Sequence, Motif
 
 
+@admin.register(Collection)
 class CollectionAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Collection File Information', {
@@ -15,6 +16,7 @@ class CollectionAdmin(admin.ModelAdmin):
                 'collection_name',
                 'collection_file',
                 'collection_hash',
+                'sequence_count',
                 'collection_parsed',
                 'pub_date',
             ],
@@ -22,9 +24,9 @@ class CollectionAdmin(admin.ModelAdmin):
     ]
 
     readonly_fields = [
-        'collection_name',
-        'collection_file',
         'collection_hash',
+        'sequence_count',
+        'sequence_count',
         'collection_parsed',
         'pub_date',
     ]
@@ -33,7 +35,7 @@ class CollectionAdmin(admin.ModelAdmin):
         'collection_name',
         'collection_file',
         'collection_hash',
-        'pub_date',
+        'sequence_count',
         'collection_parsed',
         'parse_file_action',
     ]
@@ -77,13 +79,15 @@ class CollectionAdmin(admin.ModelAdmin):
                     sequence=str(record.seq),
                 )
                 sequence.save()
-                collection.collection_parsed = True
 
-        context = self.admin_site.each_context(request)
-        context['opts'] = self.model._meta
+            collection.collection_parsed = True
+            collection.sequence_count = Sequence.objects.filter(collection_fk=collection).count()
+            collection.save()
+
         return HttpResponseRedirect('/admin/protein_analysis_tool/', )
 
 
+@admin.register(Sequence)
 class SequenceAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Sequence Information', {
@@ -109,6 +113,15 @@ class SequenceAdmin(admin.ModelAdmin):
         'sequence',
     ]
 
-admin.site.register(Collection, CollectionAdmin)
-admin.site.register(Sequence, SequenceAdmin)
-admin.site.register(Motif)
+
+@admin.register(Motif)
+class MotifAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Motif Information', {
+            'fields': [
+                'motif_name',
+                'motif_'
+            ],
+        }),
+    ]
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Collections{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p class="lead">Select protein sequence collections to search for motifs.</p>
+        <div class="form-group">
+            <ul class="list-group">
+                {% for collection in collections %}
+                    {% if collection.sequence_count > 0 %}
+                        <div class="col-xs-3">
+                            <li class="list-group-item">
+                                <input type="checkbox" value="{{ collection.pk }}">
+                                {{ collection.collection_name }}
+                                <span class="badge">{{ collection.sequence_count }}</span>
+                            </li>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="form-group top15">
+            <button class="btn btn-block btn-primary" type="submit">Select Sequence Collection(s)</button>
+        </div>
+    </form>
+{% endblock %}

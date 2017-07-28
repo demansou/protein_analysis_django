@@ -13,6 +13,7 @@ class Collection(models.Model):
     collection_hash = models.CharField(max_length=16, unique=True)
     pub_date = models.DateTimeField('Date Published')
     collection_parsed = models.BooleanField(default=False)
+    sequence_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.collection_name
