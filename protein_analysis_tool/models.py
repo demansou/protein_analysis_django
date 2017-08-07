@@ -1,7 +1,4 @@
 from django.db import models
-from django.utils import timezone
-
-from .custom import large_file_hasher
 
 
 class Collection(models.Model):
@@ -17,16 +14,6 @@ class Collection(models.Model):
 
     def __str__(self):
         return self.collection_name
-
-    def save(self, *args, **kwargs):
-        if self.pk is None:
-            self.pub_date = timezone.now()
-            super(Collection, self).save(*args, **kwargs)
-
-        # TODO: try/except clause
-        file_path = self.collection_file.path
-        self.collection_hash = large_file_hasher(file_path)
-        super(Collection, self).save(*args, **kwargs)
 
 
 class Sequence(models.Model):

@@ -1,17 +1,14 @@
-from django.shortcuts import render
 from django.views import generic
 
-from .models import Collection
+from .forms import CollectionForm, MotifForm
 
 
 class IndexView(generic.TemplateView):
     template_name = 'protein_analysis_tool/index.html'
 
 
-def select_collections(request):
-    if request.method == 'POST':
-        # TODO: save primary keys, redirect to 'select_motif(s)'
-        pass
+class CollectionFormView(generic.FormView):
+    form_class = CollectionForm
+    template_name = 'protein_analysis_tool/select_collections.html'
+    success_url = '/select_motifs/'
 
-    collections = Collection.objects.all()
-    return render(request, 'protein_analysis_tool/select_collections.html', context={'collections': collections})
