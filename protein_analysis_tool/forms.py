@@ -48,25 +48,3 @@ class CollectionAdminForm(forms.ModelForm):
             collection.save()
 
         return collection
-
-
-class CollectionForm(forms.Form):
-    collections = forms.ModelMultipleChoiceField(
-        label='Select Collections For Analysis',
-        queryset=Collection.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
-    )
-
-    def as_bootstrap(self):
-        return self._html_output(
-            normal_row='<div class="col-xs-3"><li class="list-group-item">%(html_class_attr)s>%(label)s %(field)s%(help_text)s</li></div>',
-            error_row='<div class="alert alert-danger">%s</div>',
-            row_ender='</div>',
-            help_text_html=' <span class="helptext">%s</span>',
-            errors_on_separate_row=True
-        )
-
-
-
-class MotifForm(forms.Form):
-    fields = forms.ModelMultipleChoiceField(queryset=Motif.objects.all())

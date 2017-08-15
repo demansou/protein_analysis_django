@@ -61,8 +61,7 @@ class MotifAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Motif Information', {
             'fields': [
-                'motif_name',
-                'motif_'
+                'motif',
             ],
         }),
     ]

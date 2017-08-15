@@ -13,7 +13,7 @@ class Collection(models.Model):
     sequence_count = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.collection_name
+        return '{collection_name} <{sequence_count} Sequences>'.format(collection_name=self.collection_name, sequence_count=self.sequence_count)
 
 
 class Sequence(models.Model):
@@ -33,8 +33,7 @@ class Motif(models.Model):
     """
     Motif to search for in sequences.
     """
-    motif_name = models.CharField(max_length=32)
     motif = models.CharField(max_length=16)
 
     def __str__(self):
-        return self.motif_name
+        return self.motif

@@ -5,12 +5,20 @@
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        <p class="lead">{{ form.collections.label }}</p>
+
+        <p class="lead">Select Protein Sequence Collections For Motif Analysis</p>
+
         <div class="form-group">
             <ul class="list-group">
-                {% for collection in form.collections %}
-                    <div class="col-xs-3">
-                        {{ collection }}
+                {% for collection in collections %}
+                    <div class="col-xs-4">
+                        <li class="list-group-item">
+                            <label>
+                                <input type=checkbox name="collection_group[]" value="{{ collection.pk }}">
+                                {{ collection.collection_name }}
+                            </label>
+                            <span class="badge">{{ collection.sequence_count }}</span>
+                        </li>
                     </div>
                 {% endfor %}
             </ul>
