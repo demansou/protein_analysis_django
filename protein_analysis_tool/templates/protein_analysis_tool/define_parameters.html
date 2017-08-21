@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
-{% block title %}Select Motifs{% endblock %}
+{% block title %}Define Parameters{% endblock %}
 
 {% block content %}
     <form method="post">
@@ -22,17 +23,14 @@
 
         <div class="clearfix"></div>
         <div class="top15"></div>
-        <p class="lead">Select Motifs For Protein Sequence Analysis</p>
 
+        <p class="lead">Motifs Selected For Protein Sequence Analysis</p>
         <div class="form-group">
             <ul class="list-group">
-                {% for motif in motifs %}
+                {% for motif in motif_list %}
                     <div class="col-xs-4">
                         <li class="list-group-item">
-                            <label>
-                                <input type=checkbox name="motif_group[]" value="{{ motif.pk }}">
-                                {{ motif.motif }}
-                            </label>
+                            {{ motif.motif }}
                         </li>
                     </div>
                 {% endfor %}
@@ -41,8 +39,20 @@
 
         <div class="clearfix"></div>
 
+        {% for field in form %}
+            <div class="form-group top15">
+                <label for="{{ field.id_for_label }}">
+                    {{ field.label }}
+                </label>
+                {% render_field field class="form-control" %}
+            </div>
+        {% endfor %}
+
+
+        <div class="clearfix"></div>
+
         <div class="form-group top15">
-            <button class="btn btn-block btn-primary" type="submit">Select Motif(s)</button>
+            <button class="btn btn-block btn-primary" type="submit">Select Parameters</button>
         </div>
     </form>
 {% endblock %}

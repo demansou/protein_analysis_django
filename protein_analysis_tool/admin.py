@@ -1,12 +1,7 @@
-from Bio import SeqIO
-from django.conf.urls import url
-from django.core.urlresolvers import reverse
 from django.contrib import admin
-from django.http import HttpResponseRedirect
-from django.utils.html import format_html
 
 from .forms import CollectionAdminForm
-from .models import Collection, Sequence, Motif
+from .models import Collection, Sequence, Motif, Query
 
 
 @admin.register(Collection)
@@ -66,3 +61,4 @@ class MotifAdmin(admin.ModelAdmin):
         }),
     ]
 
+admin.site.register(Query)

@@ -48,3 +48,16 @@ class CollectionAdminForm(forms.ModelForm):
             collection.save()
 
         return collection
+
+
+class DefineParametersForm(forms.Form):
+    min_num_motifs_per_sequence = forms.IntegerField(
+        label='Minimum Number Of Motifs Per Sequence',
+        min_value=3,
+        max_value=10,
+    )
+    max_char_distance_between_motifs = forms.IntegerField(
+        label='Maximum Character Distance Between Start And End Of Valid Motif Range',
+        min_value=50,
+        max_value=5000,
+    )

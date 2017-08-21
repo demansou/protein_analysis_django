@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'protein_analysis_tool.apps.ProteinAnalysisToolConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

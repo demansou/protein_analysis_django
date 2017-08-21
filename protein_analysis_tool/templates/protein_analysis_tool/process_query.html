@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Processing Query{% endblock %}
+
+{% block content %}
+    <p class="lead">Collection/Motif combos </p>
+
+    <ul class="list-group">
+        {% for query in query_list %}
+            <li class="list-group-item">
+                    <b>Collection:</b> {{ query.collection_fk }}<br>
+                    <b>Motif:</b> {{ query.motif_fk }}<br>
+                    <b>Status:</b><br>
+            </li>
+            <div class="clearfix"></div>
+        {% endfor %}
+    </ul>
+{% endblock %}

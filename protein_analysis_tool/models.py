@@ -13,7 +13,7 @@ class Collection(models.Model):
     sequence_count = models.IntegerField(default=0)
 
     def __str__(self):
-        return '{collection_name} <{sequence_count} Sequences>'.format(collection_name=self.collection_name, sequence_count=self.sequence_count)
+        return self.collection_name
 
 
 class Sequence(models.Model):
@@ -37,3 +37,24 @@ class Motif(models.Model):
 
     def __str__(self):
         return self.motif
+
+
+class Query(models.Model):
+    """
+    Combination of Collection and Motif.
+    """
+    collection_fk = models.ForeignKey(Collection, on_delete=models.CASCADE)
+    motif_fk = models.ForeignKey(Motif, on_delete=models.CASCADE)
+    min_num_motifs_per_sequence = models.IntegerField()
+    max_char_distance_between_motifs = models.IntegerField()
+
+    class Meta:
+        unique_together = (
+            'collection_fk',
+            'motif_fk',
+            'min_num_motifs_per_sequence',
+            'max_char_distance_between_motifs',
+        )
+
+    def __str__(self):
+        return '{collection} -> {motif}'.format(collection=self.collection_fk, motif=self.motif_fk)
