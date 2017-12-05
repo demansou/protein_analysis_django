@@ -12,7 +12,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.1 virtualenv at C:\Users\deman\venv_protein_analysis_django" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.1 virtualenv at C:\Users\deman\protein_analysis_django" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
@@ -20,8 +20,8 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/templates" />
-        <option value="$MODULE_DIR$/static" />
         <option value="$MODULE_DIR$/protein_analysis_tool/static" />
+        <option value="$MODULE_DIR$/protein_analysis_tool/templates" />
       </list>
     </option>
   </component>

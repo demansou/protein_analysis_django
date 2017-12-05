@@ -39,14 +39,13 @@
 
         <div class="clearfix"></div>
 
-        {% for field in form %}
-            <div class="form-group top15">
-                <label for="{{ field.id_for_label }}">
-                    {{ field.label }}
-                </label>
-                {% render_field field class="form-control" %}
-            </div>
-        {% endfor %}
+        <div class="top15"></div>
+        <p class="lead">{% render_field form.min_num_motifs_per_sequence.label %}</p>
+        {% render_field form.min_num_motifs_per_sequence  class+="form-control" %}
+
+        <div class="top15"></div>
+        <p class="lead">{% render_field form.max_char_distance_between_motifs.label %}</p>
+        {% render_field form.max_char_distance_between_motifs class+="form-control" %}
 
 
         <div class="clearfix"></div>

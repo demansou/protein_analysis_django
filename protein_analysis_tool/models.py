@@ -47,6 +47,7 @@ class Query(models.Model):
     motif_fk = models.ForeignKey(Motif, on_delete=models.CASCADE)
     min_num_motifs_per_sequence = models.IntegerField()
     max_char_distance_between_motifs = models.IntegerField()
+    query_is_finished = models.BooleanField(default=False)
 
     class Meta:
         unique_together = (

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'protein_analysis_tool.apps.ProteinAnalysisToolConfig',
+    'protein_analysis_tool',
     'widget_tweaks',
 ]
 
