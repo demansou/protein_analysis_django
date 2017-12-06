@@ -4,11 +4,22 @@ from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from .forms import DefineParametersForm
 from .models import Collection, Motif, Query
+from .celery.tasks import task_process_query
 
 
 def get_form_data_from_http_post(request, key):
     """
     Returns form data from http post with key.
+    :param request:
+    :param key:
+    :return:
+    """
+    return request.POST[key]
+
+
+def get_form_data_from_http_post_as_list(request, key):
+    """
+    Returns form data list from http post with key.
     :param request:
     :param key:
     :return:
@@ -36,6 +47,24 @@ def get_session_data(request, key):
     """
     return request.session.get(key, False)
 
+
+def process_single_query(request):
+    """
+
+    :param request:
+    :return:
+    """
+
+    query_id = get_form_data_from_http_post(request, 'query_id')
+
+    if not query_id:
+        pass
+
+    # push to celery queue
+    task_process_query(query_id)
+
+    return
+
 #################
 # POST REQUESTS #
 #################
@@ -49,7 +78,7 @@ def update_request_and_redirect_to_motif_selection(request):
     :return:
     """
 
-    collection_list = get_form_data_from_http_post(request, 'collection_group[]')
+    collection_list = get_form_data_from_http_post_as_list(request, 'collection_group[]')
 
     # re-render form in case of empty list
     if not collection_list:
@@ -69,7 +98,7 @@ def update_request_and_redirect_to_define_parameters(request):
     :return:
     """
 
-    motif_list = get_form_data_from_http_post(request, 'motif_group[]')
+    motif_list = get_form_data_from_http_post_as_list(request, 'motif_group[]')
 
     if not motif_list:
         pass

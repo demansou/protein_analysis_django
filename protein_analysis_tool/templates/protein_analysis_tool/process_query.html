@@ -7,13 +7,30 @@
 
     <ul class="list-group">
         {% for query in query_list %}
-            <li class="list-group-item">
+            <div class="col-xs-6">
+                <li class="list-group-item">
                     <b>Collection:</b> {{ query.collection_fk }}<br>
                     <b>Motif:</b> {{ query.motif_fk }}<br>
                     <b>Motif Frequency:</b> {{ query.min_num_motifs_per_sequence }}<br>
                     <b>Motif Search Range:</b> {{ query.max_char_distance_between_motifs }}<br>
                     <b>Status:</b> {% if query.query_is_finished %}Finished{% else %}Not Finished{% endif %}<br>
-            </li>
+                </li>
+            </div>
+            <div class="col-xs-6">
+                    {% if query.query_is_finished %}
+
+                    {% else %}
+                        <form method="post">
+                            {% csrf_token %}
+
+                            <input type="hidden" name="query_id" value="{{ query.pk }}">
+                            <div class="top30">
+                                <button class="btn btn-block btn-primary" type="submit">Process Query</button>
+                            </div>
+                        </form>
+                    {% endif %}
+                </div>
+
             <div class="clearfix"></div>
         {% endfor %}
     </ul>

@@ -4,7 +4,8 @@ from .views_controller import update_request_and_redirect_to_motif_selection,\
     get_list_of_objects_and_render_collection_form, update_request_and_redirect_to_define_parameters,\
     get_list_of_motifs_and_render_motif_form, update_request_and_redirect_to_process_query,\
     get_selected_collections_and_motifs_and_render_parameters_form,\
-    get_selected_queries_and_render_process_query_http_get, get_all_queries_and_render_all
+    get_selected_queries_and_render_process_query_http_get, get_all_queries_and_render_all,\
+    process_single_query
 
 
 class IndexView(generic.TemplateView):
@@ -34,8 +35,7 @@ def define_parameters(request):
 
 def process_query(request):
     if request.POST:
-        # there is no POST action for this view
-        pass
+        return process_single_query(request)
 
     return get_selected_queries_and_render_process_query_http_get(request)
 

@@ -1,4 +1,5 @@
 from django.db import models
+import json
 
 
 class Collection(models.Model):
@@ -59,3 +60,28 @@ class Query(models.Model):
 
     def __str__(self):
         return '{collection} -> {motif}'.format(collection=self.collection_fk, motif=self.motif_fk)
+
+
+class QuerySequence(models.Model):
+    """
+    Combination of Query and Sequence.
+    """
+    query_fk = models.ForeignKey(Query, on_delete=models.CASCADE)
+    sequence_fk = models.ForeignKey(Sequence, on_delete=models.CASCADE)
+    is_match = models.BooleanField(default=False)
+    matches = models.CharField(max_length=4096)
+
+    class Meta:
+        unique_together = {
+            'query_fk',
+            'motif_fk',
+        }
+
+    def __str__(self):
+        return '{motif} -> {matches}'.format(motif=self.sequence_fk, matches=self.matches)
+
+    def set_matches(self, matches_list):
+        self.matches = json.dumps(matches_list)
+
+    def get_matches(self):
+        return json.loads(self.matches)
