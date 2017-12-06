@@ -18,7 +18,7 @@ def get_form_data_from_http_post(request, key):
 
 def update_request_session_dict(request, key, value):
     """
-
+    Sets session dict key value.
     :param request:
     :param key:
     :param value:
@@ -29,7 +29,7 @@ def update_request_session_dict(request, key, value):
 
 def get_session_data(request, key):
     """
-
+    Gets session dict key value.
     :param request:
     :param key:
     :return:
@@ -64,7 +64,7 @@ def update_request_and_redirect_to_motif_selection(request):
 
 def update_request_and_redirect_to_define_parameters(request):
     """
-
+    Takes selected motifs from form and adds them to session dictionary
     :param request:
     :return:
     """
@@ -81,7 +81,7 @@ def update_request_and_redirect_to_define_parameters(request):
 
 def update_request_and_redirect_to_process_query(request):
     """
-
+    Creates queries with selected collections, motifs, and parameters
     :param request:
     :return:
     """
@@ -168,7 +168,7 @@ def get_list_of_objects_and_render_collection_form(request):
 
 def get_list_of_motifs_and_render_motif_form(request):
     """
-
+    Displays selected collections, gives list of motifs to select, and displays form.
     :param request:
     :return:
     """
@@ -200,7 +200,7 @@ def get_list_of_motifs_and_render_motif_form(request):
 
 def get_selected_collections_and_motifs_and_render_parameters_form(request):
     """
-
+    Gets selected collections and motifs and renders the parameters input form.
     :param request:
     :return:
     """
@@ -254,7 +254,7 @@ def get_selected_queries_and_render_process_query_http_get(request):
     return render(request, 'protein_analysis_tool/process_query.html', context=context)
 
 
-def get_all_queries_and_render_all_queries(request):
+def get_all_queries_and_render_all(request):
     """
     View all queries.
     :param request:
