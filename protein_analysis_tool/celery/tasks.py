@@ -1,5 +1,5 @@
 from celery import Celery
-from ..models import Motif, Query, Sequence
+from ..models import Motif, Query, Sequence, QuerySequence
 
 app = Celery('process_queue', broker='ampq://guest@localhost')
 
@@ -32,9 +32,17 @@ def task_process_query(query_id):
         # if sequence has one motif, continue checking
 
         # get subsequence of sequence from first motif
+        matches = []
 
         # check for frequency of motif.
 
         #if positive, record positions.
+        is_match = True
 
         # update database
+        QuerySequence.objects.create(
+            query_fk=query,
+            sequence_fk=sequence,
+            is_match=is_match,
+            matches=matches
+        )
