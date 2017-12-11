@@ -74,7 +74,7 @@ class QuerySequence(models.Model):
     class Meta:
         unique_together = (
             'query_fk',
-            'motif_fk',
+            'sequence_fk',
         )
 
     def __str__(self):
