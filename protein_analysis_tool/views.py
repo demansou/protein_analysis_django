@@ -42,6 +42,6 @@ def process_query(request):
 
 def all_queries(request):
     if request.POST:
-        pass
+        return process_single_query(request)
 
     return get_all_queries_and_render_all(request)
