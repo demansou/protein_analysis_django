@@ -18,7 +18,7 @@ def motif_to_regex(motif):
 @app.task
 def task_process_query(query_id):
     """
-
+    Takes query ID and processes each combination and either creates or updates a database row.
     :param query_id:
     :return: 
     """
@@ -54,11 +54,13 @@ def task_process_query(query_id):
                 matches_objects.append(substr_analysis)
 
         try:
+            # attempt to add data to already existing querysequence row
             query_sequence = QuerySequence.objects.get(query_fk=query, sequence_fk=sequence)
             query_sequence.is_match = bool(len(matches_objects) > 0)
             query_sequence.set_matches(matches_objects)
 
         except QuerySequence.DoesNotExist:
+            # create new querysequence row if match does not already exist
             QuerySequence.objects.create(
                 query_fk=query,
                 sequence_fk=sequence,

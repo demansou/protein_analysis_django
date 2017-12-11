@@ -1,5 +1,5 @@
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from .forms import DefineParametersForm
@@ -63,7 +63,7 @@ def process_single_query(request):
     # push to celery queue
     task_process_query(query_id)
 
-    return
+    return JsonResponse({})
 
 #################
 # POST REQUESTS #
