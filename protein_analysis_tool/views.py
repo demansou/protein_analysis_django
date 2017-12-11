@@ -5,7 +5,7 @@ from .views_controller import update_request_and_redirect_to_motif_selection,\
     get_list_of_motifs_and_render_motif_form, update_request_and_redirect_to_process_query,\
     get_selected_collections_and_motifs_and_render_parameters_form,\
     get_selected_queries_and_render_process_query_http_get, get_all_queries_and_render_all,\
-    process_single_query
+    process_single_query, process_all_queries
 
 
 class IndexView(generic.TemplateView):
@@ -26,22 +26,29 @@ def select_motifs_view(request):
     return get_list_of_motifs_and_render_motif_form(request)
 
 
-def define_parameters(request):
+def define_parameters_view(request):
     if request.POST:
         return update_request_and_redirect_to_process_query(request)
 
     return get_selected_collections_and_motifs_and_render_parameters_form(request)
 
 
-def process_query(request):
+def process_query_view(request):
     if request.POST:
         return process_single_query(request)
 
     return get_selected_queries_and_render_process_query_http_get(request)
 
 
-def all_queries(request):
+def all_queries_view(request):
     if request.POST:
         return process_single_query(request)
 
     return get_all_queries_and_render_all(request)
+
+
+def process_all_queries_view(request):
+    if request.POST:
+        return process_all_queries(request)
+
+    pass

@@ -65,6 +65,15 @@ def process_single_query(request):
 
     return HttpResponseRedirect('/all_queries/')
 
+
+def process_all_queries(request):
+    """
+
+    :param request:
+    :return:
+    """
+
+
 #################
 # POST REQUESTS #
 #################

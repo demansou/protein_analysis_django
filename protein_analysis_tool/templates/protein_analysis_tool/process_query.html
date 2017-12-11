@@ -18,14 +18,15 @@
             </div>
             <div class="col-xs-6">
                     {% if query.query_is_finished %}
-
+                        <div class="top30">
+                            <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:process-all-queries" %}">View Results</a>
+                        </div>
                     {% else %}
                         <form method="post">
                             {% csrf_token %}
-
                             <input type="hidden" name="query_id" value="{{ query.pk }}">
                             <div class="top30">
-                                <button class="btn btn-block btn-primary" type="submit">Process Query</button>
+                                <button class="btn btn-block btn-default" type="submit">Process Query</button>
                             </div>
                         </form>
                     {% endif %}
