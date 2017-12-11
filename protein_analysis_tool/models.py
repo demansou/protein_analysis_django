@@ -72,10 +72,10 @@ class QuerySequence(models.Model):
     matches = models.CharField(max_length=4096)
 
     class Meta:
-        unique_together = {
+        unique_together = (
             'query_fk',
             'motif_fk',
-        }
+        )
 
     def __str__(self):
         return '{motif} -> {matches}'.format(motif=self.sequence_fk, matches=self.matches)
