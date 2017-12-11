@@ -63,7 +63,7 @@ def process_single_query(request):
     # push to celery queue
     task_process_query(query_id)
 
-    return JsonResponse({})
+    return HttpResponseRedirect('/all_queries/')
 
 #################
 # POST REQUESTS #

@@ -67,3 +67,6 @@ def task_process_query(query_id):
                 is_match=bool(len(matches_objects) > 0),
                 matches=json.dumps(matches_objects)
             )
+
+    # update run query to be finished
+    Query.objects.filter(pk=query_id).update(query_is_finished=True)
