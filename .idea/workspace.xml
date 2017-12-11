@@ -142,9 +142,11 @@
           <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/admin.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="793">
-                  <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-                  <folding />
+                <state relative-caret-position="759">
+                  <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -743,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512964938040</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ADMIN FEATURE added query custom form to admin panel">
+      <created>1512965258983</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1512965258983</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -826,7 +835,8 @@
     <MESSAGE value="FEATURE added QuerySequence migration to git branch" />
     <MESSAGE value="BUGFIX when processing query, there was no HTTP response. added json response" />
     <MESSAGE value="FEATURE when done processing query, updates query row to be finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURE when done processing query, updates query row to be finished" />
+    <MESSAGE value="ADMIN FEATURE added query custom form to admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADMIN FEATURE added query custom form to admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1200,9 +1210,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="759">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

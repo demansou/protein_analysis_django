@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .forms import CollectionAdminForm
-from .models import Collection, Sequence, Motif, Query
+from .models import Collection, Sequence, Motif, Query, QuerySequence
 
 
 @admin.register(Collection)
@@ -77,5 +77,11 @@ class QueryAdmin(admin.ModelAdmin):
     ]
 
     readonly_fields = [
+        'collection_fk',
+        'motif_fk',
+        'min_num_motifs_per_sequence',
+        'max_char_distance_between_motifs',
         'query_is_finished',
     ]
+
+admin.register(QuerySequence)
