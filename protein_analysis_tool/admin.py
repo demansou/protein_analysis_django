@@ -61,4 +61,21 @@ class MotifAdmin(admin.ModelAdmin):
         }),
     ]
 
-admin.site.register(Query)
+
+@admin.register(Query)
+class QueryAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Query Information', {
+            'fields': [
+                'collection_fk',
+                'motif_fk',
+                'min_num_motifs_per_sequence',
+                'max_char_distance_between_motifs',
+                'query_is_finished'
+            ],
+        }),
+    ]
+
+    readonly_fields = [
+        'query_is_finished',
+    ]

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/admin.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,7 +127,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="759">
@@ -136,6 +135,16 @@
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/protein_analysis_tool/admin.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="793">
+                  <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -223,7 +232,6 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_collections.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/forms.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
         <option value="$PROJECT_DIR$/protein_analysis_django/settings.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/define_parameters.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
@@ -234,6 +242,7 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
       </list>
     </option>
   </component>
@@ -727,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512964613510</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="FEATURE when done processing query, updates query row to be finished">
+      <created>1512964938040</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1512964938040</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -809,7 +825,8 @@
     <MESSAGE value="BUGFIX in celery tasks, was trying to regex find in sequence object rather than sequence object string" />
     <MESSAGE value="FEATURE added QuerySequence migration to git branch" />
     <MESSAGE value="BUGFIX when processing query, there was no HTTP response. added json response" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX when processing query, there was no HTTP response. added json response" />
+    <MESSAGE value="FEATURE when done processing query, updates query row to be finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURE when done processing query, updates query row to be finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1057,16 +1074,6 @@
     </entry>
     <entry file="file://$USER_HOME$/venv_protein_analysis_django/Lib/site-packages/django/shortcuts.py" />
     <entry file="das://table:/70803d82/b483a05b-8aca-4944-8cd4-69b2cd4e43c2/main.protein_analysis_tool_collection" />
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -1188,6 +1195,14 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
