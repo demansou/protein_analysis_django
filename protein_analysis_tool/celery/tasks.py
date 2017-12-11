@@ -41,14 +41,14 @@ def task_process_query(query_id):
         matches_objects = []
 
         # iterate over each sequence in list of sequences
-        for match in motif_regex.finditer(sequence):
+        for match in motif_regex.finditer(sequence.sequence):
 
             # declare beginning of motif substring
             substr_start = int(match.start())
 
             # gather regex matches in substring
             substr_analysis = [m for m in motif_regex.finditer(
-                sequence[substr_start:substr_start + query.max_char_distance_between_motifs])]
+                sequence.sequence[substr_start:substr_start + query.max_char_distance_between_motifs])]
 
             if len(substr_analysis) >= query.min_num_motifs_per_sequence:
                 matches_objects.append(substr_analysis)
