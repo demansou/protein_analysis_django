@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^process_query/$', views.process_query_view, name='process-query'),
     url(r'^process_all_queries/$', views.process_all_queries_view, name='process-all-queries'),
     url(r'^all_queries/$', views.all_queries_view, name='all-queries'),
+    url(r'^results/<int:result_id>/$', views.view_query_result, name='view-single-result'),
 ]

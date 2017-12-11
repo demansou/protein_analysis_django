@@ -66,7 +66,24 @@ def process_single_query(request):
     return HttpResponseRedirect('/all_queries/')
 
 
-def process_all_queries(request):
+def process_all_queries():
+    """
+
+    :return:
+    """
+
+    # put all un-finished queries in a iterable list
+    query_list = Query.objects.filter(query_is_finished=False)
+
+    # iterate through each query in list
+    for query in query_list:
+        # push to celery queue
+        task_process_query(query.pk)
+
+    return HttpResponseRedirect('/all_queries/')
+
+
+def display_query_result(request):
     """
 
     :param request:
