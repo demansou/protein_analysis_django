@@ -84,4 +84,4 @@ class QueryAdmin(admin.ModelAdmin):
         'query_is_finished',
     ]
 
-admin.register(QuerySequence)
+admin.site.register(QuerySequence)
