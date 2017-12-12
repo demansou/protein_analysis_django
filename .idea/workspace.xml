@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/urls.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_query.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="process_query.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="119" lean-forward="false" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
+              <caret line="21" column="130" lean-forward="false" selection-start-line="21" selection-start-column="130" selection-end-line="21" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -115,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
       </list>
     </option>
   </component>
@@ -771,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513056656218</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;">
+      <created>1513056714294</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1513056714294</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -838,7 +845,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="collection sequence parsing working" />
     <MESSAGE value="collections form working. working on select motifs form" />
     <MESSAGE value="collection selection form working" />
     <MESSAGE value="collection selection form working, working on motif selection form" />
@@ -863,7 +869,8 @@
     <MESSAGE value="[BUGFIX] accidently cast process all queries button as view results button. fixed process all queries ubtton and moved to top of page" />
     <MESSAGE value="[PARTIAL FEATURE] after bugfix, added button for single results view" />
     <MESSAGE value="[PARTIAL FEATURE] updated url processing" />
-    <option name="LAST_COMMIT_MESSAGE" value="[PARTIAL FEATURE] updated url processing" />
+    <MESSAGE value="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1260,14 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="119" lean-forward="false" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1275,6 +1274,14 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="130" lean-forward="false" selection-start-line="21" selection-start-column="130" selection-end-line="21" selection-end-column="130" />
+          <folding />
         </state>
       </provider>
     </entry>

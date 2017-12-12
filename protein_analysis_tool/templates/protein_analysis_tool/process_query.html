@@ -19,7 +19,7 @@
             <div class="col-xs-6">
                     {% if query.query_is_finished %}
                         <div class="top30">
-                            <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:view-single-result" %}">View Results</a>
+                            <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:view-single-result/" query.pk %}">View Results</a>
                         </div>
                     {% else %}
                         <form method="post">
