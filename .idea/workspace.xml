@@ -73,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="130" lean-forward="false" selection-start-line="21" selection-start-column="130" selection-end-line="21" selection-end-column="130" />
+              <caret line="21" column="119" lean-forward="true" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -778,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513056714294</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[TRIAL] dynamic url in template">
+      <created>1513056956535</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1513056956535</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -845,7 +852,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="collections form working. working on select motifs form" />
     <MESSAGE value="collection selection form working" />
     <MESSAGE value="collection selection form working, working on motif selection form" />
     <MESSAGE value="updated views and models. migrated changes to database." />
@@ -870,7 +876,8 @@
     <MESSAGE value="[PARTIAL FEATURE] after bugfix, added button for single results view" />
     <MESSAGE value="[PARTIAL FEATURE] updated url processing" />
     <MESSAGE value="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;" />
+    <MESSAGE value="[TRIAL] dynamic url in template" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TRIAL] dynamic url in template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1280,7 +1287,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="130" lean-forward="false" selection-start-line="21" selection-start-column="130" selection-end-line="21" selection-end-column="130" />
+          <caret line="21" column="119" lean-forward="true" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
           <folding />
         </state>
       </provider>
