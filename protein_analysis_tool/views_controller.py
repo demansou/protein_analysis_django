@@ -326,3 +326,20 @@ def get_all_queries_and_render_all(request):
 
     # render process_query page with all queries
     return render(request, 'protein_analysis_tool/process_query.html', context=context)
+
+
+def get_selected_result_and_render(request, result_id):
+    """
+
+    :param request:
+    :param result_id:
+    :return:
+    """
+
+    result_list = []
+
+    context = {
+        'result_list': result_list,
+    }
+
+    return render(request, 'protein_analysis_tool/result_viewer.html', context=context)
