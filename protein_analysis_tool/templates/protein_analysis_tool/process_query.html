@@ -5,7 +5,7 @@
 {% block content %}
     <p class="lead">Collection/Motif combos </p>
     <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:process-all-queries" %}">Process All Queries</a>
-    <ul class="list-group">
+    <ul class="list-group top30">
         {% for query in query_list %}
             <div class="col-xs-6">
                 <li class="list-group-item">
@@ -19,7 +19,7 @@
             <div class="col-xs-6">
                     {% if query.query_is_finished %}
                         <div class="top30">
-                            <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:process-all-queries" %}">Process All Queries</a>
+                            <a class="btn btn-block btn-primary" href="{% url "protein_analysis_tool:view-single-result" %}">View Results</a>
                         </div>
                     {% else %}
                         <form method="post">
