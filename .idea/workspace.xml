@@ -118,8 +118,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -750,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513052970154</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="[PARTIAL FEATURE] updated url processing">
+      <created>1513056500307</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1513056500307</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -817,7 +824,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moved collection handling to admin side." />
     <MESSAGE value="collection sequence parsing working" />
     <MESSAGE value="collections form working. working on select motifs form" />
     <MESSAGE value="collection selection form working" />
@@ -842,7 +848,8 @@
     <MESSAGE value="[PARTIAL FEATURE] view results" />
     <MESSAGE value="[BUGFIX] accidently cast process all queries button as view results button. fixed process all queries ubtton and moved to top of page" />
     <MESSAGE value="[PARTIAL FEATURE] after bugfix, added button for single results view" />
-    <option name="LAST_COMMIT_MESSAGE" value="[PARTIAL FEATURE] after bugfix, added button for single results view" />
+    <MESSAGE value="[PARTIAL FEATURE] updated url processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="[PARTIAL FEATURE] updated url processing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,8 +1256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

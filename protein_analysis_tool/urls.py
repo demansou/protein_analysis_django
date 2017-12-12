@@ -19,7 +19,7 @@ urlpatterns = [
 """
 
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    path('/', views.IndexView.as_view(), name='index'),
     path('select_collections/', views.select_collections_view, name='select-collections'),
     path('select_motifs/', views.select_motifs_view, name='select-motifs'),
     path('define_parameters/', views.define_parameters_view, name='define-parameters'),
