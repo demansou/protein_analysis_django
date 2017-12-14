@@ -56,7 +56,7 @@ def process_result_dict(result_dict):
     :param result_dict:
     :return:
     """
-    result_dict['matches'] = json.loads(result_dict['matches'])
+    result_dict.matches = json.loads(result_dict.matches)
     return result_dict
 
 

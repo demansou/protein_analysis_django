@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[TEST] edited">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/models.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,8 +144,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="623">
-                  <caret line="355" column="54" lean-forward="false" selection-start-line="355" selection-start-column="54" selection-end-line="355" selection-end-column="54" />
+                <state relative-caret-position="680">
+                  <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -878,7 +877,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513220802688</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="[TEST] changed list comprehension in results querying to jsonify the matches">
+      <created>1513223055708</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1513223055708</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView">
@@ -945,7 +951,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BUGFIX QuerySequence unique_together incorrect reference to motif_fk replace with sequence_fk" />
     <MESSAGE value="BUGFIX in celery tasks, was trying to regex find in sequence object rather than sequence object string" />
     <MESSAGE value="FEATURE added QuerySequence migration to git branch" />
     <MESSAGE value="BUGFIX when processing query, there was no HTTP response. added json response" />
@@ -970,7 +975,8 @@
     <MESSAGE value="[TEST] Added columns and broke up results" />
     <MESSAGE value="[BUGFIX] Accidently added table header row with every result. Moved table header to top of table only displaying once+" />
     <MESSAGE value="[TEST] Changed result matches array display to count of matches. [FEATURE] Added button for view details for each result" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TEST] Changed result matches array display to count of matches. [FEATURE] Added button for view details for each result" />
+    <MESSAGE value="[TEST] changed list comprehension in results querying to jsonify the matches" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TEST] changed list comprehension in results querying to jsonify the matches" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1369,8 +1375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="355" column="54" lean-forward="false" selection-start-line="355" selection-start-column="54" selection-end-line="355" selection-end-column="54" />
+        <state relative-caret-position="680">
+          <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
