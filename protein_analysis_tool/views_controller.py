@@ -349,14 +349,14 @@ def get_selected_result_and_render(request, result_id):
     :return:
     """
 
-    # result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(
-    #     query_fk_id=result_id, is_match=True)]
-    # result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
+    # get results list and process matches to encode as json
+    result_list = [process_result_dict(query_sequence) for query_sequence
+                   in QuerySequence.objects.filter(query_fk_id=result_id)]
 
-    result_list = [process_result_dict(query_sequence) for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
-
+    # create context
     context = {
         'result_list': result_list,
     }
 
+    # return results page with list of results
     return render(request, 'protein_analysis_tool/result_viewer.html', context=context)

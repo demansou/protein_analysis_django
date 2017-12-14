@@ -4,15 +4,20 @@
 {% block title %}View Results{% endblock %}
 
 {% block content %}
+    <h1>{{ result_list }}</h1>
     <table class="table table-bordered table-responsive">
         <tr>
             <th>Sequence</th>
+            <th>Motif</th>
+            <th>Frequency</th>
             <th># Matches</th>
             <th>Detail View</th>
         </tr>
         {% for result in result_list %}
             <tr>
                 <td>{{ result.sequence_fk.sequence_id }}</td>
+                <td>{{ result.query_fk.motif_fk.motif }}</td>
+                <td>{{ result.query_fk.min_num_motifs_per_sequence }} / {{ result.query_fk.max_char_distance_between_motifs }}</td>
                 <td>{{ result.matches|length }}</td>
                 <td><a href="#" class="btn btn-block btn-default">View Details</a></td>
             </tr>

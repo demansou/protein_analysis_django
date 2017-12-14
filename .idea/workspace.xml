@@ -4,6 +4,7 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,8 +83,8 @@
           <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+                <state relative-caret-position="323">
+                  <caret line="19" column="123" lean-forward="false" selection-start-line="19" selection-start-column="123" selection-end-line="19" selection-end-column="123" />
                   <folding />
                 </state>
               </provider>
@@ -129,11 +130,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="708">
-                  <caret line="80" column="90" lean-forward="false" selection-start-line="80" selection-start-column="90" selection-end-line="80" selection-end-column="90" />
+                <state relative-caret-position="657">
+                  <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -141,11 +142,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+                <state relative-caret-position="572">
+                  <caret line="352" column="62" lean-forward="false" selection-start-line="352" selection-start-column="62" selection-end-line="352" selection-end-column="62" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -191,8 +192,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/models.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
       </list>
     </option>
@@ -898,7 +899,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513224416954</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="[BUGFIX] fixed template count">
+      <created>1513225370919</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1513225370919</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -965,7 +973,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FEATURE added QuerySequence migration to git branch" />
     <MESSAGE value="BUGFIX when processing query, there was no HTTP response. added json response" />
     <MESSAGE value="FEATURE when done processing query, updates query row to be finished" />
     <MESSAGE value="ADMIN FEATURE added query custom form to admin panel" />
@@ -990,7 +997,8 @@
     <MESSAGE value="[TEST] Changed result matches array display to count of matches. [FEATURE] Added button for view details for each result" />
     <MESSAGE value="[TEST] changed list comprehension in results querying to jsonify the matches" />
     <MESSAGE value="[BUGFIX] accidently treated the QuerySequence object like a dict instaed of object" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] accidently treated the QuerySequence object like a dict instaed of object" />
+    <MESSAGE value="[BUGFIX] fixed template count" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] fixed template count" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1369,30 +1377,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="80" column="90" lean-forward="false" selection-start-line="80" selection-start-column="90" selection-end-line="80" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state relative-caret-position="572">
+          <caret line="352" column="62" lean-forward="false" selection-start-line="352" selection-start-column="62" selection-end-line="352" selection-end-column="62" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="323">
+          <caret line="19" column="123" lean-forward="false" selection-start-line="19" selection-start-column="123" selection-end-line="19" selection-end-column="123" />
           <folding />
         </state>
       </provider>
