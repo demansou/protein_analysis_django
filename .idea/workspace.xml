@@ -140,10 +140,10 @@
       <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="561">
+              <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
               <folding>
-                <element signature="e#1182#1189#1#HTML" expanded="true" />
+                <element signature="e#1241#1248#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -598,13 +598,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00001" summary="moved collection handling to admin side.">
-      <created>1500789492146</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1500789492146</updated>
-    </task>
     <task id="LOCAL-00002" summary="collection sequence parsing working">
       <created>1500864739029</created>
       <option name="number" value="00002" />
@@ -941,7 +934,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513230032555</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="[BUGFIX] Removed close class from view details butotn">
+      <created>1513230159280</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1513230159280</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1008,7 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEATURE] added button in view all queries to process all queries action&#10;[FEATURE] added url for process all queries action&#10;[FEATURE] added HTTP processor for processing all queries&#10;[FEATURE] added logic holder (incomplete) for processing all queries" />
     <MESSAGE value="[BUGFIX] typo in url parameter for process all queries" />
     <MESSAGE value="[PARTIAL FEATURE] view results" />
     <MESSAGE value="[BUGFIX] accidently cast process all queries button as view results button. fixed process all queries ubtton and moved to top of page" />
@@ -1033,7 +1032,8 @@
     <MESSAGE value="[BUGFIX] accidently added process_all_queries_view controller to HTTP post instead of HTTP get" />
     <MESSAGE value="[BUGFIX] fixed all_queries/ url" />
     <MESSAGE value="[TEST] Added modals" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TEST] Added modals" />
+    <MESSAGE value="[BUGFIX] Removed close class from view details butotn" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] Removed close class from view details butotn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1434,10 +1434,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="561">
+          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding>
-            <element signature="e#1182#1189#1#HTML" expanded="true" />
+            <element signature="e#1241#1248#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
