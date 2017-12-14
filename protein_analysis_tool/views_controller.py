@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from .forms import DefineParametersForm
-from .models import Collection, Motif, Query
+from .models import Collection, Motif, Query, QuerySequence
 from .celery.tasks import task_process_query
 
 
@@ -336,7 +336,7 @@ def get_selected_result_and_render(request, result_id):
     :return:
     """
 
-    result_list = []
+    result_list = [query_sequence for query_sequence in QuerySequence.objects.get(query_fk_id=result_id)]
 
     context = {
         'result_list': result_list,
