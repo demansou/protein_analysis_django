@@ -16,7 +16,7 @@
             <tr>
                 <td>{{ result.sequence_fk.sequence_id }}</td>
                 <td>{{ result.query_fk.motif_fk.motif }}</td>
-                <td>{{ result.query_fk.min_num_motifs_per_sequence }} / {{ result.query_fk.max_char_distance_between_motifs }}</td>
+                <td>{{ result.query_fk.min_num_motifs_per_sequence }} matches per {{ result.query_fk.max_char_distance_between_motifs }} AA</td>
                 <td>{{ result.matches|length }}</td>
                 <td><a href="#" class="btn btn-block btn-default">View Details</a></td>
             </tr>
