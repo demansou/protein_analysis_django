@@ -19,7 +19,7 @@
                 <td>{{ result.query_fk.min_num_motifs_per_sequence }} matches per {{ result.query_fk.max_char_distance_between_motifs }} AA</td>
                 <td>{{ result.matches|length }}</td>
                 <td>
-                    <button type="button" class="close btn btn-block btn-default" data-toggle="modal"
+                    <button type="button" class="btn btn-block btn-default" data-toggle="modal"
                             data-target="#popin{{ result.sequence_fk.pk }}">View Details</button>
 
                     <div id="popin{{ result.sequence_fk.pk }}" class="modal fade" role="dialog">
