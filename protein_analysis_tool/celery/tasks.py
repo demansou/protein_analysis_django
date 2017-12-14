@@ -57,7 +57,8 @@ def task_process_query(query_id):
             # attempt to add data to already existing querysequence row
             query_sequence = QuerySequence.objects.get(query_fk=query, sequence_fk=sequence)
             query_sequence.is_match = bool(len(matches_objects) > 0)
-            query_sequence.set_matches(matches_objects)
+            query_sequence.matches = json.dumps(matches_objects)
+            query_sequence.save()
 
         except QuerySequence.DoesNotExist:
             # create new querysequence row if match does not already exist
