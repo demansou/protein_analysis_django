@@ -79,9 +79,3 @@ class QuerySequence(models.Model):
 
     def __str__(self):
         return '{motif} -> {matches}'.format(motif=self.sequence_fk, matches=self.matches)
-
-    def set_matches(self, matches_list):
-        self.matches = json.dumps(matches_list)
-
-    def get_matches(self):
-        return json.loads(self.matches)

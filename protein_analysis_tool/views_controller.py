@@ -6,6 +6,8 @@ from .forms import DefineParametersForm
 from .models import Collection, Motif, Query, QuerySequence
 from .celery.tasks import task_process_query
 
+import json
+
 
 def get_form_data_from_http_post(request, key):
     """
@@ -46,6 +48,16 @@ def get_session_data(request, key):
     :return:
     """
     return request.session.get(key, False)
+
+
+def process_result_dict(result_dict):
+    """
+
+    :param result_dict:
+    :return:
+    """
+    result_dict['matches'] = json.loads(result_dict['matches'])
+    return result_dict
 
 
 def process_single_query(request):
@@ -89,6 +101,7 @@ def display_query_result(request):
     :param request:
     :return:
     """
+    pass
 
 
 #################
@@ -338,7 +351,9 @@ def get_selected_result_and_render(request, result_id):
 
     # result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(
     #     query_fk_id=result_id, is_match=True)]
-    result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
+    # result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
+
+    result_list = [process_result_dict(query_sequence) for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
 
     context = {
         'result_list': result_list,
