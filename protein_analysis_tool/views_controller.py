@@ -336,6 +336,8 @@ def get_selected_result_and_render(request, result_id):
     :return:
     """
 
+    # result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(
+    #     query_fk_id=result_id, is_match=True)]
     result_list = [query_sequence for query_sequence in QuerySequence.objects.filter(query_fk_id=result_id)]
 
     context = {

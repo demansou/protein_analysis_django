@@ -7,16 +7,14 @@
     <table class="table table-bordered table-responsive">
         <tr>
             <th>Sequence</th>
-            <th>Is Match?</th>
-            <th>Matches</th>
-            <th></th>
+            <th># Matches</th>
+            <th>Detail View</th>
         </tr>
         {% for result in result_list %}
             <tr>
                 <td>{{ result.sequence_fk.sequence_id }}</td>
-                <td>{{ result.is_match }}</td>
-                <td>{{ result.matches }}</td>
-                <td></td>
+                <td>{{ result.matches.count }}</td>
+                <td><a href="#" class="btn btn-block btn-default">View Details</a></td>
             </tr>
         {% endfor %}
     </table>
