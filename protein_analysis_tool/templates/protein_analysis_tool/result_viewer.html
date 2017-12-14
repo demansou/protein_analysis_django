@@ -5,13 +5,13 @@
 
 {% block content %}
     <table class="table table-bordered table-responsive">
+        <tr>
+            <th>Sequence</th>
+            <th>Is Match?</th>
+            <th>Matches</th>
+            <th></th>
+        </tr>
         {% for result in result_list %}
-            <tr>
-                <th>Sequence</th>
-                <th>Is Match?</th>
-                <th>Matches</th>
-                <th></th>
-            </tr>
             <tr>
                 <td>{{ result.sequence_fk.sequence_id }}</td>
                 <td>{{ result.is_match }}</td>
