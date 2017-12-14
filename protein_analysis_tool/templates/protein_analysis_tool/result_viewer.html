@@ -13,7 +13,7 @@
         {% for result in result_list %}
             <tr>
                 <td>{{ result.sequence_fk.sequence_id }}</td>
-                <td>{{ result.matches.count }}</td>
+                <td>{{ result.matches|length }}</td>
                 <td><a href="#" class="btn btn-block btn-default">View Details</a></td>
             </tr>
         {% endfor %}
