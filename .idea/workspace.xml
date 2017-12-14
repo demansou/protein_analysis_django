@@ -145,7 +145,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="623">
-                  <caret line="338" column="103" lean-forward="false" selection-start-line="338" selection-start-column="103" selection-end-line="338" selection-end-column="103" />
+                  <caret line="338" column="84" lean-forward="false" selection-start-line="338" selection-start-column="84" selection-end-line="338" selection-end-column="84" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -828,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513058845309</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[FEATURE] Added query to retrieve results for a specific query to view_query_result view">
+      <created>1513219642673</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1513219642673</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -895,7 +902,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="collection selection form working, working on motif selection form" />
     <MESSAGE value="updated views and models. migrated changes to database." />
     <MESSAGE value="updated commenting in views_controller.py" />
     <MESSAGE value="created celery task queue method for analyzing sequences. added new model QuerySequence which stores results of query analysis." />
@@ -920,7 +926,8 @@
     <MESSAGE value="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;" />
     <MESSAGE value="[TRIAL] dynamic url in template" />
     <MESSAGE value="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results" />
+    <MESSAGE value="[FEATURE] Added query to retrieve results for a specific query to view_query_result view" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Added query to retrieve results for a specific query to view_query_result view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1327,7 +1334,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
-          <caret line="338" column="103" lean-forward="false" selection-start-line="338" selection-start-column="103" selection-end-line="338" selection-end-column="103" />
+          <caret line="338" column="84" lean-forward="false" selection-start-line="338" selection-start-column="84" selection-end-line="338" selection-end-column="84" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
