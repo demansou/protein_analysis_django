@@ -4,9 +4,13 @@
 {% block title %}View Results{% endblock %}
 
 {% block content %}
-    {% for result in result_list %}
-        {{ result }}
-    {% endfor %}
+    <table class="table table-bordered table-responsive">
+        {% for result in result_list %}
+            <tr>
+                <td>{{ result }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
 
 {% block javascript %}
