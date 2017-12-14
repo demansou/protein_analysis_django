@@ -4,7 +4,9 @@
 {% block title %}View Results{% endblock %}
 
 {% block content %}
-
+    {% for result in result_list %}
+        {{ result }}
+    {% endfor %}
 {% endblock %}
 
 {% block javascript %}
