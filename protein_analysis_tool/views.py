@@ -49,9 +49,9 @@ def all_queries_view(request):
 
 def process_all_queries_view(request):
     if request.POST:
-        return process_all_queries()
+        pass
 
-    pass
+    return process_all_queries()
 
 
 def view_query_result(request, result_id):
