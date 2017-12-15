@@ -710,13 +710,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00010" summary="added motif analysis functionality to celery task">
-      <created>1512625490964</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1512625490964</updated>
-    </task>
     <task id="LOCAL-00011" summary="BUGFIX QuerySequence unique_together dict to tuple">
       <created>1512961321924</created>
       <option name="number" value="00011" />
@@ -1053,7 +1046,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513309028259</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="[TEST] testing how to implement mark.js">
+      <created>1513309539322</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1513309539322</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1120,7 +1120,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results" />
     <MESSAGE value="[FEATURE] Added query to retrieve results for a specific query to view_query_result view" />
     <MESSAGE value="[BUGFIX] in newly added query from last commit, changed get() to filter() becvause am looking for more than one result" />
     <MESSAGE value="[TEST] Added template printout of results from query view" />
@@ -1145,7 +1144,8 @@
     <MESSAGE value="[BUGFIX] loaded static to result viewer template" />
     <MESSAGE value="[BUGFIX] accidently declared class twice in sequence table in modal" />
     <MESSAGE value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
+    <MESSAGE value="[TEST] testing how to implement mark.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TEST] testing how to implement mark.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

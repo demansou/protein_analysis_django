@@ -52,7 +52,7 @@
     <script src="{% static 'protein_analysis_tool/js/jquery.mark.min.js' %}"></script>
     <script>
         $(document).ready(function(){
-            $(".sequence-view").markRegExp({{ motif }});
+            $(".sequence-view").markRegExp(/{{ motif }}/gmi, {className: "match"});
         });
 
     </script>
