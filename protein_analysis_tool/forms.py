@@ -16,6 +16,8 @@ class CollectionAdminForm(forms.ModelForm):
         # Creates object with name and file.
         collection = super(CollectionAdminForm, self).save(commit=False)
 
+        assert(collection.pk is None)
+
         if not collection.pk:
             # Set fields.
             collection.pub_date = timezone.now()
