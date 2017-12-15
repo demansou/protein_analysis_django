@@ -353,9 +353,12 @@ def get_selected_result_and_render(request, result_id):
     result_list = [process_result_dict(query_sequence) for query_sequence
                    in QuerySequence.objects.filter(query_fk_id=result_id)]
 
+    motif = Query.objects.get(pk=result_id).motif_fk.motif
+
     # create context
     context = {
         'result_list': result_list,
+        'motif': motif,
     }
 
     # return results page with list of results

@@ -30,17 +30,15 @@
                                     <h4 class="modal-title">{{ result.sequence_fk.sequence_id }}</h4>
                                 </div>
                                 <div class="modal-body">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            {{ result.sequence_fk.sequence }}
-                                        </td>
-                                    </tr>
-                                </table>
+                                    <table class="table table-responsive">
+                                        <tr>
+                                            <td class="sequence-view">
+                                                {{ result.sequence_fk.sequence }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </td>
@@ -50,4 +48,8 @@
 {% endblock %}
 
 {% block javascript %}
+    <script src="{% static 'protein_analysis_tool/js/jquery.mark.min.js' %}"></script>
+    <script>
+        $(".sequence-view").mark({{ motif }})
+    </script>
 {% endblock %}
