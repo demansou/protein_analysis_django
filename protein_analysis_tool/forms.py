@@ -5,6 +5,8 @@ from django.utils import timezone
 from .custom import large_file_hasher
 from .models import Collection, Motif, Sequence
 
+from django.core.files.storage import default_storage
+
 
 class CollectionAdminForm(forms.ModelForm):
     class Meta:
@@ -16,7 +18,8 @@ class CollectionAdminForm(forms.ModelForm):
         # Creates object with name and file.
         collection = super(CollectionAdminForm, self).save(commit=False)
 
-        assert(collection.pk is None)
+        if not default_storage.exists(collection.collection_file.path):
+            default_storage.save(collection.collection_file.path, collection.collection_file)
 
         if not collection.pk:
             # Set fields.

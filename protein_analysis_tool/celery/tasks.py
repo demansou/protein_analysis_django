@@ -38,10 +38,11 @@ def task_process_query(query_id):
 
     # perform analysis on each sequence in collection
     for sequence in sequence_list:
-        matches_objects = []
+        regex_match_list = []
 
         # iterate over each sequence in list of sequences
         for match in motif_regex.finditer(sequence.sequence):
+            substr_match_list = []
 
             # declare beginning of motif substring
             substr_start = int(match.start())
@@ -50,14 +51,27 @@ def task_process_query(query_id):
             substr_analysis = [m for m in motif_regex.finditer(
                 sequence.sequence[substr_start:substr_start + query.max_char_distance_between_motifs])]
 
+            # check that regex matches at least equal the minimum number of hits in the substring
             if len(substr_analysis) >= query.min_num_motifs_per_sequence:
-                matches_objects.append(substr_analysis)
+                # if there are at least the minimum number of regex hits in the substring,
+                # save each match as a dict
+                for substr_match in substr_analysis:
+
+                    substr = {
+                        'start': substr_match.start(),
+                        'group': substr_match.group(),
+                        'span': (substr_start + substr_match.span()[0], substr_start + substr_match.span()[1])
+                    }
+
+                    substr_match_list.append(substr)
+
+            regex_match_list.append(substr_match_list)
 
         try:
             # attempt to add data to already existing querysequence row
             query_sequence = QuerySequence.objects.get(query_fk=query, sequence_fk=sequence)
-            query_sequence.is_match = bool(len(matches_objects) > 0)
-            query_sequence.matches = json.dumps(matches_objects)
+            query_sequence.is_match = bool(len(regex_match_list) > 0)
+            query_sequence.matches = json.dumps(regex_match_list)
             query_sequence.save()
 
         except QuerySequence.DoesNotExist:
@@ -65,8 +79,8 @@ def task_process_query(query_id):
             QuerySequence.objects.create(
                 query_fk=query,
                 sequence_fk=sequence,
-                is_match=bool(len(matches_objects) > 0),
-                matches=json.dumps(matches_objects)
+                is_match=bool(len(regex_match_list) > 0),
+                matches=json.dumps(regex_match_list)
             )
 
     # update run query to be finished
