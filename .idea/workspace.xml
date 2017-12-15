@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[BUGFIX] forgot to add jquery.mark.js and">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/js/jquery.mark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/js/jquery.mark.min.js" />
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -141,8 +140,8 @@
       <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+            <state relative-caret-position="699">
+              <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -711,13 +710,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00009" summary="building out functionality for sequence analysis celery task">
-      <created>1512541058863</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1512541058863</updated>
-    </task>
     <task id="LOCAL-00010" summary="added motif analysis functionality to celery task">
       <created>1512625490964</created>
       <option name="number" value="00010" />
@@ -1054,7 +1046,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513308693447</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo">
+      <created>1513309028259</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1513309028259</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1068,8 +1067,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="30" width="1294" height="1417" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3517018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3517018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32320872" sideWeight="0.51620746" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1120,7 +1120,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TRIAL] dynamic url in template" />
     <MESSAGE value="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results" />
     <MESSAGE value="[FEATURE] Added query to retrieve results for a specific query to view_query_result view" />
     <MESSAGE value="[BUGFIX] in newly added query from last commit, changed get() to filter() becvause am looking for more than one result" />
@@ -1145,7 +1144,8 @@
     <MESSAGE value="[FEATURE] added text highlighting with mark.js and added motif to context for result view" />
     <MESSAGE value="[BUGFIX] loaded static to result viewer template" />
     <MESSAGE value="[BUGFIX] accidently declared class twice in sequence table in modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] accidently declared class twice in sequence table in modal" />
+    <MESSAGE value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1543,8 +1543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        <state relative-caret-position="699">
+          <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding />
         </state>
       </provider>

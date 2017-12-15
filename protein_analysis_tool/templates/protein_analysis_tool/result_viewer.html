@@ -51,6 +51,9 @@
 {% block javascript %}
     <script src="{% static 'protein_analysis_tool/js/jquery.mark.min.js' %}"></script>
     <script>
-        $(".sequence-view").mark({{ motif }})
+        $(document).ready(function(){
+            $(".sequence-view").markRegExp({{ motif }});
+        });
+
     </script>
 {% endblock %}
