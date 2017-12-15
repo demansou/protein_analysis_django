@@ -710,13 +710,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00012" summary="BUGFIX QuerySequence unique_together incorrect reference to motif_fk replace with sequence_fk">
-      <created>1512961387678</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1512961387678</updated>
-    </task>
     <task id="LOCAL-00013" summary="BUGFIX in celery tasks, was trying to regex find in sequence object rather than sequence object string">
       <created>1512961656303</created>
       <option name="number" value="00013" />
@@ -1053,7 +1046,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513309758986</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="[TEST] markjs working. updating highlight color">
+      <created>1513309919167</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1513309919167</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1120,7 +1120,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEATURE] Added query to retrieve results for a specific query to view_query_result view" />
     <MESSAGE value="[BUGFIX] in newly added query from last commit, changed get() to filter() becvause am looking for more than one result" />
     <MESSAGE value="[TEST] Added template printout of results from query view" />
     <MESSAGE value="[TEST] Added table style to previous commit's output" />
@@ -1145,7 +1144,8 @@
     <MESSAGE value="[BUGFIX] accidently declared class twice in sequence table in modal" />
     <MESSAGE value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
     <MESSAGE value="[TEST] testing how to implement mark.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TEST] testing how to implement mark.js" />
+    <MESSAGE value="[TEST] markjs working. updating highlight color" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TEST] markjs working. updating highlight color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
