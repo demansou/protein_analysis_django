@@ -9,3 +9,8 @@
 .is-breakable {
     word-break: break-all;
 }
+
+mark{
+    background: yellow;
+    color: black;
+}
