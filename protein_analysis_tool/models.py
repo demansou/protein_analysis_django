@@ -1,5 +1,9 @@
 from django.db import models
-import json
+from django.core.files.storage import FileSystemStorage
+
+from protein_analysis_django.settings import MEDIA_ROOT
+
+fs = FileSystemStorage(location=MEDIA_ROOT)
 
 
 class Collection(models.Model):
@@ -7,7 +11,7 @@ class Collection(models.Model):
     Collection name information and file storage.
     """
     collection_name = models.CharField(max_length=128)
-    collection_file = models.FileField()
+    collection_file = models.FileField(storage=fs)
     collection_hash = models.CharField(max_length=16, unique=True)
     pub_date = models.DateTimeField('Date Published')
     collection_parsed = models.BooleanField(default=False)
