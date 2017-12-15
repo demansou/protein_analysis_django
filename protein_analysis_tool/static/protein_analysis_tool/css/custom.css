@@ -5,3 +5,7 @@
 .top30 {
     margin-top: 30px;
 }
+
+.is-breakable {
+    word-break: break-all;
+}
