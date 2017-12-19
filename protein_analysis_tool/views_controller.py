@@ -1,12 +1,12 @@
+import json
+
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
+from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from .forms import DefineParametersForm
 from .models import Collection, Motif, Query, QuerySequence
-from .celery.tasks import task_process_query
-
-import json
 
 
 def get_form_data_from_http_post(request, key):
@@ -73,7 +73,7 @@ def process_single_query(request):
         pass
 
     # push to celery queue
-    task_process_query(query_id)
+    task_process_query.delay(query_id)
 
     return HttpResponseRedirect('/all_queries/')
 
@@ -83,14 +83,7 @@ def process_all_queries():
 
     :return:
     """
-
-    # put all un-finished queries in a iterable list
-    query_list = Query.objects.filter(query_is_finished=False)
-
-    # iterate through each query in list
-    for query in query_list:
-        # push to celery queue
-        task_process_query(query.pk)
+    task_process_all_queries.delay()
 
     return HttpResponseRedirect('/all_queries/')
 

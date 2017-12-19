@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'protein_analysis_tool',
     'widget_tweaks',
+    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,5 @@ DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 MEDIA_URL = '/files/'
+
+CELERY_RESULT_BACKEND = 'django-db'

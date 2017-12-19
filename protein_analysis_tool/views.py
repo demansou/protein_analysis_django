@@ -51,7 +51,7 @@ def process_all_queries_view(request):
     if request.POST:
         pass
 
-    return process_all_queries()
+    return process_all_queries(request)
 
 
 def view_query_result(request, result_id):
