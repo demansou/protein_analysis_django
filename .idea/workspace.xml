@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_django/settings.py" afterPath="$PROJECT_DIR$/protein_analysis_django/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein_analysis_tool/tasks.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,13 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-491">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +85,8 @@
       <file leaf-file-name="celery.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_django/celery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -130,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_django/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="59" lean-forward="true" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+            <state relative-caret-position="459">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -205,8 +205,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" />
         <option value="$PROJECT_DIR$/protein_analysis_django/__init__.py" />
         <option value="$PROJECT_DIR$/protein_analysis_django/celery.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
         <option value="$PROJECT_DIR$/protein_analysis_django/settings.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
       </list>
     </option>
   </component>
@@ -601,13 +601,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00018" summary="ADMIN FEATURE added querysequence panel to admin">
-      <created>1512965370020</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1512965370020</updated>
-    </task>
     <task id="LOCAL-00019" summary="BUGFIX syntax for registering QuerySequence">
       <created>1512965510829</created>
       <option name="number" value="00019" />
@@ -944,7 +937,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513642596359</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="[CHANGES YO] Celery module and settings.py data">
+      <created>1513643241749</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1513643241749</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1011,7 +1011,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TEST] Added columns and broke up results" />
     <MESSAGE value="[BUGFIX] Accidently added table header row with every result. Moved table header to top of table only displaying once+" />
     <MESSAGE value="[TEST] Changed result matches array display to count of matches. [FEATURE] Added button for view details for each result" />
     <MESSAGE value="[TEST] changed list comprehension in results querying to jsonify the matches" />
@@ -1036,7 +1035,8 @@
     <MESSAGE value="[TEST] file storage" />
     <MESSAGE value="[BUGFIX] check for file stored on system and save if not." />
     <MESSAGE value="[CHANGES YO] Celery module" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CHANGES YO] Celery module" />
+    <MESSAGE value="[CHANGES YO] Celery module and settings.py data" />
+    <option name="LAST_COMMIT_MESSAGE" value="[CHANGES YO] Celery module and settings.py data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1389,26 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_django/celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_django/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1421,9 +1401,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_django/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="59" lean-forward="true" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+        <state relative-caret-position="459">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_django/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

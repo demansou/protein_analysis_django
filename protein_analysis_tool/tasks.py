@@ -1,3 +1,4 @@
+from __future__ import absolute_import, unicode_literals
 from celery import shared_task
 from protein_analysis_tool.models import Query, Sequence, QuerySequence
 import json
