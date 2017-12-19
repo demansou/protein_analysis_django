@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'protein_analysis_tool',
     'widget_tweaks',
-    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -136,4 +135,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 MEDIA_URL = '/files/'
 
-CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BROKER_URL = 'ampq://guest:guest@localhost'
