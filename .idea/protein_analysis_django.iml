@@ -7,12 +7,13 @@
         <option name="settingsModule" value="protein_analysis_django/settings.py" />
         <option name="manageScript" value="$MODULE_DIR$/manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
+        <option name="doNotUseTestRunner" value="false" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.1 virtualenv at C:\Users\deman\protein_analysis_django" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at C:\Users\deman\OneDrive\PersonalProjects\VirtualEnvironments\py_3_6_3_venv_django" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

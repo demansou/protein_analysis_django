@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,4 +134,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 MEDIA_URL = '/files/'
 
-CELERY_BROKER_URL = 'ampq://guest:guest@localhost'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
