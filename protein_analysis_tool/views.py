@@ -1,5 +1,3 @@
-from django.views import generic
-
 from .views_controller import update_request_and_redirect_to_motif_selection,\
     get_list_of_objects_and_render_collection_form, update_request_and_redirect_to_define_parameters,\
     get_list_of_motifs_and_render_motif_form, update_request_and_redirect_to_process_query,\
