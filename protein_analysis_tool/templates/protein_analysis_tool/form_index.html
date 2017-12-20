@@ -20,7 +20,7 @@
                 </div>
                 <div class="tab-pane" id="select_curated_collections">
                     <div class="row">
-                        <div class="form-group">
+                        <div class="form-group col-xs-12">
                             <h4>Select collections of amino acid sequences.</h4>
                             {% for collection in collection_list %}
                                 <label class="checkbox-inline">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-xs-12">
                     <h4>Select motifs to search for in pasted sequences.</h4>
                     {% for motif in motif_list %}
                         <label class="checkbox-inline"><input type="checkbox" value="{{ motif.pk }}" name="selected_motifs[]">{{ motif.motif }}</label>
