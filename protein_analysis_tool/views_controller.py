@@ -263,7 +263,7 @@ def index_form_process_controller(request):
 
             file_name = temp_file.name
 
-            new_collection.collection_file.save(file_name, content, save=True)
+            new_collection.collection_file.save(os.path.basename(file_name), content, save=True)
 
             collection_list.append(new_collection)
 
