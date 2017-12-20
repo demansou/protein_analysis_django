@@ -215,9 +215,11 @@ def index_form_view_controller(request):
     :return:
     """
 
+    collection_list = get_list_or_404(Collection)
     motif_list = get_list_or_404(Motif)
 
     context = {
+        'collection_list': collection_list,
         'motif_list': motif_list,
     }
 
