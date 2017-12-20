@@ -76,7 +76,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="677">
-                  <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+                  <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
                   <folding>
                     <element signature="e#124#145#0#HTML" expanded="true" />
                     <element signature="e#752#776#0#HTML" expanded="true" />
@@ -902,13 +902,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00032" summary="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results">
-      <created>1513058845309</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1513058845309</updated>
-    </task>
     <task id="LOCAL-00033" summary="[FEATURE] Added query to retrieve results for a specific query to view_query_result view">
       <created>1513219642673</created>
       <option name="number" value="00033" />
@@ -1245,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513746936304</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="[CHANGES] index view changed to form">
+      <created>1513746981667</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1513746981667</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1727,7 +1727,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="677">
-          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
           <folding>
             <element signature="e#124#145#0#HTML" expanded="true" />
             <element signature="e#752#776#0#HTML" expanded="true" />
