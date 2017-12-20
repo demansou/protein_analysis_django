@@ -5,7 +5,7 @@ from .views_controller import update_request_and_redirect_to_motif_selection,\
     get_list_of_motifs_and_render_motif_form, update_request_and_redirect_to_process_query,\
     get_selected_collections_and_motifs_and_render_parameters_form,\
     get_selected_queries_and_render_process_query_http_get, get_all_queries_and_render_all,\
-    process_single_query, process_all_queries, get_selected_result_and_render
+    process_single_query, process_all_queries, get_selected_result_and_render, index_form_view_controller
 
 
 def index_form_view(request):
