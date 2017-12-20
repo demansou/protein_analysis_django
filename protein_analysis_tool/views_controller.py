@@ -10,6 +10,7 @@ from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
+from .custom import large_file_hasher
 from .forms import DefineParametersForm
 from .models import Collection, Motif, Query, QuerySequence
 
@@ -264,6 +265,8 @@ def index_form_process_controller(request):
             file_name = temp_file.name
 
             new_collection.collection_file.save(os.path.basename(file_name), content, save=True)
+            new_collection.collection_hash = large_file_hasher(file_name)
+            new_collection.save()
 
             collection_list.append(new_collection)
 
