@@ -256,15 +256,16 @@ def index_form_process_controller(request):
 
             temp_file = tempfile.NamedTemporaryFile(
                 suffix='.fasta',
+                prefix='',
+                dir=MEDIA_ROOT
             )
 
             file_name = temp_file.name
 
             new_collection.collection_file.save(file_name, content, save=True)
 
-            new_collection.save()
-
             collection_list.append(new_collection)
+
         except IntegrityError:
             pass
 
