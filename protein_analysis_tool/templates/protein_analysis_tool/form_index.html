@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group">
-                <h3>Select motifs to search for in pasted sequences.</h3>
+                <h4>Select motifs to search for in pasted sequences.</h4>
                 {% for motif in motif_list %}
                     <label class="checkbox-inline"><input type="checkbox" value="{{ motif.pk }}" name="selected_motifs[]">{{ motif.motif }}</label>
                 {% endfor %}
