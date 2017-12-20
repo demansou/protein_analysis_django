@@ -244,9 +244,9 @@ def index_form_process_controller(request):
         if len(sequence_data_title) == 0:
             return HttpResponseRedirect('/')
 
-        content = ContentFile(str(sequence_data))
-
         try:
+            content = ContentFile(str(sequence_data))
+
             new_collection = Collection.objects.create(
                 collection_name=str(sequence_data_title),
                 pub_date=timezone.now(),
@@ -259,8 +259,7 @@ def index_form_process_controller(request):
                 dir=MEDIA_ROOT
             )
 
-            new_collection.collection_file.save(
-                file_name.name, content=content)
+            new_collection.collection_file.save(file_name.name, content, save=True)
 
             new_collection.save()
 
