@@ -5,6 +5,7 @@
 {% block content %}
     <div class="bg-info" style="padding:15px;">
         <form method="post">
+            {% csrf_token %}
             <ul class="nav nav-tabs">
                 <li><a href="#copy_paste_fasta" data-toggle="tab">Copy/Paste FASTA</a></li>
                 <li><a href="#select_curated_collections" data-toggle="tab">Select Curated Collection(s)</a></li>
@@ -12,17 +13,17 @@
             <div class="tab-content" id="tabs">
                 <div class="tab-pane" id="copy_paste_fasta">
                     <div class="form-group">
-                        <h3>Paste FASTA-format amino acid sequences (20,000 character max).</h3>
+                        <h4>Paste FASTA-format amino acid sequences (20,000 character max).</h4>
                         <textarea class="form-control" name="sequence_data" rows="10" style="resize:vertical;" maxlength="20000" wrap="soft" required></textarea>
                     </div>
                 </div>
                 <div class="tab-pane" id="select_curated_collections">
                     <div class="form-group">
-                        <h3>Select collections of amino acid sequences.</h3>
+                        <h4>Select collections of amino acid sequences.</h4>
                         {% for collection in collection_list %}
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="{{ collection.pk }}" name="selected_collections[]">
-                                {{ collection.collection_name }} <span>{{ collection.sequence_count }}</span>
+                                {{ collection.collection_name }} <span class="">{{ collection.sequence_count }}</span>
                             </label>
                         {% endfor %}
                     </div>
@@ -37,11 +38,11 @@
             </div>
             <div class="row">
                 <div class="col-xs-6">
-                    <h3>Minimum motif match density.</h3>
+                    <h4>Minimum motif match density.</h4>
                     <input type="number" class="form-control" name="min_num_motifs" placeholder="3" required>
                 </div>
                 <div class="col-xs-6">
-                    <h3>Maximum range to group motif matches.</h3>
+                    <h4>Maximum range to group motif matches.</h4>
                     <input type="number" class="form-control" name="max_motif_range" placeholder="100" required>
                 </div>
             </div>
