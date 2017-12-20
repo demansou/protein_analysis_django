@@ -6,8 +6,8 @@
     <div class="bg-info" style="padding:15px;">
         <form method="post">
             <ul class="nav nav-tabs">
-                <li><a id="copy_paste_fasta_tab">Copy/Paste FASTA</a></li>
-                <li><a id="select_curated_collections_tab">Select Curated Collection(s)</a></li>
+                <li id="copy_paste_fasta_tab"><a href="#" >Copy/Paste FASTA</a></li>
+                <li id="select_curated_collections_tab"><a href="#">Select Curated Collection(s)</a></li>
             </ul>
             <input type="hidden" name="using_copy_paste" id="using_copy_paste" value=true>
             <div class="form-group" id="copy_paste_fasta">
@@ -48,8 +48,9 @@
     <script>
     $(document).ready(function(){
         $("#copy_paste_fasta_tab").addClass('active');
+    });
 
-        $("#copy_paste_fasta_tab").click(function(){
+    $("#copy_paste_fasta_tab").click(function(){
             $("#select_curated_collections_tab").removeClass('active');
             $(this).addClass('active');
         }).done(function(){
@@ -64,6 +65,5 @@
             $("#copy_paste_fasta").hide();
             $("#select_curated_collections").show();
         });
-    })
     </script>
 {% endblock %}
