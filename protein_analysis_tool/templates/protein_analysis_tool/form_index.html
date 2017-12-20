@@ -47,15 +47,17 @@
 {% block javascript %}
     <script>
     $(document).ready(function(){
-        $("#copy_paste_fasta_tab").addClass('active');
 
-        $("#copy_paste_fasta_tab").click(function(){
-            $("#select_curated_collections_tab").removeClass('active');
-            $(this).addClass('active');
-        }).done(function(){
-            $("#copy_paste_fasta").show();
-            $("#select_curated_collections").hide();
-        });
+        $("#copy_paste_fasta_tab")
+            .addClass('active')
+            .click(function(){
+                $("#select_curated_collections_tab").removeClass('active');
+                $(this).addClass('active');
+            })
+            .done(function(){
+                $("#copy_paste_fasta").show();
+                $("#select_curated_collections").hide();
+            });
 
         $("#select_curated_collections_tab").click(function(){
             $("#copy_paste_fasta_tab").removeClass('active');
