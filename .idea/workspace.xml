@@ -76,7 +76,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="677">
-                  <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+                  <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
                   <folding>
                     <element signature="e#124#145#0#HTML" expanded="true" />
                     <element signature="e#752#776#0#HTML" expanded="true" />
@@ -902,13 +902,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00031" summary="[TRIAL] dynamic url in template">
-      <created>1513056994762</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1513056994762</updated>
-    </task>
     <task id="LOCAL-00032" summary="[FEATURE] Successfully bound view results to url&#10;&#10;[PARTIAL FEATURE] html for view results">
       <created>1513058845309</created>
       <option name="number" value="00032" />
@@ -1245,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513746480418</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="[CHANGES] index view changed to form">
+      <created>1513746936304</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1513746936304</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1727,7 +1727,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="677">
-          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
           <folding>
             <element signature="e#124#145#0#HTML" expanded="true" />
             <element signature="e#752#776#0#HTML" expanded="true" />
