@@ -232,7 +232,10 @@ def index_form_process_controller(request):
     if int(max_motif_range) < 20 or int(max_motif_range) > 200:
         return HttpResponseRedirect('/')
 
-    collection_list = [Collection.objects.get(pk=int(c)) for c in selected_collections]
+    if selected_collections:
+        collection_list = [Collection.objects.get(pk=int(c)) for c in selected_collections]
+    else:
+        collection_list = []
 
     if len(sequence_data) > 0:
         if len(sequence_data_title) == 0:
