@@ -75,8 +75,8 @@
           <file leaf-file-name="form_index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-190">
-                  <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+                <state relative-caret-position="558">
+                  <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
                   <folding>
                     <element signature="e#125#146#0#HTML" expanded="true" />
                     <element signature="e#1014#1038#0#HTML" expanded="true" />
@@ -112,8 +112,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="238" column="0" lean-forward="true" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+                <state relative-caret-position="580">
+                  <caret line="244" column="27" lean-forward="false" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -124,9 +124,11 @@
           <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="2" selection-end-column="33" />
-                  <folding />
+                <state relative-caret-position="714">
+                  <caret line="42" column="49" lean-forward="true" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -863,13 +865,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00048" summary="[BUGFIX] fixed all_queries/ url">
-      <created>1513226941906</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1513226941906</updated>
-    </task>
     <task id="LOCAL-00049" summary="[TEST] Added modals">
       <created>1513230032555</created>
       <option name="number" value="00049" />
@@ -1206,7 +1201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513805681558</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="[FORM] Almost done editing POST processor for index form">
+      <created>1513806162368</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1513806162368</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1651,14 +1653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1669,8 +1663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="558">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#125#146#0#HTML" expanded="true" />
             <element signature="e#1014#1038#0#HTML" expanded="true" />
@@ -1678,10 +1672,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="49" lean-forward="true" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="238" column="0" lean-forward="true" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+        <state relative-caret-position="580">
+          <caret line="244" column="27" lean-forward="false" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
