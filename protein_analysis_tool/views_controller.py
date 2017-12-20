@@ -242,6 +242,7 @@ def index_form_process_controller(request):
             return HttpResponseRedirect('/')
 
         content = ContentFile(str(sequence_data))
+        content.file.save()
 
         try:
             new_collection = Collection.objects.create(
