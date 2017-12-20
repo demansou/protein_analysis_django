@@ -75,8 +75,8 @@
           <file leaf-file-name="form_index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+                <state relative-caret-position="555">
+                  <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
                   <folding>
                     <element signature="e#124#145#0#HTML" expanded="true" />
                     <element signature="e#717#741#0#HTML" expanded="true" />
@@ -902,13 +902,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00028" summary="[PARTIAL FEATURE] updated url processing">
-      <created>1513056656218</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1513056656218</updated>
-    </task>
     <task id="LOCAL-00029" summary="[BUGFIX] &quot;all_queries&quot; uses an underscore. fixed to &quot;all-queries&quot;">
       <created>1513056714294</created>
       <option name="number" value="00029" />
@@ -1245,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513746179061</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="[CHANGES] index view changed to form">
+      <created>1513746303502</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1513746303502</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1726,8 +1726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="555">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
           <folding>
             <element signature="e#124#145#0#HTML" expanded="true" />
             <element signature="e#717#741#0#HTML" expanded="true" />
