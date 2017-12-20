@@ -257,10 +257,10 @@ def index_form_process_controller(request):
             file_name = tempfile.NamedTemporaryFile(
                 suffix='.fasta',
                 dir=MEDIA_ROOT
-            ).name
+            )
 
             new_collection.collection_file.save(
-                file_name, content=content)
+                file_name.name, content=content)
 
             new_collection.save()
 
