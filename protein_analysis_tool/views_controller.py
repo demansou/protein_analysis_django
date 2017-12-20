@@ -255,7 +255,6 @@ def index_form_process_controller(request):
             )
 
             file_name = tempfile.NamedTemporaryFile(
-                prefix=new_collection.collection_name,
                 suffix='.fasta',
                 dir=MEDIA_ROOT
             ).name
