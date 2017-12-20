@@ -5,7 +5,7 @@ from . import views
 app_name = 'protein_analysis_tool'
 
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    path('', views.index_form_view, name='index'),
     path('select_collections/', views.select_collections_view, name='select-collections'),
     path('select_motifs/', views.select_motifs_view, name='select-motifs'),
     path('define_parameters/', views.define_parameters_view, name='define-parameters'),
