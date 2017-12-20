@@ -216,6 +216,7 @@ def index_form_view_controller(request):
     """
 
     collection_list = get_list_or_404(Collection, sequence_count__gte=1)
+
     motif_list = get_list_or_404(Motif)
 
     context = {

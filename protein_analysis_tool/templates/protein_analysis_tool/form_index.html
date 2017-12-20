@@ -3,13 +3,7 @@
 {% block title %}Motif Analysis Tool{% endblock %}
 
 {% block content %}
-    {% for collection in collection_list %}
-                            {{ collection }}
-                            <label class="checkbox-inline">
-                                <input type="checkbox" value="{{ collection.pk }}" name="selected_collections[]">
-                                {{ collection.collection_name }} <span class="badge">{{ collection.sequence_count }}</span>
-                            </label>
-                        {% endfor %}
+
     <div class="bg-info" style="padding:15px;">
         <form method="post">
             {% csrf_token %}
@@ -27,7 +21,12 @@
                 <div class="tab-pane" id="select_curated_collections">
                     <div class="form-group">
                         <h4>Select collections of amino acid sequences.</h4>
-
+                        {% for collection in collection_list %}
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="{{ collection.pk }}" name="selected_collections[]">
+                                {{ collection.collection_name }} <span class="badge">{{ collection.sequence_count }}</span>
+                            </label>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
