@@ -245,7 +245,6 @@ def index_form_process_controller(request):
             return HttpResponseRedirect('/')
 
         content = ContentFile(str(sequence_data))
-        content.file.save()
 
         try:
             new_collection = Collection.objects.create(
@@ -262,7 +261,7 @@ def index_form_process_controller(request):
             ).name
 
             new_collection.collection_file.save(
-                os.path.join(MEDIA_ROOT, file_name))
+                os.path.join(MEDIA_ROOT, file_name), content=content)
 
             new_collection.save()
 
