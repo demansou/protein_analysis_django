@@ -112,8 +112,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="244" column="27" lean-forward="false" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
+                <state relative-caret-position="595">
+                  <caret line="266" column="33" lean-forward="false" selection-start-line="266" selection-start-column="33" selection-end-line="266" selection-end-column="33" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -865,13 +865,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00049" summary="[TEST] Added modals">
-      <created>1513230032555</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1513230032555</updated>
-    </task>
     <task id="LOCAL-00050" summary="[BUGFIX] Removed close class from view details butotn">
       <created>1513230159280</created>
       <option name="number" value="00050" />
@@ -1208,7 +1201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513806162368</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="[FORM] Almost done editing POST processor for index form">
+      <created>1513808422305</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1513808422305</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1684,8 +1684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="244" column="27" lean-forward="false" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
+        <state relative-caret-position="595">
+          <caret line="266" column="33" lean-forward="false" selection-start-line="266" selection-start-column="33" selection-end-line="266" selection-end-column="33" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
