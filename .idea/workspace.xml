@@ -72,7 +72,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="form_index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="form_index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="184">
@@ -95,6 +95,18 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="47" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -112,21 +124,11 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="268" column="33" lean-forward="false" selection-start-line="268" selection-start-column="33" selection-end-line="268" selection-end-column="33" />
+                <state relative-caret-position="646">
+                  <caret line="284" column="12" lean-forward="false" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
                   <folding>
-                    <element signature="e#0#11#0" expanded="true" />
+                    <element signature="e#0#21#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="37" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -863,13 +865,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00061" summary="[TEST] markjs working. updating highlight color">
-      <created>1513309919167</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1513309919167</updated>
-    </task>
     <task id="LOCAL-00062" summary="[TEST] markjs working. updating highlight color">
       <created>1513309983293</created>
       <option name="number" value="00062" />
@@ -1206,7 +1201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513810306976</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="[FORM] form saves copy paste text to file and updates db. working on file hashing">
+      <created>1513810652404</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1513810652404</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1273,7 +1275,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[BUGFIX] accidently treated the QuerySequence object like a dict instaed of object" />
     <MESSAGE value="[BUGFIX] fixed template count" />
     <MESSAGE value="[TEST] updated results template" />
     <MESSAGE value="[BUGFIX] Accidently introduced header into template" />
@@ -1298,7 +1299,8 @@
     <MESSAGE value="[CHANGES] index view changed to form" />
     <MESSAGE value="[FORM] Almost done editing POST processor for index form" />
     <MESSAGE value="[FORM] working with file saving for copy paste text" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM] working with file saving for copy paste text" />
+    <MESSAGE value="[FORM] form saves copy paste text to file and updates db. working on file hashing" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM] form saves copy paste text to file and updates db. working on file hashing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1672,18 +1674,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="680">
+          <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="268" column="33" lean-forward="false" selection-start-line="268" selection-start-column="33" selection-end-line="268" selection-end-column="33" />
+        <state relative-caret-position="646">
+          <caret line="284" column="12" lean-forward="false" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

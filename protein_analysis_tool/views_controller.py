@@ -1,3 +1,4 @@
+from Bio import SeqIO
 import json
 import os
 import tempfile
@@ -12,7 +13,7 @@ from protein_analysis_tool.tasks import task_process_query, task_process_all_que
 from protein_analysis_django.settings import MEDIA_ROOT
 from .custom import large_file_hasher
 from .forms import DefineParametersForm
-from .models import Collection, Motif, Query, QuerySequence
+from .models import Collection, Motif, Query, QuerySequence, Sequence
 
 
 def get_form_data_from_http_post(request, key):
@@ -266,6 +267,20 @@ def index_form_process_controller(request):
 
             new_collection.collection_file.save(os.path.basename(file_name), content, save=True)
             new_collection.collection_hash = large_file_hasher(file_name)
+            new_collection.save()
+
+            for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
+                try:
+                    Sequence.objects.create(
+                        collection_fk=new_collection,
+                        sequence_id=record.id,
+                        sequence_name=record.name,
+                        sequence=str(record.seq),
+                    )
+                except IntegrityError:
+                    continue
+
+            new_collection.collection_parsed = True
             new_collection.save()
 
             collection_list.append(new_collection)
