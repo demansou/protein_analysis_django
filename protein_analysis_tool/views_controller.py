@@ -232,22 +232,44 @@ def index_form_process_controller(request):
     if int(max_motif_range) < 20 or int(max_motif_range) > 200:
         return HttpResponseRedirect('/')
 
-    if len(sequence_data) > 0:
+    collection_list = [Collection.objects.get(pk=int(c)) for c in selected_collections]
 
+    if len(sequence_data) > 0:
         if len(sequence_data_title) == 0:
             return HttpResponseRedirect('/')
 
         content = ContentFile(str(sequence_data))
 
-        new_collection = Collection.objects.create(
-            collection_name=str(sequence_data_title),
-            pub_date=timezone.now(),
-            collection_parsed=False,
-            sequence_count=0
-        )
-    else:
-        # append collections to database
-        pass
+        try:
+            new_collection = Collection.objects.create(
+                collection_name=str(sequence_data_title),
+                collection_file=content,
+                pub_date=timezone.now(),
+                collection_parsed=False,
+                sequence_count=0
+            )
+
+            collection_list.append(new_collection)
+        except IntegrityError:
+            pass
+
+    motif_list = [Motif.objects.get(pk=int(m)) for m in selected_motifs]
+
+    for collection in collection_list:
+        for motif in motif_list:
+            try:
+                Query.objects.create(
+                    collection_fk=collection,
+                    motif_fk=motif,
+                    min_num_motifs_per_sequence=min_num_motifs,
+                    max_char_distance_between_motifs=max_motif_range
+                )
+            except IntegrityError:
+                continue
+
+    return render(request, 'protein_analysis_tool/process_query.html')
+
+
 
 ################
 # GET REQUESTS #

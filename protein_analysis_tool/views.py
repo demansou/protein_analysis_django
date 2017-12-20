@@ -9,7 +9,7 @@ from .views_controller import update_request_and_redirect_to_motif_selection,\
 
 def index_form_view(request):
     if request.POST:
-        return index_form_view_controller(request)
+        return index_form_process_controller(request)
 
     return index_form_view_controller(request)
 
@@ -53,7 +53,7 @@ def process_all_queries_view(request):
     if request.POST:
         pass
 
-    return process_all_queries(request)
+    return process_all_queries()
 
 
 def view_query_result(request, result_id):
