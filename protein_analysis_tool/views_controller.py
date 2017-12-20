@@ -1,5 +1,7 @@
 import json
+from django.utils import timezone
 
+from django.core.files.base import ContentFile
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, get_object_or_404, render
@@ -202,6 +204,50 @@ def update_request_and_redirect_to_process_query(request):
         request.session['query_list'] = query_list
 
         return HttpResponseRedirect('/process_query/')
+
+
+def index_form_process_controller(request):
+    """
+
+    :param request:
+    :return:
+    """
+
+    sequence_data_title = get_form_data_from_http_post(request, 'sequence_data_title')
+    sequence_data = get_form_data_from_http_post(request, 'sequence_data')
+    selected_collections = get_form_data_from_http_post_as_list(request, 'selected_collections[]')
+    selected_motifs = get_form_data_from_http_post_as_list(request, 'selected_motifs[]')
+    min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
+    max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
+
+    if len(sequence_data) == 0 and len(selected_collections) == 0:
+        return HttpResponseRedirect('/')
+
+    if len(selected_motifs) == 0:
+        return HttpResponseRedirect('/')
+
+    if int(min_num_motifs) < 2:
+        return HttpResponseRedirect('/')
+
+    if int(max_motif_range) < 20 or int(max_motif_range) > 200:
+        return HttpResponseRedirect('/')
+
+    if len(sequence_data) > 0:
+
+        if len(sequence_data_title) == 0:
+            return HttpResponseRedirect('/')
+
+        content = ContentFile(str(sequence_data))
+
+        new_collection = Collection.objects.create(
+            collection_name=str(sequence_data_title),
+            pub_date=timezone.now(),
+            collection_parsed=False,
+            sequence_count=0
+        )
+    else:
+        # append collections to database
+        pass
 
 ################
 # GET REQUESTS #
