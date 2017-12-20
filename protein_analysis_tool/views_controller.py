@@ -1,4 +1,6 @@
 import json
+import os
+import tempfile
 from django.utils import timezone
 
 from django.core.files.base import ContentFile
@@ -7,6 +9,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
+from protein_analysis_django.settings import MEDIA_ROOT
 from .forms import DefineParametersForm
 from .models import Collection, Motif, Query, QuerySequence
 
@@ -247,11 +250,21 @@ def index_form_process_controller(request):
         try:
             new_collection = Collection.objects.create(
                 collection_name=str(sequence_data_title),
-                collection_file=content,
                 pub_date=timezone.now(),
                 collection_parsed=False,
                 sequence_count=0
             )
+
+            file_name = tempfile.NamedTemporaryFile(
+                prefix=new_collection.collection_name,
+                suffix='.fasta',
+                dir=MEDIA_ROOT
+            ).name
+
+            new_collection.collection_file.save(
+                os.path.join(MEDIA_ROOT, file_name))
+
+            new_collection.save()
 
             collection_list.append(new_collection)
         except IntegrityError:
