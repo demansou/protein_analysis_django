@@ -260,7 +260,7 @@ def index_form_process_controller(request):
             ).name
 
             new_collection.collection_file.save(
-                os.path.join(MEDIA_ROOT, file_name), content=content)
+                file_name, content=content)
 
             new_collection.save()
 
