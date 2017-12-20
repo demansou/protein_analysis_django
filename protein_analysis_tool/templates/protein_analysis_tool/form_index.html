@@ -52,6 +52,10 @@
 
 {% block javascript %}
     <script>
-        $("#copy_paste_fasta").show();
+        function activaTab(tab){
+            $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+        }
+
+        activaTab('copy_paste_fasta');
     </script>
 {% endblock %}
