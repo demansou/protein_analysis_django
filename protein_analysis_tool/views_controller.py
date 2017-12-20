@@ -267,7 +267,7 @@ def index_form_process_controller(request):
             except IntegrityError:
                 continue
 
-    return render(request, 'protein_analysis_tool/process_query.html')
+    return HttpResponseRedirect('/all_queries/')
 
 
 
