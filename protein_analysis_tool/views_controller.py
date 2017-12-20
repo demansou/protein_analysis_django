@@ -281,6 +281,7 @@ def index_form_process_controller(request):
                     continue
 
             new_collection.collection_parsed = True
+            new_collection.sequence_count = Sequence.objects.filter(collection_fk=new_collection).count()
             new_collection.save()
 
             collection_list.append(new_collection)
