@@ -8,8 +8,11 @@ from .views_controller import update_request_and_redirect_to_motif_selection,\
     process_single_query, process_all_queries, get_selected_result_and_render
 
 
-class IndexView(generic.TemplateView):
-    template_name = 'protein_analysis_tool/index.html'
+def index_form_view(request):
+    if request.POST:
+        pass
+
+    return index_form_view_controller(request)
 
 
 def select_collections_view(request):

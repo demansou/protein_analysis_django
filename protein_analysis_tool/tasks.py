@@ -22,7 +22,7 @@ def task_process_all_queries():
     # iterate through each query in list
     for query in query_list:
         # push to celery queue
-        task_process_query(query.pk)
+        task_process_query.delay(query.pk)
 
 
 @shared_task

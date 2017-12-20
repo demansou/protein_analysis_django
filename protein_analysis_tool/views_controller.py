@@ -208,6 +208,22 @@ def update_request_and_redirect_to_process_query(request):
 ################
 
 
+def index_form_view_controller(request):
+    """
+
+    :param request:
+    :return:
+    """
+
+    motif_list = get_list_or_404(Motif)
+
+    context = {
+        'motif_list': motif_list,
+    }
+
+    return render(request, 'protein_analysis_tool/form_index.html', context=context)
+
+
 def get_list_of_objects_and_render_collection_form(request):
     """
     Gathers collections from database and renders collection selection form.
