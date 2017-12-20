@@ -254,13 +254,13 @@ def index_form_process_controller(request):
                 sequence_count=0
             )
 
-            file_name = tempfile.NamedTemporaryFile(
+            temp_file = tempfile.NamedTemporaryFile(
                 suffix='.fasta',
-                dir='',
-                delete=False
             )
 
-            new_collection.collection_file.save(file_name.name, content, save=True)
+            file_name = temp_file.name
+
+            new_collection.collection_file.save(file_name, content, save=True)
 
             new_collection.save()
 
