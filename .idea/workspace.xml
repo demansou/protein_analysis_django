@@ -112,8 +112,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="263" column="68" lean-forward="false" selection-start-line="263" selection-start-column="68" selection-end-line="263" selection-end-column="68" />
+                <state relative-caret-position="476">
+                  <caret line="259" column="18" lean-forward="false" selection-start-line="259" selection-start-column="18" selection-end-line="259" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -865,13 +865,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00051" summary="[BUGFIX] Forgot to add modal dialog div wrapper to modal template">
-      <created>1513230271778</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1513230271778</updated>
-    </task>
     <task id="LOCAL-00052" summary="[TEST] added sequence to modal">
       <created>1513307139071</created>
       <option name="number" value="00052" />
@@ -1208,7 +1201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513809058189</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="[FORM] working with file saving for copy paste text">
+      <created>1513809155697</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1513809155697</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1275,7 +1275,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TEST] changed list comprehension in results querying to jsonify the matches" />
     <MESSAGE value="[BUGFIX] accidently treated the QuerySequence object like a dict instaed of object" />
     <MESSAGE value="[BUGFIX] fixed template count" />
     <MESSAGE value="[TEST] updated results template" />
@@ -1300,7 +1299,8 @@
     <MESSAGE value="[CHANGES YO] Celery module and settings.py data" />
     <MESSAGE value="[CHANGES] index view changed to form" />
     <MESSAGE value="[FORM] Almost done editing POST processor for index form" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM] Almost done editing POST processor for index form" />
+    <MESSAGE value="[FORM] working with file saving for copy paste text" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM] working with file saving for copy paste text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1684,8 +1684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="263" column="68" lean-forward="false" selection-start-line="263" selection-start-column="68" selection-end-line="263" selection-end-column="68" />
+        <state relative-caret-position="476">
+          <caret line="259" column="18" lean-forward="false" selection-start-line="259" selection-start-column="18" selection-end-line="259" selection-end-column="18" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
