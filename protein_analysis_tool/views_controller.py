@@ -116,6 +116,11 @@ class IndexForm(object):
         :param request:
         :return:
         """
+        try:
+            del request.session['form_error']
+        except KeyError:
+            pass
+
         if len(self.sequence_data) == 0 and len(self.selected_collections) == 0:
             request.session['form_error'] = 'No sequence data selected AND no collections selected'
             return HttpResponseRedirect('/')
@@ -147,16 +152,25 @@ def index_form_process_controller(request):
     min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
     max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
 
+    try:
+        del request.session['form_error']
+    except KeyError:
+        pass
+
     if len(sequence_data) == 0 and len(selected_collections) == 0:
+        request.session['form_error'] = 'No sequence data selected AND no collections selected'
         return HttpResponseRedirect('/')
 
     if len(selected_motifs) == 0:
+        request.session['form_error'] = 'No motifs selected'
         return HttpResponseRedirect('/')
 
     if int(min_num_motifs) < 2:
+        request.session['form_error'] = 'Minimum number of motifs outside of allowed range'
         return HttpResponseRedirect('/')
 
     if int(max_motif_range) < 20 or int(max_motif_range) > 200:
+        request.session['form_error'] = 'Maximum motif range outside of allowed range'
         return HttpResponseRedirect('/')
 
     if selected_collections:
