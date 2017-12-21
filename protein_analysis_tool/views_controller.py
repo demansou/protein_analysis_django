@@ -7,12 +7,11 @@ from django.utils import timezone
 from django.core.files.base import ContentFile
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_list_or_404, get_object_or_404, render
+from django.shortcuts import get_list_or_404, render
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
 from .custom import large_file_hasher
-from .forms import DefineParametersForm
 from .models import Collection, Motif, Query, QuerySequence, Sequence
 
 
