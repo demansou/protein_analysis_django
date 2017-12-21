@@ -99,6 +99,40 @@ def process_all_queries():
     return HttpResponseRedirect('/all_queries/')
 
 
+class IndexForm(object):
+    def __init__(self, request):
+        self.sequence_data_title = get_form_data_from_http_post(request, 'sequence_data_title')
+        self.sequence_data = get_form_data_from_http_post(request, 'sequence_data')
+        self.selected_collections = get_form_data_from_http_post_as_list(request, 'selected_collections[]')
+        self.selected_motifs = get_form_data_from_http_post_as_list(request, 'selected_motifs[]')
+        self.min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
+        self.max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
+
+        self.check_form_data(request)
+
+    def check_form_data(self, request):
+        """
+
+        :param request:
+        :return:
+        """
+        if len(self.sequence_data) == 0 and len(self.selected_collections) == 0:
+            request.session['form_error'] = 'No sequence data selected AND no collections selected'
+            return HttpResponseRedirect('/')
+
+        if len(self.selected_motifs) == 0:
+            request.session['form_error'] = 'No motifs selected'
+            return HttpResponseRedirect('/')
+
+        if int(self.min_num_motifs) < 2:
+            request.session['form_error'] = 'Minimum number of motifs outside of allowed range'
+            return HttpResponseRedirect('/')
+
+        if int(self.max_motif_range) < 20 or int(self.max_motif_range) > 200:
+            request.session['form_error'] = 'Maximum motif range outside of allowed range'
+            return HttpResponseRedirect('/')
+
+
 def index_form_process_controller(request):
     """
 
