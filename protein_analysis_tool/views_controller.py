@@ -271,12 +271,13 @@ def index_form_process_controller(request):
 
             for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
                 try:
-                    Sequence.objects.create(
+                    sequence = Sequence.objects.create(
                         collection_fk=new_collection,
                         sequence_id=record.id,
                         sequence_name=record.name,
                         sequence=str(record.seq),
                     )
+                    sequence.save()
                 except IntegrityError:
                     continue
 
