@@ -26,7 +26,7 @@ class IndexFormController(object, metaclass=Singleton):
         Perform form analysis.
         :param request:
         """
-        # self.request = request
+        self.request = request
 
         # self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
         # self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
@@ -48,7 +48,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': str(self.request),
+            # 'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -63,7 +63,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': str(self.request),
+            # 'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -72,7 +72,8 @@ class IndexFormController(object, metaclass=Singleton):
             'max_motif_range': self.max_motif_range,
         })
 
-    def generate_form(self):
+    @staticmethod
+    def generate_form(request):
         """
         Generate form
         :return:
@@ -85,7 +86,8 @@ class IndexFormController(object, metaclass=Singleton):
             'motif_list': motif_list,
         }
 
-        return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
+        # return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
+        return render(request, 'protein_analysis_tool/form_index.html', context=context)
 
     def process_form(self):
         """
