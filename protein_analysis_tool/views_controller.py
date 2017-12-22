@@ -6,6 +6,7 @@ import tempfile
 from django.utils import timezone
 from django.contrib import messages
 from django.core.files.base import ContentFile
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, render, reverse
 
@@ -332,6 +333,7 @@ class ResultsController(object):
         :param result_id:
         :return:
         """
+        """
         result_list = [self.process_query_sequence(qs) for qs in QuerySequence.objects.filter(query_fk_id=result_id)]
 
         result_count = [self.count_matches(r.matches) for r in result_list]
@@ -341,13 +343,39 @@ class ResultsController(object):
         motif = Query.objects.get(pk=result_id).motif_fk.motif
 
         context = {
-            # 'result_list': result_list,
-            # 'result_count': result_count,
             'results': results,
             'motif': motif,
         }
 
         return render(self.request, 'protein_analysis_tool/result_viewer.html', context=context)
+        """
+        results = self.zip_results_for_display(result_id)
+        motif = Query.objects.get(pk=result_id).motif_fk.motif
+
+        page = self.request.GET.get('page', 1)
+        paginator = Paginator(results, 25)
+
+        try:
+            results_display = paginator.page(page)
+        except PageNotAnInteger:
+            results_display = paginator.page(1)
+        except EmptyPage:
+            results_display = paginator.page(paginator.num_pages)
+
+        context = {
+            'results': results_display,
+            'motif': motif
+        }
+
+        return render(self.request, 'protein_analysis_tool/result_viewer.html', context=context)
+
+    def zip_results_for_display(self, result_id):
+        result_list = [self.process_query_sequence(qs) for qs in
+                       QuerySequence.objects.filter(query_fk_id=result_id)]
+
+        result_count = [self.count_matches(r.matches) for r in result_list]
+
+        return zip(result_list, result_count)
 
     @staticmethod
     def process_query_sequence(query_sequence):
@@ -372,6 +400,8 @@ class ResultsController(object):
                 counter += 1
 
         return counter
+
+
 #######
 # GET #
 #######
