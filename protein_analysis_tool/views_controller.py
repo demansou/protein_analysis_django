@@ -92,6 +92,7 @@ def update_session_error_message(request, message):
 # POST REQUESTS #
 #################
 
+
 def process_single_query(request):
     """
 
@@ -130,6 +131,7 @@ class IndexFormController(object):
         """
         self.request = request
 
+        """
         if self.request.POST:
             self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
             self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
@@ -139,6 +141,7 @@ class IndexFormController(object):
             self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
             self.process_form()
+        """
 
         self.generate_form()
 
