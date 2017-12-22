@@ -62,8 +62,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3854">
-                  <caret line="349" column="42" lean-forward="true" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="42" />
+                <state relative-caret-position="-5">
+                  <caret line="371" column="33" lean-forward="true" selection-start-line="371" selection-start-column="33" selection-end-line="371" selection-end-column="33" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -71,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+                <state relative-caret-position="646">
+                  <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -103,11 +103,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/requirements.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -152,8 +152,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4814">
-                  <caret line="164" column="30" lean-forward="true" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
+                <state relative-caret-position="3689">
+                  <caret line="217" column="35" lean-forward="true" selection-start-line="217" selection-start-column="35" selection-end-line="217" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -596,13 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00069" summary="[CHANGES] index view changed to form">
-      <created>1513744560894</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1513744560894</updated>
-    </task>
     <task id="LOCAL-00070" summary="[CHANGES] index view changed to form">
       <created>1513744583160</created>
       <option name="number" value="00070" />
@@ -939,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513905995209</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="[FORM UPDATE] Updated form to class controller">
+      <created>1513906196317</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1513906196317</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1289,14 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/custom.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1351,8 +1343,8 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html" />
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3854">
-          <caret line="349" column="42" lean-forward="true" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="42" />
+        <state relative-caret-position="-5">
+          <caret line="371" column="33" lean-forward="true" selection-start-line="371" selection-start-column="33" selection-end-line="371" selection-end-column="33" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1361,8 +1353,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="646">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
       </provider>
