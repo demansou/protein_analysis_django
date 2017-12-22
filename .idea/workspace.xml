@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,7 +63,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="747">
-                  <caret line="343" column="87" lean-forward="true" selection-start-line="343" selection-start-column="87" selection-end-line="343" selection-end-column="87" />
+                  <caret line="343" column="85" lean-forward="true" selection-start-line="343" selection-start-column="85" selection-end-line="343" selection-end-column="85" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -130,8 +130,8 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
-                  <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+                <state relative-caret-position="595">
+                  <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -154,8 +154,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2770">
-                  <caret line="475" column="0" lean-forward="true" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
+                <state relative-caret-position="517">
+                  <caret line="343" column="66" lean-forward="false" selection-start-line="343" selection-start-column="66" selection-end-line="343" selection-end-column="66" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -219,8 +219,8 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
       </list>
     </option>
   </component>
@@ -613,13 +613,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00121" summary="[FORM UPDATE] Fixed syntax error in views_controller line 301">
-      <created>1513906804267</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1513906804267</updated>
-    </task>
     <task id="LOCAL-00122" summary="[FORM UPDATE] Fixed syntax error in views_controller line 301">
       <created>1513908850375</created>
       <option name="number" value="00122" />
@@ -956,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513931168165</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py">
+      <created>1513931266654</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1513931266654</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1025,7 +1025,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
     <MESSAGE value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
     <MESSAGE value="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data" />
     <MESSAGE value="[MILESTONE] FORM CONTROLLER WORKING AS EXPECTED FOR TESTS" />
@@ -1050,7 +1049,8 @@
     <MESSAGE value="[FEATURE] Added navigation to base html &quot;create motif&quot;. currently unlinked" />
     <MESSAGE value="[FEATURE] Added title to form in form_index.html" />
     <MESSAGE value="[Maintenance] Adding comments and updating method by which tasks measure motif matches." />
-    <option name="LAST_COMMIT_MESSAGE" value="[Maintenance] Adding comments and updating method by which tasks measure motif matches." />
+    <MESSAGE value="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1364,16 +1364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="343" column="87" lean-forward="true" selection-start-line="343" selection-start-column="87" selection-end-line="343" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1384,9 +1374,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="595">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="343" column="66" lean-forward="false" selection-start-line="343" selection-start-column="66" selection-end-line="343" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
