@@ -35,6 +35,24 @@ class IndexFormController(object, metaclass=Singleton):
             self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
             self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
+    def __str__(self):
+        """
+        Returns object with variables as JSON string.
+        :return:
+        """
+        if self.request.POST:
+            return json.dumps({
+                'request': self.request,
+                'sequence_data_title': self.sequence_data_title,
+                'sequence_data': self.sequence_data,
+                'selected_collections': self.selected_collections,
+                'selected_motifs': self.selected_motifs,
+                'min_num_motifs': self.min_num_motifs,
+                'max_motif_range': self.max_motif_range,
+            })
+
+        return json.dumps({ 'request': self.request })
+
     def generate_form(self):
         """
         Generate form
