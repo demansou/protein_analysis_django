@@ -7,7 +7,11 @@ def index_form_view(request):
         # return index_form_process_controller(request)
 
     # return index_form_view_controller(request)
-    return IndexFormController(request)
+    controller = IndexFormController(request)
+    if request.POST:
+        return controller.process_form()
+
+    return controller.generate_form()
 
 
 def process_query_view(request):
