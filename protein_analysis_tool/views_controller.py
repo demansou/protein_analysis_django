@@ -375,7 +375,7 @@ class ResultsController(object):
 
         result_count = [self.count_matches(r.matches) for r in result_list]
 
-        return zip(result_list, result_count)
+        return list(zip(result_list, result_count))
 
     @staticmethod
     def process_query_sequence(query_sequence):
