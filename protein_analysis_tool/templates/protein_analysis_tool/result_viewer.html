@@ -44,9 +44,11 @@
                                             <th>Matches</th>
                                         </tr>
                                         {% for match in result.matches %}
+                                            {% if match >= result.query_fk.min_num_motifs_per_sequence %}
                                             <tr>
                                                 <td>{{ match }}</td>
                                             </tr>
+                                            {% endif %}
                                         {% endfor %}
                                     </table>
                                 </div>

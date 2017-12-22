@@ -4,7 +4,6 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -129,8 +128,8 @@
           <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+                <state relative-caret-position="747">
+                  <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
                   <folding />
                 </state>
               </provider>
@@ -139,8 +138,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
+                <state relative-caret-position="390">
+                  <caret line="367" column="30" lean-forward="true" selection-start-line="367" selection-start-column="30" selection-end-line="367" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -155,7 +154,7 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="500">
+                <state relative-caret-position="347">
                   <caret line="346" column="36" lean-forward="false" selection-start-line="346" selection-start-column="36" selection-end-line="346" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
@@ -614,13 +613,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00128" summary="[FORM UPDATE] Class working when initialized before check.">
-      <created>1513910352056</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1513910352056</updated>
-    </task>
     <task id="LOCAL-00129" summary="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element">
       <created>1513910521430</created>
       <option name="number" value="00129" />
@@ -957,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513932267993</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="[FEATURE] attempting to correct stuff on result_viewer template">
+      <created>1513932769954</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1513932769954</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1026,7 +1025,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found" />
     <MESSAGE value="[MILESTONE] BUGFIXES COMPLETE FOR INDEXFORMCONTROLLER" />
     <MESSAGE value="[Query Processing] Added ProcessQueryController class" />
     <MESSAGE value="[Query Processing] Updated and consolidated urls" />
@@ -1051,7 +1049,8 @@
     <MESSAGE value="[BUGFIX] accidently added wrong namespace to reverse url lookup for results viewer" />
     <MESSAGE value="[BUGFIX] forgot to add result id to reverse for result viewer" />
     <MESSAGE value="[FEATURE] updated result template modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] updated result template modal" />
+    <MESSAGE value="[FEATURE] attempting to correct stuff on result_viewer template" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] attempting to correct stuff on result_viewer template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1375,8 +1374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
+        <state relative-caret-position="390">
+          <caret line="367" column="30" lean-forward="true" selection-start-line="367" selection-start-column="30" selection-end-line="367" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1385,8 +1384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        <state relative-caret-position="747">
+          <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
           <folding />
         </state>
       </provider>
