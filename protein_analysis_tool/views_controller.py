@@ -20,6 +20,10 @@ from .models import Collection, Motif, Query, QuerySequence, Sequence
 
 
 class IndexFormController(object):
+    """
+    Controller for processing homepage form.
+    """
+
     def __init__(self, request):
         """
         Initialize IndexForm controller with HTTP request.
@@ -182,7 +186,8 @@ class IndexFormController(object):
 
     def parse_new_collection_file_data(self, new_collection):
         """
-
+        Iterate through each sequence in new collection file and add a record to the database if record does not exist.
+        Update Collection data with sequence parsing data.
         :param new_collection:
         :return:
         """
@@ -269,11 +274,12 @@ class IndexFormController(object):
 
 class ProcessQueryController(object):
     """
-
+    Controller for processing queries.
     """
     def __init__(self, request):
         """
-
+        Initialize query processing controller when dealing with the query page.
+        Can initialize Celery and distributed task queue operations.
         :param request:
         """
         self.request = request
