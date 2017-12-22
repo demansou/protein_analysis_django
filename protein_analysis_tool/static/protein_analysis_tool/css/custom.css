@@ -10,6 +10,10 @@
     word-break: break-all;
 }
 
+.center-pagination {
+    margin: 0 auto;
+}
+
 mark{
     background: orange;
     color: black;
