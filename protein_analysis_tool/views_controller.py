@@ -11,7 +11,7 @@ from django.shortcuts import get_list_or_404, render, reverse
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
-from .custom import large_file_hasher, Singleton
+from .custom import large_file_hasher
 from .models import Collection, Motif, Query, QuerySequence, Sequence
 
 ###############
