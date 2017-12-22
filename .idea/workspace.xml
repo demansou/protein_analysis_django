@@ -155,7 +155,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="517">
-                  <caret line="343" column="66" lean-forward="false" selection-start-line="343" selection-start-column="66" selection-end-line="343" selection-end-column="66" />
+                  <caret line="343" column="108" lean-forward="false" selection-start-line="343" selection-start-column="108" selection-end-line="343" selection-end-column="108" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -613,13 +613,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00122" summary="[FORM UPDATE] Fixed syntax error in views_controller line 301">
-      <created>1513908850375</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1513908850375</updated>
-    </task>
     <task id="LOCAL-00123" summary="[FORM UPDATE] Fixed syntax error in views_controller line 301">
       <created>1513909233024</created>
       <option name="number" value="00123" />
@@ -956,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513931266654</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="[BUGFIX] accidently added wrong namespace to reverse url lookup for results viewer">
+      <created>1513931331944</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1513931331944</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1025,7 +1025,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
     <MESSAGE value="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data" />
     <MESSAGE value="[MILESTONE] FORM CONTROLLER WORKING AS EXPECTED FOR TESTS" />
     <MESSAGE value="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found" />
@@ -1050,7 +1049,8 @@
     <MESSAGE value="[FEATURE] Added title to form in form_index.html" />
     <MESSAGE value="[Maintenance] Adding comments and updating method by which tasks measure motif matches." />
     <MESSAGE value="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py" />
+    <MESSAGE value="[BUGFIX] accidently added wrong namespace to reverse url lookup for results viewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] accidently added wrong namespace to reverse url lookup for results viewer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1383,7 +1383,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
-          <caret line="343" column="66" lean-forward="false" selection-start-line="343" selection-start-column="66" selection-end-line="343" selection-end-column="66" />
+          <caret line="343" column="108" lean-forward="false" selection-start-line="343" selection-start-column="108" selection-end-line="343" selection-end-column="108" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
