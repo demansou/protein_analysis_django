@@ -27,31 +27,27 @@ class IndexFormController(object, metaclass=Singleton):
         """
         self.request = request
 
-        if self.request.POST:
-            self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
-            self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
-            self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
-            self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
-            self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
-            self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
+        self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
+        self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
+        self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
+        self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
+        self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
+        self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
     def __str__(self):
         """
         Returns object with variables as JSON string.
         :return:
         """
-        if self.request.POST:
-            return json.dumps({
-                'request': self.request,
-                'sequence_data_title': self.sequence_data_title,
-                'sequence_data': self.sequence_data,
-                'selected_collections': self.selected_collections,
-                'selected_motifs': self.selected_motifs,
-                'min_num_motifs': self.min_num_motifs,
-                'max_motif_range': self.max_motif_range,
-            })
-
-        return json.dumps({ 'request': self.request })
+        return {
+            'request': self.request,
+            'sequence_data_title': self.sequence_data_title,
+            'sequence_data': self.sequence_data,
+            'selected_collections': self.selected_collections,
+            'selected_motifs': self.selected_motifs,
+            'min_num_motifs': self.min_num_motifs,
+            'max_motif_range': self.max_motif_range,
+        }
 
     def generate_form(self):
         """
@@ -254,11 +250,17 @@ class IndexFormController(object, metaclass=Singleton):
 
 
 class ProcessQueryController(object, metaclass=Singleton):
+    """
+
+    """
     def __init__(self, request):
+        """
+
+        :param request:
+        """
         self.request = request
 
-        if self.request.POST:
-            self.query_id = get_form_data_from_http_post(request, 'query_id')
+        self.query_id = get_form_data_from_http_post(request, 'query_id')
 
     def process_query(self):
         """
