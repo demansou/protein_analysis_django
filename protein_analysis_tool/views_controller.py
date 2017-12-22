@@ -139,10 +139,6 @@ class IndexFormController(object, metaclass=Singleton):
             self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
             self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
-            self.process_form()
-
-        self.generate_form()
-
     def generate_form(self):
         """
         Generate form

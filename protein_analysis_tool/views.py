@@ -8,6 +8,7 @@ def index_form_view(request):
 
     # return index_form_view_controller(request)
     controller = IndexFormController(request)
+
     if request.POST:
         return controller.process_form()
 
