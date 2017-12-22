@@ -11,6 +11,10 @@
 }
 
 .center-pagination {
+    width:100%;
+}
+
+.center-pagination ul {
     margin: 0 auto;
 }
 
