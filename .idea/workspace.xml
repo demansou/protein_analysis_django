@@ -129,8 +129,8 @@
           <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="781">
-                  <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+                <state relative-caret-position="339">
+                  <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -139,8 +139,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
+                <state relative-caret-position="339">
+                  <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -156,7 +156,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="500">
-                  <caret line="345" column="36" lean-forward="false" selection-start-line="345" selection-start-column="36" selection-end-line="345" selection-end-column="36" />
+                  <caret line="346" column="36" lean-forward="false" selection-start-line="346" selection-start-column="36" selection-end-line="346" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -614,13 +614,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00127" summary="[FORM UPDATE] Converted class to singleton metaclass">
-      <created>1513910145701</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1513910145701</updated>
-    </task>
     <task id="LOCAL-00128" summary="[FORM UPDATE] Class working when initialized before check.">
       <created>1513910352056</created>
       <option name="number" value="00128" />
@@ -957,7 +950,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513931791352</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="[FEATURE] updated result template modal">
+      <created>1513932267993</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1513932267993</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TodoView">
@@ -979,7 +979,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964426" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320959" sideWeight="0.47416535" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32578126" sideWeight="0.49682036" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36526233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36526233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1026,7 +1026,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[MILESTONE] FORM CONTROLLER WORKING AS EXPECTED FOR TESTS" />
     <MESSAGE value="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found" />
     <MESSAGE value="[MILESTONE] BUGFIXES COMPLETE FOR INDEXFORMCONTROLLER" />
     <MESSAGE value="[Query Processing] Added ProcessQueryController class" />
@@ -1051,7 +1050,8 @@
     <MESSAGE value="[Maintenance] Added ResultsController. Forgot to edit commit message last time with changes. [Bugfix] accidently removed process_all_queries_view from views.py" />
     <MESSAGE value="[BUGFIX] accidently added wrong namespace to reverse url lookup for results viewer" />
     <MESSAGE value="[BUGFIX] forgot to add result id to reverse for result viewer" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] forgot to add result id to reverse for result viewer" />
+    <MESSAGE value="[FEATURE] updated result template modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] updated result template modal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1365,16 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -1383,10 +1373,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="339">
+          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
           <folding />
         </state>
       </provider>
