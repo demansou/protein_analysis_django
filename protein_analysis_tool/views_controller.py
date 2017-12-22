@@ -26,14 +26,21 @@ class IndexFormController(object, metaclass=Singleton):
         Perform form analysis.
         :param request:
         """
-        self.request = request
+        # self.request = request
 
-        self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
-        self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
-        self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
-        self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
-        self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
-        self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
+        # self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
+        # self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
+        # self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
+        # self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
+        # self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
+        # self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
+
+        self.sequence_data_title = get_form_data_from_http_post(request, 'sequence_data_title')
+        self.sequence_data = get_form_data_from_http_post(request, 'sequence_data')
+        self.selected_collections = get_form_data_from_http_post_as_list(request, 'selected_collections[]')
+        self.selected_motifs = get_form_data_from_http_post_as_list(request, 'selected_motifs[]')
+        self.min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
+        self.max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
 
     def __str__(self):
         """
