@@ -19,7 +19,7 @@ from .models import Collection, Motif, Query, QuerySequence, Sequence
 ###############
 
 
-class IndexFormController(object, metaclass=Singleton):
+class IndexFormController(object):
     def __init__(self, request):
         """
         Initialize IndexForm controller with HTTP request.
@@ -28,19 +28,12 @@ class IndexFormController(object, metaclass=Singleton):
         """
         self.request = request
 
-        # self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
-        # self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
-        # self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
-        # self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
-        # self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
-        # self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
-
-        self.sequence_data_title = get_form_data_from_http_post(request, 'sequence_data_title')
-        self.sequence_data = get_form_data_from_http_post(request, 'sequence_data')
-        self.selected_collections = get_form_data_from_http_post_as_list(request, 'selected_collections[]')
-        self.selected_motifs = get_form_data_from_http_post_as_list(request, 'selected_motifs[]')
-        self.min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
-        self.max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
+        self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
+        self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
+        self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
+        self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
+        self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
+        self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
     def __str__(self):
         """
@@ -72,8 +65,7 @@ class IndexFormController(object, metaclass=Singleton):
             'max_motif_range': self.max_motif_range,
         })
 
-    @staticmethod
-    def generate_form(request):
+    def generate_form(self):
         """
         Generate form
         :return:
@@ -86,14 +78,14 @@ class IndexFormController(object, metaclass=Singleton):
             'motif_list': motif_list,
         }
 
-        # return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
-        return render(request, 'protein_analysis_tool/form_index.html', context=context)
+        return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
 
     def process_form(self):
         """
         Process form data
         :return:
         """
+
         # validate form fields
         self.check_form_data()
 
@@ -118,25 +110,21 @@ class IndexFormController(object, metaclass=Singleton):
         """
         if not self.sequence_data and not self.selected_collections:
             err = 'No sequence data selected AND no collections selected'
-            # self.request = update_session_error_message(self.request, err)
             messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if not self.selected_motifs:
             err = 'No motifs selected'
-            # self.request = update_session_error_message(self.request, err)
             messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if int(self.min_num_motifs) < 2:
             err = 'Minimum number of motifs outside of allowed range'
-            # self.request = update_session_error_message(self.request, err)
             messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if int(self.max_motif_range) < 20 or int(self.max_motif_range) > 200:
             err = 'Maximum motif range outside of allowed range'
-            # self.request = update_session_error_message(self.request, err)
             messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
@@ -244,7 +232,6 @@ class IndexFormController(object, metaclass=Singleton):
                 len(selected_collections_objects),
                 len(selected_motifs_objects)
             )
-            # self.request = update_session_error_message(self.request, err)
             messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
@@ -300,7 +287,6 @@ class ProcessQueryController(object, metaclass=Singleton):
         """
         if not self.query_id:
             err = 'Error: Queue processing controller did not receive a query.'
-            # self.request = update_session_error_message(self.request, err)
             messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
