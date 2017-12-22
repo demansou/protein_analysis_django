@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[FEATURE] Added pagination link to bottom of">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,21 +123,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="636">
+              <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+              <folding>
+                <element signature="e#3124#3131#1#HTML" expanded="true" />
+                <element signature="e#3207#3214#1#HTML" expanded="true" />
+                <element signature="e#3706#3713#1#HTML" expanded="true" />
+                <element signature="e#3789#3796#1#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="377" column="51" lean-forward="false" selection-start-line="377" selection-start-column="51" selection-end-line="377" selection-end-column="51" />
+            <state relative-caret-position="306">
+              <caret line="364" column="19" lean-forward="true" selection-start-line="364" selection-start-column="19" selection-end-line="364" selection-end-column="19" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -200,8 +205,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
       </list>
     </option>
   </component>
@@ -594,13 +599,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00133" summary="[MILESTONE] FORM CONTROLLER WORKING AS EXPECTED FOR TESTS">
-      <created>1513911629241</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1513911629241</updated>
-    </task>
     <task id="LOCAL-00134" summary="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found">
       <created>1513912482795</created>
       <option name="number" value="00134" />
@@ -937,7 +935,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513969702182</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="[BUGFIX] cast zip object for results list as list">
+      <created>1513969844156</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1513969844156</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1006,7 +1011,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Query Processing] Added ProcessQueryController class" />
     <MESSAGE value="[Query Processing] Updated and consolidated urls" />
     <MESSAGE value="[Query Processing] Fixed un-updated url in base.html" />
     <MESSAGE value="[Maintenance] base.html template tidying" />
@@ -1031,7 +1035,8 @@
     <MESSAGE value="[FEATURE] updated result template modal" />
     <MESSAGE value="[FEATURE] attempting to correct stuff on result_viewer template" />
     <MESSAGE value="[FEATURE] added paginator to results display (MAY NOT WORK)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] added paginator to results display (MAY NOT WORK)" />
+    <MESSAGE value="[BUGFIX] cast zip object for results list as list" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] cast zip object for results list as list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1345,14 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
@@ -1363,10 +1360,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="377" column="51" lean-forward="false" selection-start-line="377" selection-start-column="51" selection-end-line="377" selection-end-column="51" />
+        <state relative-caret-position="306">
+          <caret line="364" column="19" lean-forward="true" selection-start-line="364" selection-start-column="19" selection-end-line="364" selection-end-column="19" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+          <folding>
+            <element signature="e#3124#3131#1#HTML" expanded="true" />
+            <element signature="e#3207#3214#1#HTML" expanded="true" />
+            <element signature="e#3706#3713#1#HTML" expanded="true" />
+            <element signature="e#3789#3796#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
