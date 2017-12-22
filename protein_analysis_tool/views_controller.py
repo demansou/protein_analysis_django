@@ -49,6 +49,21 @@ class IndexFormController(object, metaclass=Singleton):
             'max_motif_range': self.max_motif_range,
         }
 
+    def __repr__(self):
+        """
+        Returns object with variables as JSON string.
+        :return:
+        """
+        return {
+            'request': self.request,
+            'sequence_data_title': self.sequence_data_title,
+            'sequence_data': self.sequence_data,
+            'selected_collections': self.selected_collections,
+            'selected_motifs': self.selected_motifs,
+            'min_num_motifs': self.min_num_motifs,
+            'max_motif_range': self.max_motif_range,
+        }
+
     def generate_form(self):
         """
         Generate form
