@@ -41,7 +41,7 @@ class IndexFormController(object):
         :return:
         """
         return json.dumps({
-            # 'request': str(self.request),
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -56,7 +56,7 @@ class IndexFormController(object):
         :return:
         """
         return json.dumps({
-            # 'request': str(self.request),
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
