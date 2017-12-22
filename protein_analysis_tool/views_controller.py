@@ -267,7 +267,7 @@ class IndexFormController(object):
         return os.path.basename(file_name)
 
 
-class ProcessQueryController(object, metaclass=Singleton):
+class ProcessQueryController(object):
     """
 
     """
