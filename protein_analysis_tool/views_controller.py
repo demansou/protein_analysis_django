@@ -77,7 +77,7 @@ class IndexFormController(object, metaclass=Singleton):
         Handles form errors.
         :return:
         """
-        if len(str(self.sequence_data)) == 0 and len(self.selected_collections) == 0:
+        if (not self.sequence_data or len(str(self.sequence_data)) == 0) and len(self.selected_collections) == 0:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
