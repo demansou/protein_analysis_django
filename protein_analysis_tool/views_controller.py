@@ -244,7 +244,7 @@ class ProcessQueryController(object, metaclass=Singleton):
         Process single query.
         :return:
         """
-        if len(str(self.query_id)) == 0:
+        if self.query_id is None:
             err = 'Error: Queue processing controller did not receive a query.'
             update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
