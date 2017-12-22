@@ -298,7 +298,7 @@ class IndexFormController(object):
         Cannot be empty because form requires at least one motif to process form.
         :return:
         """
-        return [Motif.objects.get(pk=int(m) for m in self.selected_motifs)]
+        return [Motif.objects.get(pk=int(m)) for m in self.selected_motifs]
 
     def create_query_motifs(self, selected_collections_objects, selected_motifs_objects):
         """
