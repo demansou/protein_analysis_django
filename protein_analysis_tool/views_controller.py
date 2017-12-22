@@ -28,12 +28,19 @@ class IndexFormController(object, metaclass=Singleton):
         """
         self.request = request
 
-        self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
-        self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
-        self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
-        self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
-        self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
-        self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
+        # self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
+        # self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
+        # self.selected_collections = get_form_data_from_http_post_as_list(self.request, 'selected_collections[]')
+        # self.selected_motifs = get_form_data_from_http_post_as_list(self.request, 'selected_motifs[]')
+        # self.min_num_motifs = get_form_data_from_http_post(self.request, 'min_num_motifs')
+        # self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
+
+        self.sequence_data_title = get_form_data_from_http_post(request, 'sequence_data_title')
+        self.sequence_data = get_form_data_from_http_post(request, 'sequence_data')
+        self.selected_collections = get_form_data_from_http_post_as_list(request, 'selected_collections[]')
+        self.selected_motifs = get_form_data_from_http_post_as_list(request, 'selected_motifs[]')
+        self.min_num_motifs = get_form_data_from_http_post(request, 'min_num_motifs')
+        self.max_motif_range = get_form_data_from_http_post(request, 'max_motif_range')
 
     def __str__(self):
         """
@@ -41,7 +48,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': str(self.request),
+            # 'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -56,7 +63,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': str(self.request),
+            # 'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -65,7 +72,8 @@ class IndexFormController(object, metaclass=Singleton):
             'max_motif_range': self.max_motif_range,
         })
 
-    def generate_form(self):
+    @staticmethod
+    def generate_form(request):
         """
         Generate form
         :return:
@@ -78,7 +86,8 @@ class IndexFormController(object, metaclass=Singleton):
             'motif_list': motif_list,
         }
 
-        return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
+        # return render(self.request, 'protein_analysis_tool/form_index.html', context=context)
+        return render(request, 'protein_analysis_tool/form_index.html', context=context)
 
     def process_form(self):
         """
