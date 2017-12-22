@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[FEATURE] Added pagination link to bottom of">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css" afterPath="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,17 +124,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+            <state relative-caret-position="194">
+              <caret line="48" column="68" lean-forward="true" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
               <folding>
-                <element signature="e#3124#3131#1#HTML" expanded="true" />
-                <element signature="e#3207#3214#1#HTML" expanded="true" />
-                <element signature="e#3706#3713#1#HTML" expanded="true" />
-                <element signature="e#3789#3796#1#HTML" expanded="true" />
+                <element signature="e#3176#3183#1#HTML" expanded="true" />
+                <element signature="e#3267#3274#1#HTML" expanded="true" />
+                <element signature="e#3806#3813#1#HTML" expanded="true" />
+                <element signature="e#3897#3904#1#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,7 +202,6 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/define_parameters.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/models.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/forms.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/celery/tasks.py" />
@@ -207,6 +217,7 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css" />
       </list>
     </option>
   </component>
@@ -253,6 +264,27 @@
               <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
               <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
@@ -599,13 +631,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00134" summary="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found">
-      <created>1513912482795</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1513912482795</updated>
-    </task>
     <task id="LOCAL-00135" summary="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found">
       <created>1513912526148</created>
       <option name="number" value="00135" />
@@ -942,7 +967,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513969844156</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="[FEATURE] Added pagination link to bottom of page">
+      <created>1513970236442</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1513970236442</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TodoView">
@@ -964,7 +996,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964426" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320959" sideWeight="0.47416535" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280881" sideWeight="0.49513775" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36526233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36466774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1011,7 +1043,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Query Processing] Updated and consolidated urls" />
     <MESSAGE value="[Query Processing] Fixed un-updated url in base.html" />
     <MESSAGE value="[Maintenance] base.html template tidying" />
     <MESSAGE value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
@@ -1036,7 +1067,8 @@
     <MESSAGE value="[FEATURE] attempting to correct stuff on result_viewer template" />
     <MESSAGE value="[FEATURE] added paginator to results display (MAY NOT WORK)" />
     <MESSAGE value="[BUGFIX] cast zip object for results list as list" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] cast zip object for results list as list" />
+    <MESSAGE value="[FEATURE] Added pagination link to bottom of page" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Added pagination link to bottom of page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1217,13 +1249,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/index.html" />
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/OneDrive/PersonalProjects/protein_analysis_django/protein_analysis_tool/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1370,14 +1395,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+        <state relative-caret-position="194">
+          <caret line="48" column="68" lean-forward="true" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
           <folding>
-            <element signature="e#3124#3131#1#HTML" expanded="true" />
-            <element signature="e#3207#3214#1#HTML" expanded="true" />
-            <element signature="e#3706#3713#1#HTML" expanded="true" />
-            <element signature="e#3789#3796#1#HTML" expanded="true" />
+            <element signature="e#3176#3183#1#HTML" expanded="true" />
+            <element signature="e#3267#3274#1#HTML" expanded="true" />
+            <element signature="e#3806#3813#1#HTML" expanded="true" />
+            <element signature="e#3897#3904#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
