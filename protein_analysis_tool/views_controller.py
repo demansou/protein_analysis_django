@@ -77,12 +77,12 @@ class IndexFormController(object, metaclass=Singleton):
         Handles form errors.
         :return:
         """
-        if not self.sequence_data and len(self.selected_collections) == 0:
+        if not self.sequence_data and not self.selected_collections:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
 
-        if len(self.selected_motifs) == 0:
+        if not self.selected_motifs:
             err = 'No motifs selected'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
@@ -102,6 +102,9 @@ class IndexFormController(object, metaclass=Singleton):
         Checks for selected collections in form. Returns list of objects or empty list.
         :return:
         """
+        if not self.selected_collections:
+            return []
+
         return [Collection.objects.get(pk=int(c)) for c in self.selected_collections]
 
     def check_copy_paste_data(self, selected_collections_objects):
@@ -110,7 +113,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         # return only selected collections if no data input into textarea
-        if len(str(self.sequence_data)) == 0:
+        if not self.sequence_data:
             return selected_collections_objects
 
         # attempt to create new record or update previous record
@@ -279,7 +282,7 @@ def get_form_data_from_http_post(request, key):
     :param key:
     :return:
     """
-    return request.POST.get(key, None)
+    return request.POST.get(key, False)
 
 
 def get_form_data_from_http_post_as_list(request, key):
@@ -289,7 +292,7 @@ def get_form_data_from_http_post_as_list(request, key):
     :param key:
     :return:
     """
-    return request.POST.getlist(key, [])
+    return request.POST.getlist(key, False)
 
 
 def update_request_session_dict(request, key, value):
