@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +91,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="form_index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="form_index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -112,10 +111,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
+                <state relative-caret-position="172">
                   <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
                   <folding>
                     <element signature="e#2182#2189#1#HTML" expanded="true" />
@@ -224,10 +223,10 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/custom.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
         <option value="$PROJECT_DIR$/protein_analysis_django/settings.py" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
       </list>
     </option>
   </component>
@@ -620,13 +619,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00117" summary="[FORM UPDATE] Updated form to class controller">
-      <created>1513905995208</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1513905995209</updated>
-    </task>
     <task id="LOCAL-00118" summary="[FORM UPDATE] Updated form to class controller">
       <created>1513906196317</created>
       <option name="number" value="00118" />
@@ -963,7 +955,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513925805511</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="[FEATURE] Added navigation to base html &quot;create motif&quot;. currently unlinked">
+      <created>1513926255804</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1513926255804</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1032,7 +1031,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FORM UPDATE] Converted class to singleton" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton metaclass" />
     <MESSAGE value="[FORM UPDATE] Class working when initialized before check." />
     <MESSAGE value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
@@ -1057,7 +1055,8 @@
     <MESSAGE value="[BUGFIX] messages" />
     <MESSAGE value="[BUGFIX] removed singleton metaclass" />
     <MESSAGE value="[BUGFIX] Removed singleton from controller classes. things seem to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] Removed singleton from controller classes. things seem to work" />
+    <MESSAGE value="[FEATURE] Added navigation to base html &quot;create motif&quot;. currently unlinked" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Added navigation to base html &quot;create motif&quot;. currently unlinked" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1335,14 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1387,11 +1378,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="172">
           <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
           <folding>
             <element signature="e#2182#2189#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
