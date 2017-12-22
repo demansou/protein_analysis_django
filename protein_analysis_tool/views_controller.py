@@ -41,7 +41,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': self.request,
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -56,7 +56,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': self.request,
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -402,8 +402,6 @@ def process_all_queries():
     task_process_all_queries.delay()
 
     return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
-
-
 
 ################
 # GET REQUESTS #

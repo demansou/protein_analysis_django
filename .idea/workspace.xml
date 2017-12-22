@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[BUGFIX] using request.method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
@@ -62,8 +62,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="294" column="45" lean-forward="false" selection-start-line="294" selection-start-column="45" selection-end-line="294" selection-end-column="45" />
+                <state relative-caret-position="101">
+                  <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -156,7 +156,7 @@
                   <caret line="400" column="17" lean-forward="true" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1513918958650" expanded="true" signature="2951:3673" ph="..." />
+                    <marker date="1513919161617" expanded="true" signature="2961:3683" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -632,13 +632,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00105" summary="[FORM] working with file saving for copy paste text">
-      <created>1513809785340</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1513809785340</updated>
-    </task>
     <task id="LOCAL-00106" summary="[FORM] working with file saving for copy paste text">
       <created>1513809963033</created>
       <option name="number" value="00106" />
@@ -975,7 +968,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513918695080</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="[BUGFIX] using request.method">
+      <created>1513918967271</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1513918967271</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1399,8 +1399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="294" column="45" lean-forward="false" selection-start-line="294" selection-start-column="45" selection-end-line="294" selection-end-column="45" />
+        <state relative-caret-position="101">
+          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
