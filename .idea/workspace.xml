@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[MILESTONE] BUGFIXES COMPLETE FOR">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
@@ -63,11 +63,11 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-494">
-                  <caret line="358" column="0" lean-forward="false" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
+                  <caret line="354" column="0" lean-forward="false" selection-start-line="354" selection-start-column="0" selection-end-line="354" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1513912519118" expanded="true" signature="9361:9387" ph="..." />
-                    <marker date="1513912519118" expanded="true" signature="9462:9598" ph="..." />
+                    <marker date="1513912619170" expanded="true" signature="9217:9243" ph="..." />
+                    <marker date="1513912619170" expanded="true" signature="9318:9454" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -154,8 +154,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+                <state relative-caret-position="1785">
+                  <caret line="105" column="11" lean-forward="false" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -608,13 +608,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00086" summary="[CHANGES] index view changed to form">
-      <created>1513747783159</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1513747783159</updated>
-    </task>
     <task id="LOCAL-00087" summary="[CHANGES] index view changed to form">
       <created>1513747962977</created>
       <option name="number" value="00087" />
@@ -951,7 +944,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513912482795</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found">
+      <created>1513912526148</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1513912526148</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1371,8 +1371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="1785">
+          <caret line="105" column="11" lean-forward="false" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
