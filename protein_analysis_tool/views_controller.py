@@ -2,8 +2,9 @@ from Bio import SeqIO
 import json
 import os
 import tempfile
-from django.utils import timezone
 
+from django.utils import timezone
+from django.contrib import messages
 from django.core.files.base import ContentFile
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, render, reverse
@@ -108,22 +109,26 @@ class IndexFormController(object, metaclass=Singleton):
         """
         if not self.sequence_data and not self.selected_collections:
             err = 'No sequence data selected AND no collections selected'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         if not self.selected_motifs:
             err = 'No motifs selected'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         if int(self.min_num_motifs) < 2:
             err = 'Minimum number of motifs outside of allowed range'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         if int(self.max_motif_range) < 20 or int(self.max_motif_range) > 200:
             err = 'Maximum motif range outside of allowed range'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
     def check_selected_collections(self):
@@ -204,7 +209,8 @@ class IndexFormController(object, metaclass=Singleton):
 
         if not Collection.objects.get(pk=new_collection.pk).collection_parsed:
             err = 'Error: Collection not parsed.'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         return new_collection
@@ -229,7 +235,8 @@ class IndexFormController(object, metaclass=Singleton):
                 len(selected_collections_objects),
                 len(selected_motifs_objects)
             )
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         for collection in selected_collections_objects:
@@ -284,7 +291,8 @@ class ProcessQueryController(object, metaclass=Singleton):
         """
         if not self.query_id:
             err = 'Error: Queue processing controller did not receive a query.'
-            self.request = update_session_error_message(self.request, err)
+            # self.request = update_session_error_message(self.request, err)
+            messages.add_message(self.request, messages.ERROR, err)
             return HttpResponseRedirect('/')
 
         # send to celery
