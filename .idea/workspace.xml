@@ -152,8 +152,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1564">
-                  <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
+                <state relative-caret-position="357">
+                  <caret line="225" column="34" lean-forward="false" selection-start-line="225" selection-start-column="34" selection-end-line="225" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -606,13 +606,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00080" summary="[CHANGES] index view changed to form">
-      <created>1513746936304</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1513746936304</updated>
-    </task>
     <task id="LOCAL-00081" summary="[CHANGES] index view changed to form">
       <created>1513746981667</created>
       <option name="number" value="00081" />
@@ -949,7 +942,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513910352056</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element">
+      <created>1513910521430</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1513910521430</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1018,7 +1018,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TEST] added sequence to modal" />
     <MESSAGE value="[BUGFIX] incorrect usage of modal fixed" />
     <MESSAGE value="[FEATURE] added text highlighting with mark.js and added motif to context for result view" />
     <MESSAGE value="[BUGFIX] loaded static to result viewer template" />
@@ -1043,7 +1042,8 @@
     <MESSAGE value="[FORM UPDATE] Converted class to singleton" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton metaclass" />
     <MESSAGE value="[FORM UPDATE] Class working when initialized before check." />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Class working when initialized before check." />
+    <MESSAGE value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1369,8 +1369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
+        <state relative-caret-position="357">
+          <caret line="225" column="34" lean-forward="false" selection-start-line="225" selection-start-column="34" selection-end-line="225" selection-end-column="34" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

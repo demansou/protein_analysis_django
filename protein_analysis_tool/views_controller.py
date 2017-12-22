@@ -255,7 +255,9 @@ class IndexFormController(object, metaclass=Singleton):
             return HttpResponseRedirect('/')
 
         # return list of selected collections with new collection added
-        return selected_collections_objects.append(new_collection)
+        selected_collections_objects.append(new_collection)
+
+        return selected_collections_objects
 
     def parse_new_collection_file_data(self, new_collection):
         """
@@ -268,7 +270,7 @@ class IndexFormController(object, metaclass=Singleton):
 
         # iterate through fasta file and update record if exists with current collection as FK or create otherwise
         for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
-            Sequence.objects.update_or_create(
+            sequence, created = Sequence.objects.update_or_create(
                 collection_fk=new_collection,
                 sequence_id=record.id,
                 sequence_name=str(record.name),
