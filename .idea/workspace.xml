@@ -152,8 +152,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="257" column="43" lean-forward="false" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
+                <state relative-caret-position="527">
+                  <caret line="178" column="30" lean-forward="true" selection-start-line="178" selection-start-column="30" selection-end-line="178" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -606,13 +606,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00082" summary="[CHANGES] index view changed to form">
-      <created>1513747103687</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1513747103687</updated>
-    </task>
     <task id="LOCAL-00083" summary="[CHANGES] index view changed to form">
       <created>1513747213022</created>
       <option name="number" value="00083" />
@@ -949,7 +942,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513910815016</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data">
+      <created>1513911263799</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1513911263799</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1018,7 +1018,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEATURE] added text highlighting with mark.js and added motif to context for result view" />
     <MESSAGE value="[BUGFIX] loaded static to result viewer template" />
     <MESSAGE value="[BUGFIX] accidently declared class twice in sequence table in modal" />
     <MESSAGE value="[BUGFIX] forgot to add jquery.mark.js and jquery.mark.min.js to repo" />
@@ -1043,7 +1042,8 @@
     <MESSAGE value="[FORM UPDATE] Class working when initialized before check." />
     <MESSAGE value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
     <MESSAGE value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
+    <MESSAGE value="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1369,8 +1369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="257" column="43" lean-forward="false" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
+        <state relative-caret-position="527">
+          <caret line="178" column="30" lean-forward="true" selection-start-line="178" selection-start-column="30" selection-end-line="178" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
