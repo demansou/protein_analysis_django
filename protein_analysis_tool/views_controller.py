@@ -6,7 +6,7 @@ from django.utils import timezone
 
 from django.core.files.base import ContentFile
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_list_or_404, render
+from django.shortcuts import get_list_or_404, render, reverse
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
@@ -70,15 +70,13 @@ class IndexFormController(object, metaclass=Singleton):
         # create QueryMotif database entries with data from form
         self.create_query_motifs(selected_collections_objects, selected_motifs_objects)
 
-        return HttpResponseRedirect('/all_queries/')
+        return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
 
     def check_form_data(self):
         """
         Handles form errors.
         :return:
         """
-        reset_session_error_message(self.request)
-
         if len(str(self.sequence_data)) == 0 and len(self.selected_collections) == 0:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
@@ -111,9 +109,6 @@ class IndexFormController(object, metaclass=Singleton):
         Checks for textarea input. Attempts to create new database entry with new collection data.
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         # return only selected collections if no data input into textarea
         if len(str(self.sequence_data)) == 0:
             return selected_collections_objects
@@ -157,9 +152,6 @@ class IndexFormController(object, metaclass=Singleton):
         :param new_collection:
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         # iterate through fasta file and update record if exists with current collection as FK or create otherwise
         for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
             Sequence.objects.update_or_create(
@@ -200,9 +192,6 @@ class IndexFormController(object, metaclass=Singleton):
         :param selected_motifs_objects:
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         if len(selected_collections_objects) == 0 or len(selected_motifs_objects) == 0:
             err = 'Error occurred creating queries from data. # Collections: {0}, # Motifs: {1}'.format(
                 len(selected_collections_objects),
@@ -242,8 +231,41 @@ class IndexFormController(object, metaclass=Singleton):
         """
         return os.path.basename(file_name)
 
-# class QueryController(object, metaclass=Singleton):
-    # def __init__(self):
+
+class ProcessQueryController(object, metaclass=Singleton):
+    def __init__(self, request):
+        self.request = request
+
+        if self.request.POST:
+            self.query_id = get_form_data_from_http_post(request, 'query_id')
+
+    def process_query(self):
+        """
+        Process single query.
+        :return:
+        """
+        if len(str(self.query_id)) == 0:
+            err = 'Error: Queue processing controller did not receive a query.'
+            update_session_error_message(self.request, err)
+            return HttpResponseRedirect('/')
+
+        # send to celery
+        task_process_query.delay(self.query_id)
+
+        return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
+
+    def display_queries(self):
+        """
+        Display all queries in database.
+        :return:
+        """
+        query_list = [query for query in Query.objects.all()]
+
+        context = {
+            'query_list': query_list,
+        }
+
+        return render(self.request, 'protein_analysis_tool/process_query.html', context=context)
 
 
 #######
@@ -324,24 +346,6 @@ def update_session_error_message(request, message):
     return request
 
 
-def process_single_query(request):
-    """
-
-    :param request:
-    :return:
-    """
-
-    query_id = get_form_data_from_http_post(request, 'query_id')
-
-    if not query_id:
-        pass
-
-    # push to celery queue
-    task_process_query.delay(query_id)
-
-    return HttpResponseRedirect('/all_queries/')
-
-
 def process_all_queries():
     """
 
@@ -350,36 +354,13 @@ def process_all_queries():
     # Celery task
     task_process_all_queries.delay()
 
-    return HttpResponseRedirect('/all_queries/')
+    return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
 
 
 
 ################
 # GET REQUESTS #
 ################
-
-
-def process_query_view_controller(request):
-    """
-    In Process Query view, get list of queries entered this session.
-    :param request:
-    :return:
-    """
-
-    query_list_cookie = request.session.get('query_list', False)
-
-    if not query_list_cookie:
-        return HttpResponseRedirect('/')
-
-    query_list = []
-    for query_id in query_list_cookie:
-        query_list.append(Query.objects.get(pk=query_id))
-
-    context = {
-        'query_list': query_list,
-    }
-
-    return render(request, 'protein_analysis_tool/process_query.html', context=context)
 
 
 def all_queries_view_controller(request):
