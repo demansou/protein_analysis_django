@@ -227,7 +227,7 @@ class IndexFormController(object, metaclass=Singleton):
             return selected_collections_objects
 
         # attempt to create new record or update previous record
-        new_collection = Collection.objects.update_or_create(
+        new_collection, created = Collection.objects.update_or_create(
             collection_name=str(self.sequence_data_title),
             pub_date=timezone.now(),
             collection_parsed=False,

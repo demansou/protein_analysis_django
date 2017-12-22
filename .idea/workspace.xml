@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,8 +152,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="139" column="96" lean-forward="false" selection-start-line="139" selection-start-column="96" selection-end-line="139" selection-end-column="96" />
+                <state relative-caret-position="-1564">
+                  <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -607,13 +606,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00079" summary="[CHANGES] index view changed to form">
-      <created>1513746480418</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1513746480418</updated>
-    </task>
     <task id="LOCAL-00080" summary="[CHANGES] index view changed to form">
       <created>1513746936304</created>
       <option name="number" value="00080" />
@@ -950,7 +942,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513910145701</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="[FORM UPDATE] Class working when initialized before check.">
+      <created>1513910352056</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1513910352056</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1019,7 +1018,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[BUGFIX] Forgot to add modal dialog div wrapper to modal template" />
     <MESSAGE value="[TEST] added sequence to modal" />
     <MESSAGE value="[BUGFIX] incorrect usage of modal fixed" />
     <MESSAGE value="[FEATURE] added text highlighting with mark.js and added motif to context for result view" />
@@ -1044,7 +1042,8 @@
     <MESSAGE value="[FORM UPDATE] Fixed syntax error in views_controller line 301" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton metaclass" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Converted class to singleton metaclass" />
+    <MESSAGE value="[FORM UPDATE] Class working when initialized before check." />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Class working when initialized before check." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1370,8 +1369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="139" column="96" lean-forward="false" selection-start-line="139" selection-start-column="96" selection-end-line="139" selection-end-column="96" />
+        <state relative-caret-position="-1564">
+          <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
