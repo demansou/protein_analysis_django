@@ -2,47 +2,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %} | UST Motif Analysis Tool</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'protein_analysis_tool/css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'protein_analysis_tool/css/custom.css' %}">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#protein_analysis_tool_navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'protein_analysis_tool:index' %}">UST Motif Analysis Tool</a>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} | UST Motif Analysis Tool</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'protein_analysis_tool/css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'protein_analysis_tool/css/custom.css' %}">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#protein_analysis_tool_navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'protein_analysis_tool:index' %}">UST Motif Analysis Tool</a>
+                </div>
+                <div class="collapse navbar-collapse" id="protein_analysis_tool_navbar">
+                    <ul class="nav navbar-nav">
+                        <!-- Links go here -->
+                        <li><a href="{% url 'protein_analysis_tool:process-query' %}">All Queries</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'admin:index' %}">Admin Login</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="protein_analysis_tool_navbar">
-                <ul class="nav navbar-nav">
-                    <!-- Links go here -->
-                    <li><a href="{% url 'protein_analysis_tool:process-query' %}">All Queries</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{% url 'admin:index' %}">Admin Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- /Navbar -->
+        </nav>
+        <!-- /Navbar -->
 
-    <div class="container">
-        <div class="col-xs-12">
-            {% block content %}{% endblock %}
+        <div class="container">
+            <div class="col-xs-12">
+                {% block content %}{% endblock %}
+            </div>
         </div>
-    </div>
-    <!-- Load Javascript -->
-    <script src="{% static 'protein_analysis_tool/js/jquery-3.2.1.js' %}"></script>
-    <script src="{% static 'protein_analysis_tool/js/bootstrap.js' %}"></script>
-    <!-- /Load Javascript -->
-    {% block javascript %}{% endblock %}
-</body>
+        <!-- Load Javascript -->
+        <script src="{% static 'protein_analysis_tool/js/jquery-3.2.1.js' %}"></script>
+        <script src="{% static 'protein_analysis_tool/js/bootstrap.js' %}"></script>
+        <!-- /Load Javascript -->
+        {% block javascript %}{% endblock %}
+    </body>
 </html>
