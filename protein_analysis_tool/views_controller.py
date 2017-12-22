@@ -105,8 +105,8 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         # if selected_collections is false (from import) return empty list
-        if not self.selected_collections:
-            return []
+        # if not self.selected_collections:
+            # return []
 
         return [Collection.objects.get(pk=int(c)) for c in self.selected_collections]
 
