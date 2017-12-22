@@ -62,8 +62,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="213" column="54" lean-forward="true" selection-start-line="213" selection-start-column="54" selection-end-line="213" selection-end-column="54" />
+                <state relative-caret-position="318">
+                  <caret line="300" column="74" lean-forward="false" selection-start-line="300" selection-start-column="74" selection-end-line="300" selection-end-column="74" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -596,13 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00071" summary="[CHANGES] index view changed to form">
-      <created>1513744746020</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1513744746020</updated>
-    </task>
     <task id="LOCAL-00072" summary="[CHANGES] index view changed to form">
       <created>1513744820155</created>
       <option name="number" value="00072" />
@@ -939,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513906613442</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="[FORM UPDATE] Fixed syntax error in views_controller line 218">
+      <created>1513906769938</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1513906769938</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1008,7 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[BUGFIX] accidently added process_all_queries_view controller to HTTP post instead of HTTP get" />
     <MESSAGE value="[BUGFIX] fixed all_queries/ url" />
     <MESSAGE value="[TEST] Added modals" />
     <MESSAGE value="[BUGFIX] Removed close class from view details butotn" />
@@ -1033,7 +1032,8 @@
     <MESSAGE value="[PROJECT] Cleaned up old forms/views" />
     <MESSAGE value="[PROJECT] Attempting to add error handlers to form" />
     <MESSAGE value="[FORM UPDATE] Updated form to class controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Updated form to class controller" />
+    <MESSAGE value="[FORM UPDATE] Fixed syntax error in views_controller line 218" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Fixed syntax error in views_controller line 218" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1359,8 +1359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="213" column="54" lean-forward="true" selection-start-line="213" selection-start-column="54" selection-end-line="213" selection-end-column="54" />
+        <state relative-caret-position="318">
+          <caret line="300" column="74" lean-forward="false" selection-start-line="300" selection-start-column="74" selection-end-line="300" selection-end-column="74" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
