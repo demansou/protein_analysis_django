@@ -59,11 +59,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="747">
-                  <caret line="343" column="85" lean-forward="true" selection-start-line="343" selection-start-column="85" selection-end-line="343" selection-end-column="85" />
+                <state relative-caret-position="764">
+                  <caret line="344" column="12" lean-forward="false" selection-start-line="344" selection-start-column="12" selection-end-line="344" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -127,7 +127,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="595">
@@ -155,7 +155,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="517">
-                  <caret line="343" column="90" lean-forward="false" selection-start-line="343" selection-start-column="90" selection-end-line="343" selection-end-column="90" />
+                  <caret line="344" column="53" lean-forward="false" selection-start-line="344" selection-start-column="53" selection-end-line="344" selection-end-column="53" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -613,13 +613,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00124" summary="[FORM UPDATE] Fixed syntax error in views_controller line 301">
-      <created>1513909323035</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1513909323035</updated>
-    </task>
     <task id="LOCAL-00125" summary="[FORM UPDATE] Converted class to singleton">
       <created>1513909874830</created>
       <option name="number" value="00125" />
@@ -956,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513931403179</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="[BUGFIX] forgot to add result id to reverse for result viewer">
+      <created>1513931442228</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1513931442228</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1382,8 +1382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="343" column="90" lean-forward="false" selection-start-line="343" selection-start-column="90" selection-end-line="343" selection-end-column="90" />
+        <state relative-caret-position="764">
+          <caret line="344" column="12" lean-forward="false" selection-start-line="344" selection-start-column="12" selection-end-line="344" selection-end-column="12" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
