@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_collections.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +59,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="131" column="8" lean-forward="true" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+                <state relative-caret-position="3854">
+                  <caret line="349" column="42" lean-forward="true" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -74,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -215,8 +212,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
       </list>
     </option>
   </component>
@@ -599,13 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00068" summary="[CHANGES YO] Celery module and settings.py data">
-      <created>1513643380539</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1513643380539</updated>
-    </task>
     <task id="LOCAL-00069" summary="[CHANGES] index view changed to form">
       <created>1513744560894</created>
       <option name="number" value="00069" />
@@ -942,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513840850611</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="[FORM UPDATE] Updated form to class controller">
+      <created>1513905995208</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1513905995209</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1011,7 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEATURE] Updated frequency column output" />
     <MESSAGE value="[BUGFIX] accidently added process_all_queries_view controller to HTTP post instead of HTTP get" />
     <MESSAGE value="[BUGFIX] fixed all_queries/ url" />
     <MESSAGE value="[TEST] Added modals" />
@@ -1036,7 +1032,8 @@
     <MESSAGE value="[FORM] form saves copy paste text to file and hashes file. working on parsing sequences" />
     <MESSAGE value="[PROJECT] Cleaned up old forms/views" />
     <MESSAGE value="[PROJECT] Attempting to add error handlers to form" />
-    <option name="LAST_COMMIT_MESSAGE" value="[PROJECT] Attempting to add error handlers to form" />
+    <MESSAGE value="[FORM UPDATE] Updated form to class controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Updated form to class controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,21 +1349,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html" />
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="131" column="8" lean-forward="true" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+        <state relative-caret-position="3854">
+          <caret line="349" column="42" lean-forward="true" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="42" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
