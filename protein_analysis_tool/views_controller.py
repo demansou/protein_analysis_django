@@ -183,7 +183,7 @@ class IndexFormController(object, metaclass=Singleton):
         """
         reset_session_error_message(self.request)
 
-        if len(self.sequence_data) == 0 and len(self.selected_collections) == 0:
+        if len(str(self.sequence_data)) == 0 and len(self.selected_collections) == 0:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
@@ -292,8 +292,6 @@ class IndexFormController(object, metaclass=Singleton):
             return HttpResponseRedirect('/')
 
         return new_collection
-
-
 
     def check_selected_motifs(self):
         """
