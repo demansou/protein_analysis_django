@@ -341,8 +341,7 @@ class ResultsController(object):
             'motif': motif,
         }
 
-        return render(self.request, reverse(
-            'protein_analysis_tool:view-single-result', kwargs={'result_id': result_id}), context=context)
+        return render(self.request, 'protein_analysis_tool/result_viewer.html', context=context)
 
     @staticmethod
     def process_query_sequence(query_sequence):
