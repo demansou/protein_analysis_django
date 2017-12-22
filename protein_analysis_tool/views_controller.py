@@ -215,7 +215,7 @@ class IndexFormController(object):
         if not self.selected_collections:
             return []
 
-        return [Collection.objects.get(pk=int(c) for c in self.selected_collections)]
+        return [Collection.objects.get(pk=int(c)) for c in self.selected_collections]
 
     def check_copy_paste_data(self, selected_collections_objects):
         """
