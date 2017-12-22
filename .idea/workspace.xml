@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="[Bugfix] Attempt at fixing">
+    <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/urls.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +61,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
+                <state relative-caret-position="595">
+                  <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -147,7 +145,7 @@
                   <caret line="353" column="17" lean-forward="true" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1513914440371" expanded="true" signature="1918:2640" ph="..." />
+                    <marker date="1513914664604" expanded="true" signature="1918:2640" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -618,20 +616,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00092" summary="[CHANGES] index view changed to form">
-      <created>1513748967217</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1513748967217</updated>
-    </task>
-    <task id="LOCAL-00093" summary="[CHANGES] index view changed to form">
-      <created>1513749025618</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1513749025618</updated>
-    </task>
     <task id="LOCAL-00094" summary="[FORM] Almost done editing POST processor for index form">
       <created>1513750473752</created>
       <option name="number" value="00094" />
@@ -961,7 +945,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513914309351</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data">
+      <created>1513914488615</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1513914488615</updated>
+    </task>
+    <task id="LOCAL-00142" summary="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data">
+      <created>1513914667492</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1513914667492</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1030,7 +1028,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[CHANGES YO] Celery module" />
     <MESSAGE value="[CHANGES YO] Celery module and settings.py data" />
     <MESSAGE value="[CHANGES] index view changed to form" />
     <MESSAGE value="[FORM] Almost done editing POST processor for index form" />
@@ -1055,7 +1052,8 @@
     <MESSAGE value="[Query Processing] Updated and consolidated urls" />
     <MESSAGE value="[Query Processing] Fixed un-updated url in base.html" />
     <MESSAGE value="[Maintenance] base.html template tidying" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Maintenance] base.html template tidying" />
+    <MESSAGE value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1385,8 +1383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
+        <state relative-caret-position="595">
+          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
