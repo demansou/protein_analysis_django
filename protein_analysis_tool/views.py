@@ -28,13 +28,13 @@ def all_queries_view(request):
     return all_queries_view_controller(request)
 """
 
-"""
+
 def process_all_queries_view(request):
     if request.method == 'POST':
         pass
 
     return process_all_queries()
-"""
+
 
 def view_query_result(request, result_id):
     controller = ResultsController(request)
