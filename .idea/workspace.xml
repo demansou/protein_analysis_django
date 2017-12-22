@@ -4,6 +4,7 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +63,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3094">
-                  <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+                <state relative-caret-position="986">
+                  <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -141,7 +142,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="153">
-                  <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+                  <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -621,13 +622,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00114" summary="[PROJECT] Cleaned up old forms/views">
-      <created>1513839454775</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1513839454775</updated>
-    </task>
     <task id="LOCAL-00115" summary="[PROJECT] Cleaned up old forms/views">
       <created>1513840608069</created>
       <option name="number" value="00115" />
@@ -964,7 +958,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513925348960</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="[BUGFIX] removed singleton metaclass">
+      <created>1513925424398</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1513925424398</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1033,7 +1034,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FORM UPDATE] Fixed syntax error in views_controller line 218" />
     <MESSAGE value="[FORM UPDATE] Fixed syntax error in views_controller line 301" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton metaclass" />
@@ -1058,7 +1058,8 @@
     <MESSAGE value="[BUGFIX] using request.method" />
     <MESSAGE value="[BUGFIX] repr/str update" />
     <MESSAGE value="[BUGFIX] messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] messages" />
+    <MESSAGE value="[BUGFIX] removed singleton metaclass" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BUGFIX] removed singleton metaclass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1308,16 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1380,10 +1371,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3094">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="986">
+          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1393,7 +1394,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding />
         </state>
       </provider>

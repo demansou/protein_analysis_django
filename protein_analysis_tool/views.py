@@ -7,7 +7,7 @@ def index_form_view(request):
     if request.method == 'POST':
         return controller.process_form()
 
-    return controller.generate_form(request)
+    return controller.generate_form()
 
 
 def process_query_view(request):
