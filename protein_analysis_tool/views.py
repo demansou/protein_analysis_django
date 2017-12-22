@@ -3,10 +3,11 @@ from .views_controller import all_queries_view_controller, process_all_queries, 
 
 
 def index_form_view(request):
+    controller = IndexFormController(request)
     if request.method == 'POST':
-        return IndexFormController(request).process_form()
+        return controller.process_form()
 
-    return IndexFormController.generate_form(request)
+    return controller.generate_form(request)
 
 
 def process_query_view(request):
