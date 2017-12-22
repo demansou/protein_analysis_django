@@ -33,10 +33,21 @@
                                 <div class="modal-body">
                                     <table class="table table-responsive">
                                         <tr>
+                                            <th>Sequence</th>
+                                        </tr>
+                                        <tr>
                                             <td class="sequence-view is-breakable">
                                                 {{ result.sequence_fk.sequence }}
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <th>Matches</th>
+                                        </tr>
+                                        {% for match in result.matches %}
+                                            <tr>
+                                                <td>{{ match }}</td>
+                                            </tr>
+                                        {% endfor %}
                                     </table>
                                 </div>
                             </div>
