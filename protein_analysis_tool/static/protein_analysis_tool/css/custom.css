@@ -11,11 +11,11 @@
 }
 
 .center-pagination {
-    width:100%;
+    text-align: center;
 }
 
 .center-pagination ul {
-    margin: 0 auto;
+    display: inline-block;
 }
 
 mark{
