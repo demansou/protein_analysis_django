@@ -3,12 +3,6 @@
 {% block title %}Motif Analysis Tool{% endblock %}
 
 {% block content %}
-    {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-warning alert-dismissible">{{ message }}</div>
-            {% endfor %}
-    {% endif %}
-
     <div class="bg-info" style="padding:15px;">
         <form method="post">
             {% csrf_token %}
