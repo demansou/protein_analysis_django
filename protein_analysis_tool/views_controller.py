@@ -77,8 +77,6 @@ class IndexFormController(object, metaclass=Singleton):
         Handles form errors.
         :return:
         """
-        reset_session_error_message(self.request)
-
         if len(str(self.sequence_data)) == 0 and len(self.selected_collections) == 0:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
@@ -111,9 +109,6 @@ class IndexFormController(object, metaclass=Singleton):
         Checks for textarea input. Attempts to create new database entry with new collection data.
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         # return only selected collections if no data input into textarea
         if len(str(self.sequence_data)) == 0:
             return selected_collections_objects
@@ -157,9 +152,6 @@ class IndexFormController(object, metaclass=Singleton):
         :param new_collection:
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         # iterate through fasta file and update record if exists with current collection as FK or create otherwise
         for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
             Sequence.objects.update_or_create(
@@ -200,9 +192,6 @@ class IndexFormController(object, metaclass=Singleton):
         :param selected_motifs_objects:
         :return:
         """
-        # clear session error message if one present
-        reset_session_error_message(self.request)
-
         if len(selected_collections_objects) == 0 or len(selected_motifs_objects) == 0:
             err = 'Error occurred creating queries from data. # Collections: {0}, # Motifs: {1}'.format(
                 len(selected_collections_objects),
@@ -242,8 +231,41 @@ class IndexFormController(object, metaclass=Singleton):
         """
         return os.path.basename(file_name)
 
-# class QueryController(object, metaclass=Singleton):
-    # def __init__(self):
+
+class ProcessQueryController(object, metaclass=Singleton):
+    def __init__(self, request):
+        self.request = request
+
+        if self.request.POST:
+            self.query_id = get_form_data_from_http_post(request, 'query_id')
+
+    def process_query(self):
+        """
+        Process single query.
+        :return:
+        """
+        if len(str(self.query_id)) == 0:
+            err = 'Error: Queue processing controller did not receive a query.'
+            update_session_error_message(self.request, err)
+            return HttpResponseRedirect('/')
+
+        # send to celery
+        task_process_query.delay(self.query_id)
+
+        return HttpResponseRedirect('/all_queries/')
+
+    def display_queries(self):
+        """
+        Display all queries in database.
+        :return:
+        """
+        query_list = [query for query in Query.objects.all()]
+
+        context = {
+            'query_list': query_list,
+        }
+
+        return render(self.request, 'protein_analysis_tool/process_query.html', context=context)
 
 
 #######
