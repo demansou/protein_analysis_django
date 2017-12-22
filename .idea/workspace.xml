@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/urls.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="21" column="63" lean-forward="false" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+                <state relative-caret-position="342">
+                  <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
@@ -125,7 +123,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="459">
@@ -212,7 +210,6 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_collections.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_motifs.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/define_parameters.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/admin.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
@@ -230,6 +227,7 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -284,6 +282,11 @@
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -611,13 +614,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
-    </task>
-    <task id="LOCAL-00089" summary="[CHANGES] index view changed to form">
-      <created>1513748219844</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1513748219844</updated>
     </task>
     <task id="LOCAL-00090" summary="[CHANGES] index view changed to form">
       <created>1513748496458</created>
@@ -955,7 +951,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513913869646</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="[Query Processing] Updated and consolidated urls">
+      <created>1513914157105</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1513914157105</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1024,7 +1027,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TEST] markjs working. updating highlight color" />
     <MESSAGE value="[TEST] file storage" />
     <MESSAGE value="[BUGFIX] check for file stored on system and save if not." />
     <MESSAGE value="[CHANGES YO] Celery module" />
@@ -1049,7 +1051,8 @@
     <MESSAGE value="[FORM CONTROLLER] Bugfix getting data from request dict returns empty object if no key found" />
     <MESSAGE value="[MILESTONE] BUGFIXES COMPLETE FOR INDEXFORMCONTROLLER" />
     <MESSAGE value="[Query Processing] Added ProcessQueryController class" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Query Processing] Added ProcessQueryController class" />
+    <MESSAGE value="[Query Processing] Updated and consolidated urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Query Processing] Updated and consolidated urls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1281,14 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="63" lean-forward="false" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/select_collections.html" />
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1381,6 +1376,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
           <folding />
         </state>
       </provider>
