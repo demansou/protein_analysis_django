@@ -4,6 +4,7 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
+      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,8 +129,8 @@
           <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="747">
-                  <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+                <state relative-caret-position="560">
+                  <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
                   <folding />
                 </state>
               </provider>
@@ -138,8 +139,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="367" column="30" lean-forward="true" selection-start-line="367" selection-start-column="30" selection-end-line="367" selection-end-column="30" />
+                <state relative-caret-position="475">
+                  <caret line="345" column="31" lean-forward="false" selection-start-line="345" selection-start-column="31" selection-end-line="345" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -155,7 +156,7 @@
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="347">
-                  <caret line="346" column="36" lean-forward="false" selection-start-line="346" selection-start-column="36" selection-end-line="346" selection-end-column="36" />
+                  <caret line="349" column="36" lean-forward="false" selection-start-line="349" selection-start-column="36" selection-end-line="349" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -613,13 +614,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00129" summary="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element">
-      <created>1513910521430</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1513910521430</updated>
-    </task>
     <task id="LOCAL-00130" summary="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list">
       <created>1513910815015</created>
       <option name="number" value="00130" />
@@ -956,7 +950,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513932769954</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="[FEATURE] attempting to correct stuff on result_viewer template">
+      <created>1513933616517</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1513933616517</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1374,8 +1375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="367" column="30" lean-forward="true" selection-start-line="367" selection-start-column="30" selection-end-line="367" selection-end-column="30" />
+        <state relative-caret-position="475">
+          <caret line="345" column="31" lean-forward="false" selection-start-line="345" selection-start-column="31" selection-end-line="345" selection-end-column="31" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1384,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+        <state relative-caret-position="560">
+          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
           <folding />
         </state>
       </provider>

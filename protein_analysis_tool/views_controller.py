@@ -336,11 +336,14 @@ class ResultsController(object):
 
         result_count = [self.count_matches(r.matches) for r in result_list]
 
+        results = zip(result_list, result_count)
+
         motif = Query.objects.get(pk=result_id).motif_fk.motif
 
         context = {
-            'result_list': result_list,
-            'result_count': result_count,
+            # 'result_list': result_list,
+            # 'result_count': result_count,
+            'results': results,
             'motif': motif,
         }
 
