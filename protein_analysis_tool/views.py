@@ -1,5 +1,5 @@
-from .views_controller import process_query_view_controller, all_queries_view_controller,\
-    process_single_query, process_all_queries, view_query_result_controller, IndexFormController, ProcessQueryController
+from .views_controller import all_queries_view_controller, process_all_queries, view_query_result_controller, \
+    IndexFormController, ProcessQueryController
 
 
 def index_form_view(request):
@@ -15,18 +15,17 @@ def process_query_view(request):
     controller = ProcessQueryController(request)
 
     if request.POST:
-        # return process_single_query(request)
         return controller.process_query()
 
-    # return process_query_view_controller(request)
     return controller.display_queries()
 
-
+"""
 def all_queries_view(request):
     if request.POST:
         return process_single_query(request)
 
     return all_queries_view_controller(request)
+"""
 
 
 def process_all_queries_view(request):

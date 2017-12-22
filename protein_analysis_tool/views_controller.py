@@ -6,7 +6,7 @@ from django.utils import timezone
 
 from django.core.files.base import ContentFile
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_list_or_404, render
+from django.shortcuts import get_list_or_404, render, reverse
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
@@ -70,7 +70,7 @@ class IndexFormController(object, metaclass=Singleton):
         # create QueryMotif database entries with data from form
         self.create_query_motifs(selected_collections_objects, selected_motifs_objects)
 
-        return HttpResponseRedirect('/all_queries/')
+        return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
 
     def check_form_data(self):
         """
@@ -252,7 +252,7 @@ class ProcessQueryController(object, metaclass=Singleton):
         # send to celery
         task_process_query.delay(self.query_id)
 
-        return HttpResponseRedirect('/all_queries/')
+        return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
 
     def display_queries(self):
         """
@@ -346,24 +346,6 @@ def update_session_error_message(request, message):
     return request
 
 
-def process_single_query(request):
-    """
-
-    :param request:
-    :return:
-    """
-
-    query_id = get_form_data_from_http_post(request, 'query_id')
-
-    if not query_id:
-        pass
-
-    # push to celery queue
-    task_process_query.delay(query_id)
-
-    return HttpResponseRedirect('/all_queries/')
-
-
 def process_all_queries():
     """
 
@@ -372,36 +354,13 @@ def process_all_queries():
     # Celery task
     task_process_all_queries.delay()
 
-    return HttpResponseRedirect('/all_queries/')
+    return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
 
 
 
 ################
 # GET REQUESTS #
 ################
-
-
-def process_query_view_controller(request):
-    """
-    In Process Query view, get list of queries entered this session.
-    :param request:
-    :return:
-    """
-
-    query_list_cookie = request.session.get('query_list', False)
-
-    if not query_list_cookie:
-        return HttpResponseRedirect('/')
-
-    query_list = []
-    for query_id in query_list_cookie:
-        query_list.append(Query.objects.get(pk=query_id))
-
-    context = {
-        'query_list': query_list,
-    }
-
-    return render(request, 'protein_analysis_tool/process_query.html', context=context)
 
 
 def all_queries_view_controller(request):
