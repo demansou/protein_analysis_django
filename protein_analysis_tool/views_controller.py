@@ -247,7 +247,7 @@ class IndexFormController(object, metaclass=Singleton):
         # save file and hash to database
         new_collection.save()
 
-        self.parse_new_collection_file_data(new_collection)
+        new_collection = self.parse_new_collection_file_data(new_collection)
 
         if not new_collection.pk:
             err = 'Failed to add new data to database. Cannot parse new collection data from text input'
@@ -270,7 +270,7 @@ class IndexFormController(object, metaclass=Singleton):
 
         # iterate through fasta file and update record if exists with current collection as FK or create otherwise
         for record in SeqIO.parse(new_collection.collection_file.path, 'fasta'):
-            sequence, created = Sequence.objects.update_or_create(
+            Sequence.objects.update_or_create(
                 collection_fk=new_collection,
                 sequence_id=record.id,
                 sequence_name=str(record.name),
@@ -290,6 +290,10 @@ class IndexFormController(object, metaclass=Singleton):
             err = 'Error: Collection not parsed.'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
+
+        return new_collection
+
+
 
     def check_selected_motifs(self):
         """
