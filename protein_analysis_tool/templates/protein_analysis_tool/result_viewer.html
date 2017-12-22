@@ -18,7 +18,7 @@
                 <td>{{ result.sequence_fk.sequence_id }}</td>
                 <td>{{ result.query_fk.motif_fk.motif }}</td>
                 <td>{{ result.query_fk.min_num_motifs_per_sequence }} matches per {{ result.query_fk.max_char_distance_between_motifs }} AA</td>
-                <td>{{ result.matches|length }}</td>
+                <td>{{ result_count.forloop.counter0 }}</td>
                 <td>
                     <button type="button" class="btn btn-block btn-default" data-toggle="modal"
                             data-target="#popin{{ result.sequence_fk.pk }}">View Details</button>
@@ -44,9 +44,11 @@
                                             <th>Matches</th>
                                         </tr>
                                         {% for match in result.matches %}
+                                            {% if match >= result.query_fk.min_num_motifs_per_sequence %}
                                             <tr>
                                                 <td>{{ match }}</td>
                                             </tr>
+                                            {% endif %}
                                         {% endfor %}
                                     </table>
                                 </div>

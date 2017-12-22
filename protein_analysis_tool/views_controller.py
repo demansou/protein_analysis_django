@@ -334,12 +334,13 @@ class ResultsController(object):
         """
         result_list = [self.process_query_sequence(qs) for qs in QuerySequence.objects.filter(query_fk_id=result_id)]
 
+        result_count = [self.count_matches(r.matches) for r in result_list]
+
         motif = Query.objects.get(pk=result_id).motif_fk.motif
-
-
 
         context = {
             'result_list': result_list,
+            'result_count': result_count,
             'motif': motif,
         }
 
@@ -355,6 +356,19 @@ class ResultsController(object):
         query_sequence.matches = json.loads(query_sequence.matches)
         return query_sequence
 
+    @staticmethod
+    def count_matches(result_matches):
+        """
+
+        :param result_matches:
+        :return:
+        """
+        counter = 0
+        for match in result_matches:
+            if len(match) > 0:
+                counter += 1
+
+        return counter
 #######
 # GET #
 #######
