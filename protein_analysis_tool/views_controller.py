@@ -247,7 +247,7 @@ class IndexFormController(object, metaclass=Singleton):
         # save file and hash to database
         new_collection.save()
 
-        self.parse_new_collection_file_data(new_collection)
+        new_collection = self.parse_new_collection_file_data(new_collection)
 
         if not new_collection.pk:
             err = 'Failed to add new data to database. Cannot parse new collection data from text input'
@@ -255,7 +255,9 @@ class IndexFormController(object, metaclass=Singleton):
             return HttpResponseRedirect('/')
 
         # return list of selected collections with new collection added
-        return selected_collections_objects.append(new_collection)
+        selected_collections_objects.append(new_collection)
+
+        return selected_collections_objects
 
     def parse_new_collection_file_data(self, new_collection):
         """
@@ -288,6 +290,10 @@ class IndexFormController(object, metaclass=Singleton):
             err = 'Error: Collection not parsed.'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
+
+        return new_collection
+
+
 
     def check_selected_motifs(self):
         """

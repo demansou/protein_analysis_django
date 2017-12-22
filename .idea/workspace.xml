@@ -59,11 +59,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-158">
-                  <caret line="113" column="26" lean-forward="true" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+                <state relative-caret-position="2222">
+                  <caret line="286" column="25" lean-forward="false" selection-start-line="286" selection-start-column="25" selection-end-line="286" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -71,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="204">
-                  <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+                  <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -152,8 +152,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1564">
-                  <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
+                <state relative-caret-position="187">
+                  <caret line="257" column="43" lean-forward="false" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -606,20 +606,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00080" summary="[CHANGES] index view changed to form">
-      <created>1513746936304</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1513746936304</updated>
-    </task>
-    <task id="LOCAL-00081" summary="[CHANGES] index view changed to form">
-      <created>1513746981667</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1513746981667</updated>
-    </task>
     <task id="LOCAL-00082" summary="[CHANGES] index view changed to form">
       <created>1513747103687</created>
       <option name="number" value="00082" />
@@ -949,7 +935,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513910352056</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element">
+      <created>1513910521430</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1513910521430</updated>
+    </task>
+    <task id="LOCAL-00130" summary="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list">
+      <created>1513910815015</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1513910815016</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1018,8 +1018,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[TEST] added sequence to modal" />
-    <MESSAGE value="[BUGFIX] incorrect usage of modal fixed" />
     <MESSAGE value="[FEATURE] added text highlighting with mark.js and added motif to context for result view" />
     <MESSAGE value="[BUGFIX] loaded static to result viewer template" />
     <MESSAGE value="[BUGFIX] accidently declared class twice in sequence table in modal" />
@@ -1043,7 +1041,9 @@
     <MESSAGE value="[FORM UPDATE] Converted class to singleton" />
     <MESSAGE value="[FORM UPDATE] Converted class to singleton metaclass" />
     <MESSAGE value="[FORM UPDATE] Class working when initialized before check." />
-    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] Class working when initialized before check." />
+    <MESSAGE value="[FORM UPDATE] fixed but where update_or_create was returning a tuple but i didnt consider having to get a tuple element" />
+    <MESSAGE value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FORM UPDATE] fixed error where new collection from copy/paste was not added to list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1362,15 +1362,15 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="257" column="43" lean-forward="false" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
