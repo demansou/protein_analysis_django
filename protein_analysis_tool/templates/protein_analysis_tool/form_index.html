@@ -3,10 +3,12 @@
 {% block title %}Motif Analysis Tool{% endblock %}
 
 {% block content %}
-    {% if request.session.form_error %}
-        <div class="alert alert-warning" role="alert">
-            {{ request.session.form_error }}
-        </div>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
     {% endif %}
 
     <div class="bg-info" style="padding:15px;">
