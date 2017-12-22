@@ -336,6 +336,8 @@ class ResultsController(object):
 
         motif = Query.objects.get(pk=result_id).motif_fk.motif
 
+
+
         context = {
             'result_list': result_list,
             'motif': motif,
