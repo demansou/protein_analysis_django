@@ -136,8 +136,8 @@
       <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="366" column="26" lean-forward="false" selection-start-line="366" selection-start-column="26" selection-end-line="366" selection-end-column="26" />
+            <state relative-caret-position="629">
+              <caret line="377" column="51" lean-forward="false" selection-start-line="377" selection-start-column="51" selection-end-line="377" selection-end-column="51" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -594,13 +594,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00132" summary="[FORM UPDATE] fixed but where new_collection failed to update in check_copy_paste_data">
-      <created>1513911475867</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1513911475867</updated>
-    </task>
     <task id="LOCAL-00133" summary="[MILESTONE] FORM CONTROLLER WORKING AS EXPECTED FOR TESTS">
       <created>1513911629241</created>
       <option name="number" value="00133" />
@@ -937,7 +930,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513934294415</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="[FEATURE] added paginator to results display (MAY NOT WORK)">
+      <created>1513969702182</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1513969702182</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1006,7 +1006,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[MILESTONE] BUGFIXES COMPLETE FOR INDEXFORMCONTROLLER" />
     <MESSAGE value="[Query Processing] Added ProcessQueryController class" />
     <MESSAGE value="[Query Processing] Updated and consolidated urls" />
     <MESSAGE value="[Query Processing] Fixed un-updated url in base.html" />
@@ -1031,7 +1030,8 @@
     <MESSAGE value="[BUGFIX] forgot to add result id to reverse for result viewer" />
     <MESSAGE value="[FEATURE] updated result template modal" />
     <MESSAGE value="[FEATURE] attempting to correct stuff on result_viewer template" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] attempting to correct stuff on result_viewer template" />
+    <MESSAGE value="[FEATURE] added paginator to results display (MAY NOT WORK)" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] added paginator to results display (MAY NOT WORK)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1363,8 +1363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="366" column="26" lean-forward="false" selection-start-line="366" selection-start-column="26" selection-end-line="366" selection-end-column="26" />
+        <state relative-caret-position="629">
+          <caret line="377" column="51" lean-forward="false" selection-start-line="377" selection-start-column="51" selection-end-line="377" selection-end-column="51" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
