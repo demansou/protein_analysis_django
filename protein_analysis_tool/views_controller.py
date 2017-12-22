@@ -11,7 +11,7 @@ from django.shortcuts import get_list_or_404, render
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
 from protein_analysis_django.settings import MEDIA_ROOT
-from .custom import large_file_hasher
+from .custom import large_file_hasher, Singleton
 from .models import Collection, Motif, Query, QuerySequence, Sequence
 
 
@@ -122,7 +122,7 @@ def process_all_queries():
     return HttpResponseRedirect('/all_queries/')
 
 
-class IndexFormController(response):
+class IndexFormController(Singleton):
     def __init__(self, request):
         """
         Initialize IndexForm controller with HTTP request.
@@ -131,7 +131,6 @@ class IndexFormController(response):
         """
         self.request = request
 
-        """
         if self.request.POST:
             self.sequence_data_title = get_form_data_from_http_post(self.request, 'sequence_data_title')
             self.sequence_data = get_form_data_from_http_post(self.request, 'sequence_data')
@@ -141,7 +140,6 @@ class IndexFormController(response):
             self.max_motif_range = get_form_data_from_http_post(self.request, 'max_motif_range')
 
             self.process_form()
-        """
 
         self.generate_form()
 
