@@ -62,8 +62,8 @@
           <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="246" column="33" lean-forward="false" selection-start-line="246" selection-start-column="33" selection-end-line="246" selection-end-column="33" />
+                <state relative-caret-position="323">
+                  <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -146,7 +146,7 @@
                   <caret line="353" column="17" lean-forward="true" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1513914811110" expanded="true" signature="1918:2640" ph="..." />
+                    <marker date="1513915019621" expanded="true" signature="1918:2640" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -617,13 +617,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00095" summary="[FORM] Almost done editing POST processor for index form">
-      <created>1513805169493</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1513805169493</updated>
-    </task>
     <task id="LOCAL-00096" summary="[FORM] Almost done editing POST processor for index form">
       <created>1513805681558</created>
       <option name="number" value="00096" />
@@ -960,7 +953,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513914672882</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist">
+      <created>1513914851644</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1513914851644</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1029,7 +1029,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[CHANGES YO] Celery module and settings.py data" />
     <MESSAGE value="[CHANGES] index view changed to form" />
     <MESSAGE value="[FORM] Almost done editing POST processor for index form" />
     <MESSAGE value="[FORM] working with file saving for copy paste text" />
@@ -1054,7 +1053,8 @@
     <MESSAGE value="[Query Processing] Fixed un-updated url in base.html" />
     <MESSAGE value="[Maintenance] base.html template tidying" />
     <MESSAGE value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
+    <MESSAGE value="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1384,8 +1384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="246" column="33" lean-forward="false" selection-start-line="246" selection-start-column="33" selection-end-line="246" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

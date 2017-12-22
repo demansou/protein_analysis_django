@@ -77,7 +77,7 @@ class IndexFormController(object, metaclass=Singleton):
         Handles form errors.
         :return:
         """
-        if self.sequence_data is None and len(self.selected_collections) == 0:
+        if not self.sequence_data and len(self.selected_collections) == 0:
             err = 'No sequence data selected AND no collections selected'
             self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
@@ -244,7 +244,7 @@ class ProcessQueryController(object, metaclass=Singleton):
         Process single query.
         :return:
         """
-        if self.query_id is None:
+        if not self.query_id:
             err = 'Error: Queue processing controller did not receive a query.'
             update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
