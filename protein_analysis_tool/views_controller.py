@@ -89,7 +89,6 @@ class IndexFormController(object):
         Process form data
         :return:
         """
-
         # validate form fields
         self.check_form_data()
 
@@ -276,6 +275,7 @@ class ProcessQueryController(object):
     """
     Controller for processing queries.
     """
+
     def __init__(self, request):
         """
         Initialize query processing controller when dealing with the query page.
@@ -314,6 +314,44 @@ class ProcessQueryController(object):
 
         return render(self.request, 'protein_analysis_tool/process_query.html', context=context)
 
+
+class ResultsController(object):
+    """
+
+    """
+    def __init__(self, request):
+        """
+
+        :param request:
+        """
+        self.request = request
+
+    def display_results(self, result_id):
+        """
+
+        :param result_id:
+        :return:
+        """
+        result_list = [self.process_query_sequence(qs) for qs in QuerySequence.objects.filter(query_fk_id=result_id)]
+
+        motif = Query.objects.get(pk=result_id).motif_fk.motif
+
+        context = {
+            'result_list': result_list,
+            'motif': motif,
+        }
+
+        return render(self.request, reverse('protein_analysis_django:view-single-result'), context=context)
+
+    @staticmethod
+    def process_query_sequence(query_sequence):
+        """
+
+        :param query_sequence:
+        :return:
+        """
+        query_sequence.matches = json.loads(query_sequence.matches)
+        return query_sequence
 
 #######
 # GET #
