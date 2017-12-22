@@ -229,7 +229,7 @@ class IndexFormController(object, metaclass=Singleton):
                 len(selected_collections_objects),
                 len(selected_motifs_objects)
             )
-            update_session_error_message(self.request, err)
+            self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
 
         for collection in selected_collections_objects:
@@ -284,7 +284,7 @@ class ProcessQueryController(object, metaclass=Singleton):
         """
         if not self.query_id:
             err = 'Error: Queue processing controller did not receive a query.'
-            update_session_error_message(self.request, err)
+            self.request = update_session_error_message(self.request, err)
             return HttpResponseRedirect('/')
 
         # send to celery
@@ -339,6 +339,7 @@ def update_request_session_dict(request, key, value):
     :return:
     """
     request.session[key] = value
+    return request
 
 
 def get_session_data(request, key):
