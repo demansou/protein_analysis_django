@@ -1,13 +1,14 @@
 from .views_controller import process_query_view_controller, all_queries_view_controller,\
     process_single_query, process_all_queries, view_query_result_controller, index_form_view_controller,\
-    index_form_process_controller
+    index_form_process_controller, IndexFormController
 
 
 def index_form_view(request):
-    if request.POST:
-        return index_form_process_controller(request)
+    # if request.POST:
+        # return index_form_process_controller(request)
 
-    return index_form_view_controller(request)
+    # return index_form_view_controller(request)
+    return IndexFormController
 
 
 def process_query_view(request):
