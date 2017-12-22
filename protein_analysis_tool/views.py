@@ -7,7 +7,7 @@ def index_form_view(request):
         # return index_form_process_controller(request)
 
     # return index_form_view_controller(request)
-    IndexFormController(request)
+    return IndexFormController(request)
 
 
 def process_query_view(request):
