@@ -41,7 +41,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': self.request,
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -56,7 +56,7 @@ class IndexFormController(object, metaclass=Singleton):
         :return:
         """
         return json.dumps({
-            'request': self.request,
+            'request': str(self.request),
             'sequence_data_title': self.sequence_data_title,
             'sequence_data': self.sequence_data,
             'selected_collections': self.selected_collections,
@@ -110,25 +110,25 @@ class IndexFormController(object, metaclass=Singleton):
         if not self.sequence_data and not self.selected_collections:
             err = 'No sequence data selected AND no collections selected'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if not self.selected_motifs:
             err = 'No motifs selected'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if int(self.min_num_motifs) < 2:
             err = 'Minimum number of motifs outside of allowed range'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         if int(self.max_motif_range) < 20 or int(self.max_motif_range) > 200:
             err = 'Maximum motif range outside of allowed range'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
     def check_selected_collections(self):
@@ -175,7 +175,7 @@ class IndexFormController(object, metaclass=Singleton):
 
         if not new_collection.pk:
             err = 'Failed to add new data to database. Cannot parse new collection data from text input'
-            self.request = update_session_error_message(self.request, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         # return list of selected collections with new collection added
@@ -210,7 +210,7 @@ class IndexFormController(object, metaclass=Singleton):
         if not Collection.objects.get(pk=new_collection.pk).collection_parsed:
             err = 'Error: Collection not parsed.'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         return new_collection
@@ -292,7 +292,7 @@ class ProcessQueryController(object, metaclass=Singleton):
         if not self.query_id:
             err = 'Error: Queue processing controller did not receive a query.'
             # self.request = update_session_error_message(self.request, err)
-            messages.add_message(self.request, messages.ERROR, err)
+            messages.error(self.request, err)
             return HttpResponseRedirect('/')
 
         # send to celery
@@ -402,8 +402,6 @@ def process_all_queries():
     task_process_all_queries.delay()
 
     return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
-
-
 
 ################
 # GET REQUESTS #
