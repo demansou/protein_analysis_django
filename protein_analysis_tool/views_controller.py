@@ -6,7 +6,7 @@ from django.utils import timezone
 
 from django.core.files.base import ContentFile
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect, response
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_list_or_404, render
 
 from protein_analysis_tool.tasks import task_process_query, task_process_all_queries
@@ -122,7 +122,7 @@ def process_all_queries():
     return HttpResponseRedirect('/all_queries/')
 
 
-class IndexFormController(Singleton):
+class IndexFormController(object, metaclass=Singleton):
     def __init__(self, request):
         """
         Initialize IndexForm controller with HTTP request.
