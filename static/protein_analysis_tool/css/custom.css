@@ -10,6 +10,14 @@
     word-break: break-all;
 }
 
+.center-pagination {
+    text-align: center;
+}
+
+.center-pagination ul {
+    display: inline-block;
+}
+
 mark{
     background: orange;
     color: black;
