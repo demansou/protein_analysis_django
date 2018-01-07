@@ -88,6 +88,7 @@
 {% block javascript %}
     <script src="{% static 'protein_analysis_tool/js/jquery.mark.min.js' %}"></script>
     <script>
+        // function for marking motif
         $(document).ready(function(){
             $(".sequence-view").markRegExp(/{{ motif }}/gmi, {className: "match"});
         });

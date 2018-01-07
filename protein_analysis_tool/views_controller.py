@@ -15,6 +15,85 @@ from protein_analysis_django.settings import MEDIA_ROOT
 from .custom import large_file_hasher
 from .models import Collection, Motif, Query, QuerySequence, Sequence
 
+##################
+# STATIC METHODS #
+##################
+
+
+def get_form_data_from_http_post(request, key):
+    """
+    Returns form data from http post with key.
+    :param request:
+    :param key:
+    :return:
+    """
+    return request.POST.get(key, False)
+
+
+def get_form_data_from_http_post_as_list(request, key):
+    """
+    Returns form data list from http post with key.
+    :param request:
+    :param key:
+    :return:
+    """
+    return request.POST.getlist(key, False)
+
+
+def update_request_session_dict(request, key, value):
+    """
+    Sets session dict key value.
+    :param request:
+    :param key:
+    :param value:
+    :return:
+    """
+    request.session[key] = value
+    return request
+
+
+def get_session_data(request, key):
+    """
+    Gets session dict key value.
+    :param request:
+    :param key:
+    :return:
+    """
+    return request.session.get(key, False)
+
+
+def process_result_dict(result_dict):
+    """
+
+    :param result_dict:
+    :return:
+    """
+    result_dict.matches = json.loads(result_dict.matches)
+    return result_dict
+
+
+def reset_session_error_message(request):
+    """
+
+    :param request:
+    :return:
+    """
+    try:
+        del request.session['form_error']
+    except KeyError:
+        pass
+
+
+def update_session_error_message(request, message):
+    """
+
+    :param request:
+    :param message:
+    :return:
+    """
+    request.session['form_error'] = message
+    return request
+
 ###############
 # CONTROLLERS #
 ###############
@@ -315,10 +394,21 @@ class ProcessQueryController(object):
 
         return render(self.request, 'protein_analysis_tool/process_query.html', context=context)
 
+    @staticmethod
+    def process_all_queries():
+        """
+        Send celery task to process all queries.
+        :return:
+        """
+        # Celery task
+        task_process_all_queries.delay()
+
+        return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
+
 
 class ResultsController(object):
     """
-
+    Controller for displaying results.
     """
     def __init__(self, request):
         """
@@ -332,22 +422,6 @@ class ResultsController(object):
 
         :param result_id:
         :return:
-        """
-        """
-        result_list = [self.process_query_sequence(qs) for qs in QuerySequence.objects.filter(query_fk_id=result_id)]
-
-        result_count = [self.count_matches(r.matches) for r in result_list]
-
-        results = zip(result_list, result_count)
-
-        motif = Query.objects.get(pk=result_id).motif_fk.motif
-
-        context = {
-            'results': results,
-            'motif': motif,
-        }
-
-        return render(self.request, 'protein_analysis_tool/result_viewer.html', context=context)
         """
         results = self.zip_results_for_display(result_id)
         motif = Query.objects.get(pk=result_id).motif_fk.motif
@@ -370,6 +444,12 @@ class ResultsController(object):
         return render(self.request, 'protein_analysis_tool/result_viewer.html', context=context)
 
     def zip_results_for_display(self, result_id):
+        """
+        Zip results list and count together for filtering.
+        list[i][0] is result. list[i][1] is match count.
+        :param result_id:
+        :return:
+        """
         result_list = [self.process_query_sequence(qs) for qs in
                        QuerySequence.objects.filter(query_fk_id=result_id)]
 
@@ -380,7 +460,7 @@ class ResultsController(object):
     @staticmethod
     def process_query_sequence(query_sequence):
         """
-
+        Get matches for the query/sequence pair and return as JSON object.
         :param query_sequence:
         :return:
         """
@@ -390,7 +470,7 @@ class ResultsController(object):
     @staticmethod
     def count_matches(result_matches):
         """
-
+        Counts matches for each sequence.
         :param result_matches:
         :return:
         """
@@ -400,140 +480,3 @@ class ResultsController(object):
                 counter += 1
 
         return counter
-
-
-#######
-# GET #
-#######
-
-def get_form_data_from_http_post(request, key):
-    """
-    Returns form data from http post with key.
-    :param request:
-    :param key:
-    :return:
-    """
-    return request.POST.get(key, False)
-
-
-def get_form_data_from_http_post_as_list(request, key):
-    """
-    Returns form data list from http post with key.
-    :param request:
-    :param key:
-    :return:
-    """
-    return request.POST.getlist(key, False)
-
-
-def update_request_session_dict(request, key, value):
-    """
-    Sets session dict key value.
-    :param request:
-    :param key:
-    :param value:
-    :return:
-    """
-    request.session[key] = value
-    return request
-
-
-def get_session_data(request, key):
-    """
-    Gets session dict key value.
-    :param request:
-    :param key:
-    :return:
-    """
-    return request.session.get(key, False)
-
-
-def process_result_dict(result_dict):
-    """
-
-    :param result_dict:
-    :return:
-    """
-    result_dict.matches = json.loads(result_dict.matches)
-    return result_dict
-
-
-def reset_session_error_message(request):
-    """
-
-    :param request:
-    :return:
-    """
-    try:
-        del request.session['form_error']
-    except KeyError:
-        pass
-
-
-def update_session_error_message(request, message):
-    """
-
-    :param request:
-    :param message:
-    :return:
-    """
-    request.session['form_error'] = message
-    return request
-
-
-def process_all_queries():
-    """
-
-    :return:
-    """
-    # Celery task
-    task_process_all_queries.delay()
-
-    return HttpResponseRedirect(reverse('protein_analysis_tool:process-query'))
-
-################
-# GET REQUESTS #
-################
-
-
-def all_queries_view_controller(request):
-    """
-    View all queries.
-    :param request:
-    :return:
-    """
-
-    # get all queries and format as list
-    query_list = [query for query in Query.objects.all()]
-
-    # create context
-    context = {
-        'query_list': query_list,
-    }
-
-    # render process_query page with all queries
-    return render(request, 'protein_analysis_tool/process_query.html', context=context)
-
-
-def view_query_result_controller(request, result_id):
-    """
-
-    :param request:
-    :param result_id:
-    :return:
-    """
-
-    # get results list and process matches to encode as json
-    result_list = [process_result_dict(query_sequence) for query_sequence
-                   in QuerySequence.objects.filter(query_fk_id=result_id)]
-
-    motif = Query.objects.get(pk=result_id).motif_fk.motif
-
-    # create context
-    context = {
-        'result_list': result_list,
-        'motif': motif,
-    }
-
-    # return results page with list of results
-    return render(request, 'protein_analysis_tool/result_viewer.html', context=context)

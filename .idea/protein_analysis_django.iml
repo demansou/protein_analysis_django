@@ -15,7 +15,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (protein_analysis_django)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at C:\Users\deman\OneDrive\PersonalProjects\VirtualEnvironments\py_3_6_3_venv_django" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
