@@ -4,7 +4,6 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
-      <change beforePath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" afterPath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="48" column="155" lean-forward="false" selection-start-line="48" selection-start-column="155" selection-end-line="48" selection-end-column="155" />
+            <state relative-caret-position="574">
+              <caret line="48" column="64" lean-forward="false" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -563,13 +562,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00139" summary="[Query Processing] Fixed un-updated url in base.html">
-      <created>1513914226762</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1513914226762</updated>
-    </task>
     <task id="LOCAL-00140" summary="[Maintenance] base.html template tidying">
       <created>1513914309351</created>
       <option name="number" value="00140" />
@@ -906,7 +898,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515301660853</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="[TEST FEATURE] Highlight range WITH BUGFIX for range number">
+      <created>1515302451158</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1515302451158</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TodoView">
@@ -975,7 +974,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist" />
     <MESSAGE value="[FEATURE] added string method to indexformcontroller class" />
     <MESSAGE value="[FEATURE] str/repr for indexformcontroller" />
     <MESSAGE value="[BUGFIX] request key updating was not being returned to calling method" />
@@ -1000,7 +998,8 @@
     <MESSAGE value="[FEATURE] centered pagination on bottom of page" />
     <MESSAGE value="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config." />
     <MESSAGE value="[TEST FEATURE] Highlight range" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TEST FEATURE] Highlight range" />
+    <MESSAGE value="[TEST FEATURE] Highlight range WITH BUGFIX for range number" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TEST FEATURE] Highlight range WITH BUGFIX for range number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1338,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="48" column="155" lean-forward="false" selection-start-line="48" selection-start-column="155" selection-end-line="48" selection-end-column="155" />
+        <state relative-caret-position="574">
+          <caret line="48" column="64" lean-forward="false" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
           <folding />
         </state>
       </provider>
