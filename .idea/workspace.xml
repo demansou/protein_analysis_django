@@ -4,7 +4,7 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+      <change beforePath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" afterPath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +49,18 @@
       <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="48" column="113" lean-forward="false" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
+            <state relative-caret-position="404">
+              <caret line="48" column="155" lean-forward="false" selection-start-line="48" selection-start-column="155" selection-end-line="48" selection-end-column="155" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,6 +162,7 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+        <option value="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
       </list>
     </option>
@@ -207,6 +218,24 @@
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -533,13 +562,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
-    </task>
-    <task id="LOCAL-00138" summary="[Query Processing] Updated and consolidated urls">
-      <created>1513914157105</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1513914157105</updated>
     </task>
     <task id="LOCAL-00139" summary="[Query Processing] Fixed un-updated url in base.html">
       <created>1513914226762</created>
@@ -877,7 +899,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515299800910</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="[TEST FEATURE] Highlight range">
+      <created>1515301660853</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1515301660853</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TodoView">
@@ -946,7 +975,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
     <MESSAGE value="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist" />
     <MESSAGE value="[FEATURE] added string method to indexformcontroller class" />
     <MESSAGE value="[FEATURE] str/repr for indexformcontroller" />
@@ -971,7 +999,8 @@
     <MESSAGE value="[FEATURE] Added pagination link to bottom of page" />
     <MESSAGE value="[FEATURE] centered pagination on bottom of page" />
     <MESSAGE value="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config." />
-    <option name="LAST_COMMIT_MESSAGE" value="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config." />
+    <MESSAGE value="[TEST FEATURE] Highlight range" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TEST FEATURE] Highlight range" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -994,7 +1023,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/forms.py" />
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/custom.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1300,10 +1328,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="48" column="113" lean-forward="false" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
+        <state relative-caret-position="404">
+          <caret line="48" column="155" lean-forward="false" selection-start-line="48" selection-start-column="155" selection-end-line="48" selection-end-column="155" />
           <folding />
         </state>
       </provider>

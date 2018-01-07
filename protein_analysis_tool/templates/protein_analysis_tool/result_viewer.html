@@ -46,7 +46,7 @@
                                         {% for match in result.0.matches %}
                                             {% if match|length >= result.0.query_fk.min_num_motifs_per_sequence %}
                                             <tr>
-                                                <td onmouseover="highlightRange({{ match.0.span.0 }}, {{ result.1 }})">{{ match }}</td>
+                                                <td onmouseover="highlightRange({{ match.0.span.0 }}, {{ result.0.query_fk.max_char_distance_between_motifs }})">{{ match }}</td>
                                             </tr>
                                             {% endif %}
                                         {% endfor %}
@@ -96,8 +96,8 @@
         function highlightRange(startPos, range) {
             $(".sequence-view").markRanges({
                 start: parseInt(startPos),
-                length: range
-            })
+                length: parseInt(range)
+            }, {className: "matchRange"})
         }
     </script>
 {% endblock %}
