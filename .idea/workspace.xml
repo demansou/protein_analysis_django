@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/protein_analysis_django.iml" afterPath="$PROJECT_DIR$/.idea/protein_analysis_django.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/urls.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
-      <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views.py" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" afterPath="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+            <state relative-caret-position="602">
+              <caret line="48" column="113" lean-forward="false" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -63,8 +59,8 @@
       <file leaf-file-name="views_controller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1295">
-              <caret line="482" column="0" lean-forward="true" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
+            <state relative-caret-position="734">
+              <caret line="463" column="64" lean-forward="false" selection-start-line="463" selection-start-column="64" selection-end-line="463" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -84,13 +80,13 @@
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
-              <caret line="21" column="119" lean-forward="true" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
+              <caret line="21" column="119" lean-forward="false" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -153,10 +149,10 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/form_index.html" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/tasks.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/static/protein_analysis_tool/css/custom.css" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
-        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
+        <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
       </list>
     </option>
   </component>
@@ -197,24 +193,6 @@
             <path>
               <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
               <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -229,11 +207,6 @@
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -560,13 +533,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
-    </task>
-    <task id="LOCAL-00137" summary="[Query Processing] Added ProcessQueryController class">
-      <created>1513913869646</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1513913869646</updated>
     </task>
     <task id="LOCAL-00138" summary="[Query Processing] Updated and consolidated urls">
       <created>1513914157105</created>
@@ -904,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513970682786</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config.">
+      <created>1515299800909</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1515299800910</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TodoView">
@@ -973,7 +946,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Maintenance] base.html template tidying" />
     <MESSAGE value="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data" />
     <MESSAGE value="[Bugfix] BUG WITH SEQUENCE_DATA FIXED [Bugfix] Attempt at fixing ProcessQueryController process_query method where self.query_id does not exist" />
     <MESSAGE value="[FEATURE] added string method to indexformcontroller class" />
@@ -998,7 +970,8 @@
     <MESSAGE value="[BUGFIX] cast zip object for results list as list" />
     <MESSAGE value="[FEATURE] Added pagination link to bottom of page" />
     <MESSAGE value="[FEATURE] centered pagination on bottom of page" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] centered pagination on bottom of page" />
+    <MESSAGE value="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config." />
+    <option name="LAST_COMMIT_MESSAGE" value="[CLEANUP] Cleaned obsolete and unused view controllers. Added comments to url config." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1298,15 +1271,7 @@
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/process_query.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
-          <caret line="21" column="119" lean-forward="true" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+          <caret line="21" column="119" lean-forward="false" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
           <folding />
         </state>
       </provider>
@@ -1319,18 +1284,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1295">
-          <caret line="482" column="0" lean-forward="true" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/views_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="463" column="64" lean-forward="false" selection-start-line="463" selection-start-column="64" selection-end-line="463" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="48" column="113" lean-forward="false" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
           <folding />
         </state>
       </provider>

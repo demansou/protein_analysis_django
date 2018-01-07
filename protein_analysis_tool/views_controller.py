@@ -331,7 +331,7 @@ class IndexFormController(object):
     @staticmethod
     def create_temp_filename():
         """
-        Returns file name with full path.
+        STATIC. Returns file name with full path.
         :return:
         """
         return tempfile.NamedTemporaryFile(
@@ -344,7 +344,7 @@ class IndexFormController(object):
     @staticmethod
     def clean_path_from_filename(file_name):
         """
-        Returns file name from full path.
+        STATIC. Returns file name from full path.
         :param file_name:
         :return:
         """
@@ -397,7 +397,7 @@ class ProcessQueryController(object):
     @staticmethod
     def process_all_queries():
         """
-        Send celery task to process all queries.
+        STATIC. Send celery task to process all queries.
         :return:
         """
         # Celery task
@@ -419,13 +419,14 @@ class ResultsController(object):
 
     def display_results(self, result_id):
         """
-
+        Collect results and format for display. Includes pagination of results.
         :param result_id:
         :return:
         """
         results = self.zip_results_for_display(result_id)
         motif = Query.objects.get(pk=result_id).motif_fk.motif
 
+        # Collect results in pagination.
         page = self.request.GET.get('page', 1)
         paginator = Paginator(results, 25)
 
@@ -460,7 +461,7 @@ class ResultsController(object):
     @staticmethod
     def process_query_sequence(query_sequence):
         """
-        Get matches for the query/sequence pair and return as JSON object.
+        STATIC. Transform matches for the query/sequence pair to JSON object.
         :param query_sequence:
         :return:
         """
@@ -470,7 +471,7 @@ class ResultsController(object):
     @staticmethod
     def count_matches(result_matches):
         """
-        Counts matches for each sequence.
+        STATIC. Counts matches for each sequence.
         :param result_matches:
         :return:
         """

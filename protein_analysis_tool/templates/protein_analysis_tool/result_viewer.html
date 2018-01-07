@@ -46,7 +46,7 @@
                                         {% for match in result.0.matches %}
                                             {% if match|length >= result.0.query_fk.min_num_motifs_per_sequence %}
                                             <tr>
-                                                <td>{{ match }}</td>
+                                                <td onmouseover="highlightRange({{ match.0.span.0 }}, {{ result.1 }})">{{ match }}</td>
                                             </tr>
                                             {% endif %}
                                         {% endfor %}
@@ -93,5 +93,11 @@
             $(".sequence-view").markRegExp(/{{ motif }}/gmi, {className: "match"});
         });
 
+        function highlightRange(startPos, range) {
+            $(".sequence-view").markRanges({
+                start: parseInt(startPos),
+                length: range
+            })
+        }
     </script>
 {% endblock %}
