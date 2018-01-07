@@ -4,6 +4,7 @@
     <list default="true" id="9086bb95-5a7c-4730-9bf6-d482e9fa66e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" afterPath="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
+      <change beforePath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" afterPath="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,21 +46,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+            <state relative-caret-position="871">
+              <caret line="99" column="30" lean-forward="true" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="858">
+              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -161,8 +162,8 @@
         <option value="$PROJECT_DIR$/protein_analysis_tool/views.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/urls.py" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/views_controller.py" />
-        <option value="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
         <option value="$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html" />
+        <option value="$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css" />
       </list>
     </option>
   </component>
@@ -526,13 +527,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
     </task>
-    <task id="LOCAL-00141" summary="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data">
-      <created>1513914488615</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1513914488615</updated>
-    </task>
     <task id="LOCAL-00142" summary="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data">
       <created>1513914667492</created>
       <option name="number" value="00142" />
@@ -869,7 +863,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515302958038</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="[TEST FEATURE] Highlight range WITH BUGFIX for range number">
+      <created>1515303835838</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1515303835838</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1291,18 +1292,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="871">
+          <caret line="99" column="30" lean-forward="true" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
+    <entry file="file://$PROJECT_DIR$/static/protein_analysis_tool/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+        <state relative-caret-position="858">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>

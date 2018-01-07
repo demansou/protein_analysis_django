@@ -47,7 +47,6 @@
                                             {% if match|length >= result.0.query_fk.min_num_motifs_per_sequence %}
                                             <tr>
                                                 <td onmouseover="highlightRange({{ match.0.span.0 }}, {{ result.0.query_fk.max_char_distance_between_motifs }})">{{ match }}</td>
-                                                <td><button class="highlight-range">Highlight Range</button></td>
                                             </tr>
                                             {% endif %}
                                         {% endfor %}

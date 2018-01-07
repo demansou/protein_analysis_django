@@ -18,8 +18,12 @@
     display: inline-block;
 }
 
-mark{
+mark .match {
     background: orange;
     color: black;
 }
 
+mark .matchRange {
+    background: yellow;
+    color: black;
+}
