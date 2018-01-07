@@ -48,8 +48,8 @@
       <file leaf-file-name="result_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="48" column="64" lean-forward="false" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+            <state relative-caret-position="772">
+              <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -199,42 +199,6 @@
             <path>
               <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
               <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protein_analysis_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protein_analysis_django" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="protein_analysis_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,13 +525,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499103369898</updated>
-    </task>
-    <task id="LOCAL-00140" summary="[Maintenance] base.html template tidying">
-      <created>1513914309351</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1513914309351</updated>
     </task>
     <task id="LOCAL-00141" summary="[Bugfix] Attempt at fixing IndexFormController check_form_data method check for sequence_data">
       <created>1513914488615</created>
@@ -905,7 +862,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515302451158</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="[TEST FEATURE] Highlight range WITH BUGFIX for range number">
+      <created>1515302958038</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1515302958038</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1337,8 +1301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protein_analysis_tool/templates/protein_analysis_tool/result_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="48" column="64" lean-forward="false" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+        <state relative-caret-position="772">
+          <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
           <folding />
         </state>
       </provider>
